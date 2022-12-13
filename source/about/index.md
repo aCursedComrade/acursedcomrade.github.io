@@ -1,5 +1,5 @@
 ---
-title: about
+title: About
 date: 2022-12-13 17:48:33
 ---
 ### comrade@Internet: $ whoami
