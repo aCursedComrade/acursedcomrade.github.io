@@ -105,4 +105,4 @@ deploy:
   type: git
   repo: https://github.com/aCursedComrade/acursedcomrade.github.io
   branch: gh-pages
-  message: Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}
+  message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
