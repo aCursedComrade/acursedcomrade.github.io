@@ -17,7 +17,7 @@
 
 
 
-<title>About | Comrade&#39;s Blog</title>
+<title>Hello World! | Comrade&#39;s Blog</title>
 
 
 
@@ -121,32 +121,118 @@
 </script>
             <div class="main">
                 <div class="container">
-    <article class="post-wrap page">
-        
-        <h2 class="post-title">About</h2>
-        
-        <section class="post-content">
-            <h2 id="comrade-Internet-whoami"><a href="#comrade-Internet-whoami" class="headerlink" title="comrade@Internet: $ whoami"></a>comrade@Internet: $ whoami</h2><blockquote>
-<p><em>The Man Who Loves Tea</em></p>
-</blockquote>
-<p>An undergraduate, a programming hobbyist and a wannabe Red Teamer from Sri Lanka. Currently working on studies, hobby projects and homelab, finding ways to wriggle into bug hunting and maybe try making another C2 (Command &amp; Control) framework because why not.</p>
-<h2 id="Contact-and-Links"><a href="#Contact-and-Links" class="headerlink" title="Contact and Links"></a>Contact and Links</h2><p>If you need to contact me, send an e-mail to: <strong><a href="mailto:&#97;&#67;&#x75;&#114;&#x73;&#x65;&#100;&#x5f;&#67;&#x6f;&#x6d;&#x72;&#x61;&#100;&#101;&#x40;&#112;&#x72;&#111;&#x74;&#x6f;&#110;&#46;&#109;&#101;">&#97;&#67;&#x75;&#114;&#x73;&#x65;&#100;&#x5f;&#67;&#x6f;&#x6d;&#x72;&#x61;&#100;&#101;&#x40;&#112;&#x72;&#111;&#x74;&#x6f;&#110;&#46;&#109;&#101;</a></strong></p>
-<p>You can also find me on:</p>
-<ul>
-<li><a href="https://github.com/aCursedComrade" target="blank">GitHub</a></li>
-<li><a href="https://twitter.com/aCursed_Comrade" target="blank">Twitter</a></li>
-<li><a href="https://www.linkedin.com/in/loshana-aloka/" target="blank">LinkedIn</a></li>
-<li><a href="https://wetdry.world/@aCursedComrade" target="blank">Mastodon (wetdry.world)</a></li>
-<li>Discord</li>
-<li>CTF:<ul>
-<li><a href="https://tryhackme.com/p/aCursedComrade" target="blank">TryHackMe</a></li>
-<li><a href="https://app.hackthebox.com/profile/719962" target="blank">HackTheBox</a></li>
-<li><a href="https://online.pwntilldawn.com/Achievements/3351" target="blank">PwnTillDawn</a></li>
-</ul>
-</li>
-</ul>
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
 
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Hello World!</h1>
+            
+                <div class="post-meta">
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">December 13, 2022&nbsp;&nbsp;20:28</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="Hello-World-D"><a href="#Hello-World-D" class="headerlink" title="Hello World :D"></a>Hello World :D</h2><p>This is my shot at making a blog and writing about stuff. You can expect me to write about tech stuff, cyber security (when I am a professional *wink*), games ??? maybe or anything else that I may find interesting.</p>
+<p>And thats about it for this post. You can take a look at the <a href="/about">about page</a> for more information about me.<br>Thanks for reading! <img src="https://media.tenor.com/dI7PKF421EgAAAAd/thank-you-bow.gif" alt="bow_down_gif"></p>
+
+        </div>
+
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
         </section>
+        <section class="post-nav">
+            
+            
+        </section>
+
+
     </article>
 </div>
 
