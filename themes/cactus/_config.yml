@@ -5,7 +5,7 @@
 # Link to a page that gives an overview of all your projects.
 # This can be an external link (e.g., to you GitHub profile) or to another
 # page within your website.
-projects_url: http://github.com/aCursedComrade
+projects_url: https://github.com/aCursedComrade
 
 # Set the page direction to RTL or LTR. default is LTR. (if you set it 'rtl', the 'vazir' font will be loaded.)
 direction: ltr
@@ -17,7 +17,7 @@ nav:
   home: /
   about: /about/
   articles: /archives/
-  #projects: 
+  projects: https://github.com/aCursedComrade
 
 
 # Links to your social media accounts.
@@ -27,7 +27,6 @@ nav:
 social_links:
   github: https://github.com/aCursedComrade
   twitter: https://twitter.com/aCursed_Comrade
-  #facebook: /
   linkedin: https://www.linkedin.com/in/loshana-aloka/
   mail: mailto:aCursedComrade@proton.me
 
@@ -42,7 +41,7 @@ tags_overview: false
 #   - sort_updated: sort posts by last modification date instead of creation date.
 posts_overview:
   show_all_posts: false
-  post_count: 10
+  post_count: 5
   sort_updated: false
 
 # Customize the archive view.

@@ -4,8 +4,8 @@
 
 # Site
 title: Comrade's Blog
-subtitle: 'Absolutely wack'
-description: 'InfoSec Student | Programming Hobbyist | Gaming'
+subtitle: Testing title
+description: InfoSec Student | Programming Hobbyist | Video Games
 keywords:
 author: Loshana Aloka
 language: en
@@ -14,7 +14,7 @@ timezone: 'Asia/Colombo'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://acursedcomrade.github.io
-permalink: :year:month:day/:title/
+permalink: :year/:month/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -79,7 +79,7 @@ meta_generator: true
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
-time_format: HH:mm:ss
+time_format: HH:mm
 ## updated_option supports 'mtime', 'date', 'empty'
 updated_option: 'mtime'
 
@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: cactus
+theme: Chic
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

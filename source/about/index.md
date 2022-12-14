@@ -2,12 +2,12 @@
 title: About
 date: 2022-12-13 17:48:33
 ---
-### comrade@Internet: $ whoami
+## comrade@Internet: $ whoami
 > *The Man Who Loves Tea*
 
-An undergraduate, a programming hobbyist and a wannabe Red Teamer from Sri Lanka. Currently working on studies, finding ways to wriggle into bug hunting and maybe try making another C2 (Command & Control) framework because why not.
+An undergraduate, a programming hobbyist and a wannabe Red Teamer from Sri Lanka. Currently working on studies, hobby projects and homelab, finding ways to wriggle into bug hunting and maybe try making another C2 (Command & Control) framework because why not.
 
-### Contact and Links
+## Contact and Links
 If you need to contact me, send an e-mail to: **aCursed_Comrade@proton.me**
 
 You can also find me on:
