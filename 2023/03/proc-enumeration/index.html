@@ -25,7 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://acursedcomrade.github.io/img/proc_contents.png">
 <meta property="article:published_time" content="2023-03-30T06:30:00.000Z">
-<meta property="article:modified_time" content="2023-03-30T14:35:11.690Z">
+<meta property="article:modified_time" content="2023-03-30T15:40:05.662Z">
 <meta property="article:author" content="Loshana Aloka">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="ctf">
@@ -216,7 +216,7 @@
         
         
         
-          23 mins
+          24 mins
         
       </span>
     
@@ -281,8 +281,8 @@
 <li>You can break down the entries into two major categories. One is <strong>kernel (or system) information</strong> and <strong>process specific information</strong>.</li>
 <li>The numbered directories you see are made for each process, thus contains process information. The number represents the process ID (PID) of individual process.</li>
 <li>The remaining directories and file-like objects contains kernel information (but there are 4 interesting exceptions which will be discussed below).</li>
-<li>Another interesting fact is that the <code>/proc</code> <strong>occupies no disk space at all (or at least a very minimal amount)</strong>, the kernel (or the system) generates the necessary information dynamically when a programs access specific entries within <code>/proc</code>.</li>
-<li>With the exceptions of few entries, the contents of <code>/proc</code> are globally readable. But as an attacker, we only have to look at few interesting entries.</li>
+<li>Another interesting fact is that the <code>/proc</code> <strong>occupies no disk space at all (or at least a very minimal amount)</strong>, the kernel (or the system) generates the necessary information dynamically when programs access specific entries within <code>/proc</code>.</li>
+<li>With the exception of few entries, the contents of <code>/proc</code> are globally readable. But as an attacker, we only have to look at few interesting entries.</li>
 </ul>
 <p><img src="/../img/proc_contents.png" srcset="/img/loading.gif" lazyload alt="Contents of /proc"></p>
 <div class="note note-success">
@@ -325,13 +325,13 @@
 <ul>
 <li><p><code>/proc/self</code></p>
 <ul>
-<li>This is a <em>magical</em> link that automatically points to the relevant <code>/proc/&lt;PID&gt;/</code> <strong>directory</strong> of the process(s) that’s currently accessing the entry. This is made as a convenient way of accessing own process information. Can be easily used in attacks such as LFI to quickly expose information about the current process.</li>
+<li>This is a <em>magical</em> link that automatically points to the relevant <code>/proc/&lt;PID&gt;/</code> <strong>directory</strong> of the process(s) that’s currently accessing the entry. This is made as a convenient way of accessing own process information. Thus, it can be easily used in attacks such as LFI to quickly expose information about the current process.</li>
 </ul>
 </li>
 <li><p><code>/proc/mounts</code></p>
 <ul>
 <li>Like <code>/proc/self</code>, this link points to the <code>/proc/&lt;PID&gt;/mounts</code> entry of the own process. This contains information about the file system mounts that accessible by the process (Refer <code>/proc/mounts</code> in man pages<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="man 5 proc (in your terminal) or [man7 on the web](https://man7.org/linux/man-pages/man5/proc.5.html)">[2]</span></a></sup>). This can include network shares that are mounted on the system.</li>
-<li>For example, below you can see a mount that is created by <a target="_blank" rel="noopener" href="https://kdeconnect.kde.org/">KDE Connect</a> that is exposing some folders in my android device. In the next screenshot, I’m accessing the <code>Documents/message.txt</code> that results in information disclosure.</li>
+<li>For example, below you can see a mount that is created by <a target="_blank" rel="noopener" href="https://kdeconnect.kde.org/">KDE Connect</a> that is exposing some folders in my android device. In the next screenshot, I’m accessing the <code>Documents/message.txt</code> within that share which is an example of information disclosure.</li>
 </ul>
 </li>
 </ul>
@@ -340,7 +340,7 @@
 <ul>
 <li><code>/proc/net/</code><ul>
 <li>Like <code>/proc/mounts</code>, this link points to the <code>/proc/&lt;PID&gt;/net/</code> <strong>directory</strong> of the own process. The entries within this directory holds different kinds of information about the networking stack that is accessible by the process (Refer <code>/proc/net</code> in man pages<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="man 5 proc (in your terminal) or [man7 on the web](https://man7.org/linux/man-pages/man5/proc.5.html)">[2]</span></a></sup>).</li>
-<li>For example, <code>arp</code> entry holds the ARP cache of the system which can be used to discover internal hosts of the network. <code>tcp</code> and <code>udp</code> entries have relevant connections that are established or listening on the system (in hex format).</li>
+<li>For example, <code>arp</code> entry holds the ARP cache of the system which can be used to discover internal hosts of the network and the interface names which is usefult to know in some cases. <code>tcp</code> and <code>udp</code> entries have relevant connections that are established or listening on the system (in hex format).</li>
 </ul>
 </li>
 </ul>
@@ -358,7 +358,7 @@
 
 <ul>
 <li><code>/proc/&lt;PID&gt;/comm</code> &amp; <code>/proc/&lt;PID&gt;/cmdline</code><ul>
-<li><code>comm</code> and <code>cmdline</code> holds the base name of the command and the complete command used to execute the command respectively. <code>cmdline</code> will spit out the whole with the spaces in between arguments replaced by a null byte ‘\0’. We can pass this through a replace function to restore the spaces. What’s important here that the command line arguments can contain password (This is bad practice).</li>
+<li><code>comm</code> and <code>cmdline</code> holds the base name of the command and the complete command (with arguments) used to execute the command respectively. <code>cmdline</code> will spit out the command with the spaces in between arguments replaced by a null byte ‘\0’. We can pass this through a replace function to restore the spaces. What’s important here that the command line arguments can contain password (This is bad practice).</li>
 </ul>
 </li>
 </ul>
@@ -372,8 +372,8 @@
 <p><img src="/../img/proc_status.png" srcset="/img/loading.gif" lazyload alt="Response of /proc/self/status"></p>
 <ul>
 <li><code>/proc/&lt;PID&gt;/environ</code><ul>
-<li>This is the <strong>most important one</strong> in my opinion. This holds the <em>initial</em> environment variables that was used to execute the process with. By initial, it means that if any changes happen to these during the process lifetime, it won’t be reflected here.</li>
-<li>Often for production or in development, environment variables are used to hold configuration information and usually these contain sensitive information like secret keys, authentication tokens, database credentials, etc.</li>
+<li>This is the <strong>most important one</strong> in my opinion. This holds the <em>initial</em> environment variables that was used to execute the process with. By initial, it means that if any changes happen to these variables during the process lifetime, it won’t be reflected here.</li>
+<li>Often for production or in development, environment variables are used to hold configuration information and usually contain sensitive information like secret keys, authentication tokens, database credentials, etc.</li>
 <li>For example, we have our dummy variables we set up earlier dumped here (the newlines ‘\n’ are replaces by null bytes ‘\0’ here as well) (I have also truncated the output to get rid of the unnecessary variables of my ZSH config).</li>
 </ul>
 </li>
@@ -381,26 +381,26 @@
 <p><img src="/../img/proc_environ.png" srcset="/img/loading.gif" lazyload alt="Response of /proc/self/environ"></p>
 <ul>
 <li><code>/proc/&lt;PID&gt;/cwd/</code><ul>
-<li>This a symbolic link that points to the <strong>current working directory</strong> of the process. Can sometimes be used as a shortcut in context of web app path.</li>
+<li>This is a symbolic link that points to the <strong>current working directory</strong> of the process. Can sometimes be used as a shortcut in context of web app path.</li>
 </ul>
 </li>
 </ul>
 <p><img src="/../img/proc_cwd.png" srcset="/img/loading.gif" lazyload alt="Content of /proc/self/cwd/"></p>
 <ul>
 <li><code>/proc/&lt;PID&gt;/exe</code><ul>
-<li>This entry points directly to the executable command that is used run the command. Reading this will output raw binary data. Useful when you are dealing with custom standalone binaries during challenges.</li>
+<li>This entry points directly to the executable command that is used run the command. Reading this will output raw binary data. Useful when you are dealing with custom standalone binaries during challenges and you want to extract them for analysis and reversing.</li>
 </ul>
 </li>
 </ul>
 <p><img src="/../img/proc_exe.png" srcset="/img/loading.gif" lazyload alt="Content of /proc/self/exe"></p>
 <ul>
 <li><code>/proc/&lt;PID&gt;/fd/</code><ul>
-<li>This <strong>directory</strong> contains symbolic links to each file that are open in the process, named using numbers (Numbers correlate to the entries in <code>fdinfo/</code> directory). Except the first three (0, 1, 2) which are standard input, output, error respectively, files can be queried to view the contents inside it. Sometimes it can be used to execute code in context of the web app<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="[LFI to RCE via /proc/*/fd](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/File%20Inclusion/README.md#lfi-to-rce-via-procfd)">[3]</span></a></sup>.</li>
+<li>This <strong>directory</strong> contains symbolic links to each file that are open in the process, named using numbers (Numbers correlate to the entries in <code>fdinfo/</code> directory). Except the first three (0, 1, 2) which are standard input, output, error respectively, files can be queried to view the contents inside it which can contain important information. Sometimes it can be used to execute code in context of the web app<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="[LFI to RCE via /proc/*/fd](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/File%20Inclusion/README.md#lfi-to-rce-via-procfd)">[3]</span></a></sup>.</li>
 </ul>
 </li>
 </ul>
 <p><img src="/../img/proc_fd.png" srcset="/img/loading.gif" lazyload alt="Content of /proc/self/fd/"></p>
-<h2 id="Concluding-thoughts"><a href="#Concluding-thoughts" class="headerlink" title="Concluding thoughts"></a>Concluding thoughts</h2><p>That’s about it for my first blog post :) This post covered a few interesting locations in the Linux <code>/proc</code> file system that an attacker with some read access on the system during compromise or even during post exploitation phase can enumerate to uncover information. You can refer the links in the below sections for more information about the topic.</p>
+<h2 id="Concluding-thoughts"><a href="#Concluding-thoughts" class="headerlink" title="Concluding thoughts"></a>Concluding thoughts</h2><p>That’s about it for my first blog post :) This post covered a few interesting locations in the Linux <code>/proc</code> file system that an attacker with some read access on the system during initial compromise or even during post exploitation phase can enumerate to uncover information. You can refer the links in the below sections for more information about the topic.</p>
 <p>But this is a small part of an attack chain. Depending on the context of the scenario, an attacker will think outside box to carry out the attack chain and compromise a system. <strong>YOU</strong> should think out of the box too.</p>
 <p>Thank you for reading <strong>o7</strong></p>
 <p><img src="https://media.tenor.com/KmPFMGQ07-4AAAAd/hffgf.gif" srcset="/img/loading.gif" lazyload alt="Cat hacking the system"></p>
