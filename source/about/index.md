@@ -2,6 +2,7 @@
 title: About
 layout: about
 date: 2022-12-13 17:48:33
+excerpt: 'Who is this dude?'
 ---
 ## comrade@Internet: $ whoami
 >
