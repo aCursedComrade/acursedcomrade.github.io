@@ -9,3 +9,4 @@ _multiconfig.yml
 themes/*/package.json
 themes/*/.git*
 package-lock.json
+pnpm-lock.yaml

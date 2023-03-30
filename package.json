@@ -3,16 +3,15 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server"
+    "build": "npx hexo generate",
+    "clean": "npx hexo clean",
+    "server": "npx hexo server"
   },
   "hexo": {
-    "version": "6.3.0"
+    "version": "7.0.0-rc1"
   },
   "dependencies": {
-    "hexo": "^6.3.0",
+    "hexo": "7.0.0-rc1",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
@@ -22,6 +21,8 @@
     "hexo-renderer-marked": "^6.0.0",
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^3.0.0",
-    "hexo-theme-landscape": "^0.0.3"
+    "hexo-theme-fluid": "^1.9.4",
+    "hexo-theme-landscape": "^0.0.3",
+    "nunjucks": "^3.2.3"
   }
 }

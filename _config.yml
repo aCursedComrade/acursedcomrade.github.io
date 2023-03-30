@@ -4,9 +4,9 @@
 
 # Site
 title: Comrade's Blog
-subtitle: Testing title
+subtitle: Just another random blog 
 description: InfoSec Student | Programming Hobbyist | Video Games
-keywords:
+keywords: infosec, programming, ctf
 author: Loshana Aloka
 language: en
 timezone: 'Asia/Colombo'
@@ -14,7 +14,7 @@ timezone: 'Asia/Colombo'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://acursedcomrade.github.io
-permalink: :year/:month/:title/
+permalink: :year/:month/:name/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: Chic
+theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
