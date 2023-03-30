@@ -13,7 +13,7 @@ index_img: /img/proc_contents.png
 
 The `proc` file system, which usually lies in `/proc` directory of a Linux system, contains information about the runtime of the system and all processes on the system. This information is stored in the form of files or file-like objects which can be read from using simple text readers such `cat` or `grep` and can be modified by high-privileged users and processes for different purposes.
 
-If let's say a vulnerability like **LFI (Local File Inclusion)**, **command injection** or similar exists on a web app, which provides an attacker with read access on the target system. This exposes the `/proc` file system and most likely sensitive information along side of it. This is something I can personally relate to when solving CTF machines.
+If let's say a vulnerability like **LFI (Local File Inclusion)**, **command injection** or similar exists on a web app, which provides an attacker with read access on the target system. This exposes the `/proc` file system and most likely sensitive information alongside of it. This is something I can personally relate to when solving CTF machines.
 
 ## A little scenario
 
@@ -44,7 +44,7 @@ If you haven't already installed the **Flask** library, you can do so by executi
 pip install Flask
 ```
 
-For demonstration, I'm using the `export` command to create a few environment variables before we run the application. To do so this and run the script, we can execute the following:
+For demonstration, I'm using the `export` command to create a few environment variables before we run the application. To do this and run the script, we can execute the following:
 
 ```shell
 export SOME_VAR="aVariableHere" \
@@ -157,12 +157,14 @@ In this scenario, we can use the `/proc/self/` link to expose information about 
 ![Response of /proc/self/environ](../img/proc_environ.png)
 
 - `/proc/<PID>/cwd/`
-  - This is a symbolic link that points to the **current working directory** of the process. Can sometimes be used as a shortcut in the context of the web app path on the file system.
+  - This is a symbolic link that points to the **current working directory** of the process. Can sometimes be used as a shortcut in the context of the web app path on the file system. The PWD variable can be extracted from `/proc/<PID>/environ` to figure out what is the current working directory.
 
 ![Content of /proc/self/cwd/](../img/proc_cwd.png)
 
+![PWD variable as seen in /proc/self/environ](../img/proc_cwd_var.png)
+
 - `/proc/<PID>/exe`
-  - This entry points directly to the executable command that is used run the command. Reading this will output raw binary data. Useful when you are dealing with custom standalone binaries during challenges and you want to extract them for analysis and reversing.
+  - This entry points directly to the executable command that is used run the command. Reading this will output raw binary data. Useful when you are dealing with custom standalone binaries during challenges, and you want to extract them for analysis and reversing.
 
 ![Content of /proc/self/exe](../img/proc_exe.png)
 
