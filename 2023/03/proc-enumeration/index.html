@@ -25,7 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://acursedcomrade.github.io/img/proc_contents.png">
 <meta property="article:published_time" content="2023-03-30T06:30:00.000Z">
-<meta property="article:modified_time" content="2023-03-30T17:14:05.922Z">
+<meta property="article:modified_time" content="2023-03-30T18:06:51.776Z">
 <meta property="article:author" content="Loshana Aloka">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="ctf">
@@ -260,14 +260,14 @@
               <div class="markdown-body">
                 
                 <h2 id="What-is-“-x2F-proc”"><a href="#What-is-“-x2F-proc”" class="headerlink" title="What is “&#x2F;proc”?"></a>What is “&#x2F;proc”?</h2><p>The <code>proc</code> file system, which usually lies in <code>/proc</code> directory of a Linux system, contains information about the runtime of the system and all processes on the system. This information is stored in the form of files or file-like objects which can be read from using simple text readers such <code>cat</code> or <code>grep</code> and can be modified by high-privileged users and processes for different purposes.</p>
-<p>If let’s say a vulnerability like <strong>LFI (Local File Inclusion)</strong>, <strong>command injection</strong> or similar exists on a web app, which provides an attacker with read access on the target system. This exposes the <code>/proc</code> file system and most likely sensitive information along side of it. This is something I can personally relate to when solving CTF machines.</p>
+<p>If let’s say a vulnerability like <strong>LFI (Local File Inclusion)</strong>, <strong>command injection</strong> or similar exists on a web app, which provides an attacker with read access on the target system. This exposes the <code>/proc</code> file system and most likely sensitive information alongside of it. This is something I can personally relate to when solving CTF machines.</p>
 <h2 id="A-little-scenario"><a href="#A-little-scenario" class="headerlink" title="A little scenario"></a>A little scenario</h2><p>Throughout this post, I will be using a <em>smol</em> <strong>python Flask</strong> app that is deliberately vulnerable to an LFI to demonstrate the attack vector. The code for the web app is given below, make sure to run it in a contained environment:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask, request<br>app = Flask(__name__)<br><br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">index</span>():<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Hello there!\n&#x27;</span><br><br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/read&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">read</span>():<br>    file = request.args.get(<span class="hljs-string">&#x27;fn&#x27;</span>)<br>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">f&#x27;/tmp/<span class="hljs-subst">&#123;file&#125;</span>&#x27;</span>, <span class="hljs-string">&#x27;rb&#x27;</span>) <span class="hljs-keyword">as</span> f: <span class="hljs-comment"># Classic LFI</span><br>        data = f.read()<br>        <span class="hljs-keyword">return</span> data<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    app.run()<br></code></pre></td></tr></table></figure>
 
 <p>If you haven’t already installed the <strong>Flask</strong> library, you can do so by executing the command:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">pip install Flask<br></code></pre></td></tr></table></figure>
 
-<p>For demonstration, I’m using the <code>export</code> command to create a few environment variables before we run the application. To do so this and run the script, we can execute the following:</p>
+<p>For demonstration, I’m using the <code>export</code> command to create a few environment variables before we run the application. To do this and run the script, we can execute the following:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">export SOME_VAR=&quot;aVariableHere&quot; \<br>SECRET=&quot;YouShouldntBeReadingThis&quot; \<br>VERSION=&quot;6.9.0&quot; \<br>DB_URL=&#x27;mysql://dbuser:P@$$w0rd@localhost/webapp&#x27;; flask --app app run<br></code></pre></td></tr></table></figure>
 
 <p>Make sure to execute the command in the same directory as the script. If executed successfully, our vulnerable web app should be listening for new connections.</p>
@@ -381,14 +381,15 @@
 <p><img src="/../img/proc_environ.png" srcset="/img/loading.gif" lazyload alt="Response of /proc/self/environ"></p>
 <ul>
 <li><code>/proc/&lt;PID&gt;/cwd/</code><ul>
-<li>This is a symbolic link that points to the <strong>current working directory</strong> of the process. Can sometimes be used as a shortcut in the context of the web app path on the file system.</li>
+<li>This is a symbolic link that points to the <strong>current working directory</strong> of the process. Can sometimes be used as a shortcut in the context of the web app path on the file system. The PWD variable can be extracted from <code>/proc/&lt;PID&gt;/environ</code> to figure out what is the current working directory.</li>
 </ul>
 </li>
 </ul>
 <p><img src="/../img/proc_cwd.png" srcset="/img/loading.gif" lazyload alt="Content of /proc/self/cwd/"></p>
+<p><img src="/../img/proc_cwd_var.png" srcset="/img/loading.gif" lazyload alt="PWD variable as seen in /proc/self/environ"></p>
 <ul>
 <li><code>/proc/&lt;PID&gt;/exe</code><ul>
-<li>This entry points directly to the executable command that is used run the command. Reading this will output raw binary data. Useful when you are dealing with custom standalone binaries during challenges and you want to extract them for analysis and reversing.</li>
+<li>This entry points directly to the executable command that is used run the command. Reading this will output raw binary data. Useful when you are dealing with custom standalone binaries during challenges, and you want to extract them for analysis and reversing.</li>
 </ul>
 </li>
 </ul>
