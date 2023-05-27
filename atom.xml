@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Comrade&#39;s Blog</title>
+  
+  <subtitle>Just another random blog</subtitle>
+  <link href="https://acursedcomrade.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://acursedcomrade.github.io/"/>
+  <updated>2023-05-27T11:37:14.776Z</updated>
+  <id>https://acursedcomrade.github.io/</id>
+  
+  <author>
+    <name>Loshana Aloka</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&quot;/proc&quot; file system | Enumerating for a foothold</title>
+    <link href="https://acursedcomrade.github.io/2023/03/proc-enumeration/"/>
+    <id>https://acursedcomrade.github.io/2023/03/proc-enumeration/</id>
+    <published>2023-03-30T06:30:00.000Z</published>
+    <updated>2023-05-27T11:37:14.776Z</updated>
+    
+    
+    <summary type="html">A look into the &quot;/proc&quot; file system and how can an adversary leverage it for enumeration.</summary>
+    
+    
+    
+    
+    <category term="linux" scheme="https://acursedcomrade.github.io/tags/linux/"/>
+    
+    <category term="ctf" scheme="https://acursedcomrade.github.io/tags/ctf/"/>
+    
+    <category term="attack" scheme="https://acursedcomrade.github.io/tags/attack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World!</title>
+    <link href="https://acursedcomrade.github.io/2022/12/hello/"/>
+    <id>https://acursedcomrade.github.io/2022/12/hello/</id>
+    <published>2022-12-13T14:58:00.000Z</published>
+    <updated>2023-05-27T11:37:14.776Z</updated>
+    
+    
+    <summary type="html">The birth of Comrade&#39;s Blog.</summary>
+    
+    
+    
+    
+    <category term="personal" scheme="https://acursedcomrade.github.io/tags/personal/"/>
+    
+  </entry>
+  
+</feed>
