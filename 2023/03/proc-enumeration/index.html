@@ -19,13 +19,13 @@
     <meta name="description" content="A look into the &quot;&#x2F;proc&quot; file system and how can an adversary leverage it for enumeration.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="&quot;&#x2F;proc&quot; file system | Enumerating for a foothold">
-<meta property="og:url" content="https://acursedcomrade.github.io/2023/03/proc-enumeration/index.html">
+<meta property="og:url" content="https://acursedcomrade.github.io/2023/03/proc-enumeration/">
 <meta property="og:site_name" content="Comrade&#39;s Blog">
 <meta property="og:description" content="A look into the &quot;&#x2F;proc&quot; file system and how can an adversary leverage it for enumeration.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://acursedcomrade.github.io/img/proc_contents.png">
 <meta property="article:published_time" content="2023-03-30T06:30:00.000Z">
-<meta property="article:modified_time" content="2023-05-27T11:37:14.776Z">
+<meta property="article:modified_time" content="2023-05-31T18:51:30.345Z">
 <meta property="article:author" content="Loshana Aloka">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="ctf">
@@ -73,7 +73,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"acursedcomrade.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":40,"cursorChar":"█","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"#"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"acursedcomrade.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":40,"cursorChar":"█","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"#"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -186,7 +186,7 @@
 <div id="banner" class="banner" parallax=true
      style="background: url('/img/proc_contents.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.5)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
@@ -197,6 +197,11 @@
         
           
   <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Loshana Aloka
+      </span>
     
     
       <span class="post-meta">
@@ -217,7 +222,7 @@
         
         
         
-          24 mins
+          25 mins
         
       </span>
     
@@ -260,9 +265,9 @@
             
               <div class="markdown-body">
                 
-                <h2 id="What-is-“-x2F-proc”"><a href="#What-is-“-x2F-proc”" class="headerlink" title="What is “&#x2F;proc”?"></a>What is “&#x2F;proc”?</h2><p>The <code>proc</code> file system, which usually lies in <code>/proc</code> directory of a Linux system, contains information about the runtime of the system and all processes on the system. This information is stored in the form of files or file-like objects which can be read from using simple text readers such <code>cat</code> or <code>grep</code> and can be modified by high-privileged users and processes for different purposes.</p>
+                <h1 id="What-is-“-x2F-proc”"><a href="#What-is-“-x2F-proc”" class="headerlink" title="What is “&#x2F;proc”?"></a>What is “&#x2F;proc”?</h1><p>The <code>proc</code> file system, which usually lies in <code>/proc</code> directory of a Linux system, contains information about the runtime of the system and all processes on the system. This information is stored in the form of files or file-like objects which can be read from using simple text readers such <code>cat</code> or <code>grep</code> and can be modified by high-privileged users and processes for different purposes.</p>
 <p>If let’s say a vulnerability like <strong>LFI (Local File Inclusion)</strong>, <strong>command injection</strong> or similar exists on a web app, which provides an attacker with read access on the target system. This exposes the <code>/proc</code> file system and most likely sensitive information alongside of it. This is something I can personally relate to when solving CTF machines.</p>
-<h2 id="A-little-scenario"><a href="#A-little-scenario" class="headerlink" title="A little scenario"></a>A little scenario</h2><p>Throughout this post, I will be using a <em>smol</em> <strong>python Flask</strong> app that is deliberately vulnerable to an LFI to demonstrate the attack vector. The code for the web app is given below, make sure to run it in a contained environment:</p>
+<h1 id="A-little-scenario"><a href="#A-little-scenario" class="headerlink" title="A little scenario"></a>A little scenario</h1><p>Throughout this post, I will be using a small <strong>python Flask</strong> app that is deliberately vulnerable to an LFI to demonstrate the attack vector. The code for the web app is given below, make sure to run it in a contained environment:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask, request<br>app = Flask(__name__)<br><br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">index</span>():<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Hello there!\n&#x27;</span><br><br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/read&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">read</span>():<br>    file = request.args.get(<span class="hljs-string">&#x27;fn&#x27;</span>)<br>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">f&#x27;/tmp/<span class="hljs-subst">&#123;file&#125;</span>&#x27;</span>, <span class="hljs-string">&#x27;rb&#x27;</span>) <span class="hljs-keyword">as</span> f: <span class="hljs-comment"># Classic LFI</span><br>        data = f.read()<br>        <span class="hljs-keyword">return</span> data<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    app.run()<br></code></pre></td></tr></table></figure>
 
 <p>If you haven’t already installed the <strong>Flask</strong> library, you can do so by executing the command:</p>
@@ -273,28 +278,28 @@
 
 <p>Make sure to execute the command in the same directory as the script. If executed successfully, our vulnerable web app should be listening for new connections.</p>
 <p><img src="/../img/flask_start.png" srcset="/img/loading.gif" lazyload alt="Flask app configured and listening"></p>
-<h2 id="The-attack-begins"><a href="#The-attack-begins" class="headerlink" title="The attack begins"></a>The attack begins</h2><p>First things first, let’s confirm the LFI by querying the classic <code>/etc/passwd</code>. If we look at the source code again, the app is trying to read from <code>/tmp</code> with the filename passed <strong>directly</strong> in to the expression without any sanitation. We only need a single <code>..</code> operator to access the file system root. So our malicious query will be:</p>
+<h1 id="The-attack-begins"><a href="#The-attack-begins" class="headerlink" title="The attack begins"></a>The attack begins</h1><p>First things first, let’s confirm the LFI by querying the classic <code>/etc/passwd</code>. If we look at the source code again, the app is trying to read from <code>/tmp</code> with the filename passed <strong>directly</strong> in to the expression without any sanitation. We only need a single <code>..</code> operator to access the file system root. So our malicious query will be:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl &#x27;localhost:5000/read?fn=../etc/passwd&#x27;<br></code></pre></td></tr></table></figure>
 
 <p><img src="/../img/flask_etc_passwd.png" srcset="/img/loading.gif" lazyload alt="The content of /etc/passwd as the response"></p>
 <p>Great! (or not so great <em>wink</em>) This means that we can now read all files in the system which can be read by the system account running the web app. An attacker can now try to read various configuration files that are presumably on default locations (on the file system) or other files of interest and gather as much as information to gain a foothold.</p>
-<h3 id="“-x2F-proc”-structure"><a href="#“-x2F-proc”-structure" class="headerlink" title="“&#x2F;proc” structure"></a>“&#x2F;proc” structure</h3><ul>
+<h2 id="“-x2F-proc”-structure"><a href="#“-x2F-proc”-structure" class="headerlink" title="“&#x2F;proc” structure"></a>“&#x2F;proc” structure</h2><ul>
 <li>You can break down the entries into two major categories. One is <strong>kernel (or system) information</strong> and the other is <strong>process specific information</strong>.</li>
 <li>The numbered directories you see are made for each process, thus containing process information. The number represents the process ID (PID) of each individual process.</li>
 <li>The remaining directories and file-like objects contains kernel information (but there are 4 interesting exceptions which will be discussed below).</li>
 <li>Another interesting fact is that <code>/proc</code> <strong>occupies no disk space at all (or at least a very minimal amount)</strong>, the kernel (or the system) generates the necessary information dynamically when programs access specific entries within <code>/proc</code>.</li>
-<li>With the exception of a few entries, the contents of <code>/proc</code> are globally readable. But as an attacker, we only have to look at a few interesting entries.</li>
+<li>Except for a few entries, the contents of <code>/proc</code> are globally readable. But as an attacker, we only have to look at a few interesting entries.</li>
 </ul>
 <p><img src="/../img/proc_contents.png" srcset="/img/loading.gif" lazyload alt="Contents of /proc"></p>
 <div class="note note-success">
-            <p>This post will go over some entries briefly. You can read the complete documentation for the <code>/proc</code> file system and its entries from the <strong>Linux documentation</strong><sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[The Linux Documentation Project](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html)">[1]</span></a></sup> or <strong>man pages</strong><sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="man 5 proc (in your terminal) or [man7 on the web](https://man7.org/linux/man-pages/man5/proc.5.html)">[2]</span></a></sup> in your own terminal. More links are available at the end of the post.</p>
+            <p>This post will go over some entries briefly. You can read the complete documentation for the <code>/proc</code> file system and its entries from the <strong>Linux documentation</strong><sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[The Linux Documentation Project](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html)">[1]</span></a></sup> or <strong>man pages</strong><sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="`man 5 proc` (in your terminal) or [man7 on the web](https://man7.org/linux/man-pages/man5/proc.5.html)">[2]</span></a></sup> in your own terminal. More links are available at the end of the post.</p>
           </div>
 
 <div class="note note-info">
             <p>In this scenario, we are using an LFI vulnerability to read files off the system. We can read <strong>entries (files or file-like objects)</strong> in <code>/proc</code> and in other parts of the file system, but we cannot read <strong>directories</strong> which is the expected behavior. However, a capable attacker can automate a brute-force attack with a list of possible file&#x2F;directory names to discover files in the file system.</p>
           </div>
 
-<h3 id="Kernel-information"><a href="#Kernel-information" class="headerlink" title="Kernel information"></a>Kernel information</h3><ul>
+<h2 id="Kernel-information"><a href="#Kernel-information" class="headerlink" title="Kernel information"></a>Kernel information</h2><ul>
 <li><code>/proc/cpuinfo</code><ul>
 <li>Returns information regarding individual CPU cores available to the system. (Response can be quite long depending on the number of cores)</li>
 </ul>
@@ -322,7 +327,7 @@
 </li>
 </ul>
 <p><img src="/../img/proc_partitions.png" srcset="/img/loading.gif" lazyload alt="Response of /proc/partitions"></p>
-<p>As mentioned in <a href="#proc-structure">&#x2F;proc structure</a>, there are few interesting links that are available within <code>/proc</code>. They are listed below:</p>
+<p>As mentioned in <a href="#proc-structure">&#x2F;proc structure</a>, there are few interesting links that are available within <code>/proc</code>. Simply, they are <em><strong>magical</strong></em> links that automatically points to the process directory of the current process. They are listed below:</p>
 <ul>
 <li><p><code>/proc/self</code></p>
 <ul>
@@ -331,7 +336,7 @@
 </li>
 <li><p><code>/proc/mounts</code></p>
 <ul>
-<li>Like <code>/proc/self</code>, this link points to the <code>/proc/&lt;PID&gt;/mounts</code> entry of the own process. This contains information about the file system mounts that are accessible by the process (Refer <code>/proc/mounts</code> in man pages<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="man 5 proc (in your terminal) or [man7 on the web](https://man7.org/linux/man-pages/man5/proc.5.html)">[2]</span></a></sup>). This can include network shares that are mounted on the system.</li>
+<li>Like <code>/proc/self</code>, this link points to the <code>/proc/&lt;PID&gt;/mounts</code> entry of the own process. This contains information about the file system mounts that are accessible by the process (Refer <code>/proc/mounts</code> in man pages<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="`man 5 proc` (in your terminal) or [man7 on the web](https://man7.org/linux/man-pages/man5/proc.5.html)">[2]</span></a></sup>). This can include network shares that are mounted on the system.</li>
 <li>For example, below you can see a mount that is created by <a target="_blank" rel="noopener" href="https://kdeconnect.kde.org/">KDE Connect</a> that is exposing some folders in my android device. In the next screenshot, I’m accessing the <code>Documents/message.txt</code> within that share which is an example of information disclosure.</li>
 </ul>
 </li>
@@ -340,7 +345,7 @@
 <p><img src="/../img/secret_message.png" srcset="/img/loading.gif" lazyload alt="Secrets exposed!!!"></p>
 <ul>
 <li><code>/proc/net/</code><ul>
-<li>Like <code>/proc/mounts</code>, this link points to the <code>/proc/&lt;PID&gt;/net/</code> <strong>directory</strong> of the own process. The entries within this directory hold different kinds of information about the networking stack that is accessible by the process (Refer <code>/proc/net</code> in man pages<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="man 5 proc (in your terminal) or [man7 on the web](https://man7.org/linux/man-pages/man5/proc.5.html)">[2]</span></a></sup>).</li>
+<li>Like <code>/proc/mounts</code>, this link points to the <code>/proc/&lt;PID&gt;/net/</code> <strong>directory</strong> of the own process. The entries within this directory hold different kinds of information about the networking stack that is accessible by the process (Refer <code>/proc/net</code> in man pages<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="`man 5 proc` (in your terminal) or [man7 on the web](https://man7.org/linux/man-pages/man5/proc.5.html)">[2]</span></a></sup>).</li>
 <li>For example, the <code>arp</code> entry holds the ARP cache of the system which can be used to discover internal hosts of the network and interface names that are useful to know in some cases. <code>tcp</code> and <code>udp</code> entries have relevant connections that are established or listening on the system (in hex format).</li>
 </ul>
 </li>
@@ -353,7 +358,7 @@
 </li>
 </ul>
 <p><img src="/../img/proc_task.png" srcset="/img/loading.gif" lazyload alt="Threads in my &quot;Terminator&quot; session"></p>
-<h3 id="Process-information"><a href="#Process-information" class="headerlink" title="Process information"></a>Process information</h3><div class="note note-info">
+<h2 id="Process-information"><a href="#Process-information" class="headerlink" title="Process information"></a>Process information</h2><div class="note note-info">
             <p>In this scenario, we can use the <code>/proc/self/</code> link to expose information about the web app process without guessing the PID. But it is possible to brute-force PID to find processes of interest.</p>
           </div>
 
@@ -402,16 +407,16 @@
 </li>
 </ul>
 <p><img src="/../img/proc_fd.png" srcset="/img/loading.gif" lazyload alt="Content of /proc/self/fd/"></p>
-<h2 id="Concluding-thoughts"><a href="#Concluding-thoughts" class="headerlink" title="Concluding thoughts"></a>Concluding thoughts</h2><p>That’s about it for my first blog post :) This post covered a few interesting locations in the Linux <code>/proc</code> file system that an attacker with some read access on the system during initial compromise or even during post exploitation phase can enumerate to uncover information. You can refer the links in the below sections for more information about the topic.</p>
+<h1 id="Concluding-thoughts"><a href="#Concluding-thoughts" class="headerlink" title="Concluding thoughts"></a>Concluding thoughts</h1><p>That’s about it for my first blog post :) This post covered a few interesting locations in the Linux <code>/proc</code> file system that an attacker with some read access on the system during initial compromise or even during post exploitation phase can enumerate to uncover information. You can refer the links in the below sections for more information about the topic.</p>
 <p>But this is a small part of an attack chain. Depending on the context of the scenario, an attacker will think outside box to carry out the attack chain and compromise a system. <strong>YOU</strong> should think out of the box too.</p>
 <p>Thank you for reading <strong>o7</strong></p>
 <p><img src="https://media.tenor.com/KmPFMGQ07-4AAAAd/hffgf.gif" srcset="/img/loading.gif" lazyload alt="Cat hacking the system"></p>
-<h2 id="Extra-reading"><a href="#Extra-reading" class="headerlink" title="Extra reading"></a>Extra reading</h2><ul>
+<h1 id="Extra-reading"><a href="#Extra-reading" class="headerlink" title="Extra reading"></a>Extra reading</h1><ul>
 <li><a target="_blank" rel="noopener" href="https://idafchev.github.io/enumeration/2018/03/05/linux_proc_enum.html">Linux enumeration with read access only</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.netspi.com/blog/technical/web-application-penetration-testing/directory-traversal-file-inclusion-proc-file-system/">Directory Traversal, File Inclusion, and The Proc File System</a></li>
 </ul>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html">The Linux Documentation Project</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>man 5 proc (in your terminal) or <a target="_blank" rel="noopener" href="https://man7.org/linux/man-pages/man5/proc.5.html">man7 on the web</a>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html">The Linux Documentation Project</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><code>man 5 proc</code> (in your terminal) or <a target="_blank" rel="noopener" href="https://man7.org/linux/man-pages/man5/proc.5.html">man7 on the web</a>
 <a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/File%20Inclusion/README.md#lfi-to-rce-via-procfd">LFI to RCE via &#x2F;proc&#x2F;*&#x2F;fd</a>
 <a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
