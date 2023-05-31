@@ -1,23 +1,23 @@
 ---
 title: '"/proc" file system | Enumerating for a foothold'
 tags:
-  - linux
-  - ctf
-  - attack
+    - linux
+    - ctf
+    - attack
 date: 2023-03-30 12:00:00
 excerpt: "A look into the \"/proc\" file system and how can an adversary leverage it for enumeration."
 banner_img: /img/proc_contents.png
 index_img: /img/proc_contents.png
 ---
-## What is "/proc"?
+# What is "/proc"?
 
 The `proc` file system, which usually lies in `/proc` directory of a Linux system, contains information about the runtime of the system and all processes on the system. This information is stored in the form of files or file-like objects which can be read from using simple text readers such `cat` or `grep` and can be modified by high-privileged users and processes for different purposes.
 
 If let's say a vulnerability like **LFI (Local File Inclusion)**, **command injection** or similar exists on a web app, which provides an attacker with read access on the target system. This exposes the `/proc` file system and most likely sensitive information alongside of it. This is something I can personally relate to when solving CTF machines.
 
-## A little scenario
+# A little scenario
 
-Throughout this post, I will be using a *smol* **python Flask** app that is deliberately vulnerable to an LFI to demonstrate the attack vector. The code for the web app is given below, make sure to run it in a contained environment:
+Throughout this post, I will be using a small **python Flask** app that is deliberately vulnerable to an LFI to demonstrate the attack vector. The code for the web app is given below, make sure to run it in a contained environment:
 
 ```python
 from flask import Flask, request
@@ -57,7 +57,7 @@ Make sure to execute the command in the same directory as the script. If execute
 
 ![Flask app configured and listening](../img/flask_start.png)
 
-## The attack begins
+# The attack begins
 
 First things first, let's confirm the LFI by querying the classic `/etc/passwd`. If we look at the source code again, the app is trying to read from `/tmp` with the filename passed **directly** in to the expression without any sanitation. We only need a single `..` operator to access the file system root. So our malicious query will be:
 
@@ -69,13 +69,13 @@ curl 'localhost:5000/read?fn=../etc/passwd'
 
 Great! (or not so great *wink*) This means that we can now read all files in the system which can be read by the system account running the web app. An attacker can now try to read various configuration files that are presumably on default locations (on the file system) or other files of interest and gather as much as information to gain a foothold.
 
-### "/proc" structure
+## "/proc" structure
 
 - You can break down the entries into two major categories. One is **kernel (or system) information** and the other is **process specific information**.
 - The numbered directories you see are made for each process, thus containing process information. The number represents the process ID (PID) of each individual process.
 - The remaining directories and file-like objects contains kernel information (but there are 4 interesting exceptions which will be discussed below).
 - Another interesting fact is that `/proc` **occupies no disk space at all (or at least a very minimal amount)**, the kernel (or the system) generates the necessary information dynamically when programs access specific entries within `/proc`.
-- With the exception of a few entries, the contents of `/proc` are globally readable. But as an attacker, we only have to look at a few interesting entries.
+- Except for a few entries, the contents of `/proc` are globally readable. But as an attacker, we only have to look at a few interesting entries.
 
 ![Contents of /proc](../img/proc_contents.png)
 
@@ -87,7 +87,7 @@ This post will go over some entries briefly. You can read the complete documenta
 In this scenario, we are using an LFI vulnerability to read files off the system. We can read **entries (files or file-like objects)** in `/proc` and in other parts of the file system, but we cannot read **directories** which is the expected behavior. However, a capable attacker can automate a brute-force attack with a list of possible file/directory names to discover files in the file system.
 {% endnote %}
 
-### Kernel information
+## Kernel information
 
 - `/proc/cpuinfo`
   - Returns information regarding individual CPU cores available to the system. (Response can be quite long depending on the number of cores)
@@ -109,7 +109,7 @@ In this scenario, we are using an LFI vulnerability to read files off the system
 
 ![Response of /proc/partitions](../img/proc_partitions.png)
 
-As mentioned in [/proc structure](#proc-structure), there are few interesting links that are available within `/proc`. They are listed below:
+As mentioned in [/proc structure](#proc-structure), there are few interesting links that are available within `/proc`. Simply, they are ***magical*** links that automatically points to the process directory of the current process. They are listed below:
 
 - `/proc/self`
   - This is a *magical* link that automatically points to the relevant `/proc/<PID>/` **directories** of the processes that are currently accessing the entry. This was introduced as a convenient way of accessing own process information. Thus, it can be easily used in attacks such as LFI to quickly expose information about the current process without having to know the PID.
@@ -133,7 +133,7 @@ As mentioned in [/proc structure](#proc-structure), there are few interesting li
 
 ![Threads in my "Terminator" session](../img/proc_task.png)
 
-### Process information
+## Process information
 
 {% note info %}
 In this scenario, we can use the `/proc/self/` link to expose information about the web app process without guessing the PID. But it is possible to brute-force PID to find processes of interest.
@@ -173,7 +173,7 @@ In this scenario, we can use the `/proc/self/` link to expose information about 
 
 ![Content of /proc/self/fd/](../img/proc_fd.png)
 
-## Concluding thoughts
+# Concluding thoughts
 
 That's about it for my first blog post :) This post covered a few interesting locations in the Linux `/proc` file system that an attacker with some read access on the system during initial compromise or even during post exploitation phase can enumerate to uncover information. You can refer the links in the below sections for more information about the topic.
 
@@ -183,13 +183,13 @@ Thank you for reading **o7**
 
 ![Cat hacking the system](https://media.tenor.com/KmPFMGQ07-4AAAAd/hffgf.gif)
 
-## Extra reading
+# Extra reading
 
 - [Linux enumeration with read access only](https://idafchev.github.io/enumeration/2018/03/05/linux_proc_enum.html)
 - [Directory Traversal, File Inclusion, and The Proc File System](https://www.netspi.com/blog/technical/web-application-penetration-testing/directory-traversal-file-inclusion-proc-file-system/)
 
-## References
+# References
 
 [^1]: [The Linux Documentation Project](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html)
-[^2]: man 5 proc (in your terminal) or [man7 on the web](https://man7.org/linux/man-pages/man5/proc.5.html)
+[^2]: `man 5 proc` (in your terminal) or [man7 on the web](https://man7.org/linux/man-pages/man5/proc.5.html)
 [^3]: [LFI to RCE via /proc/*/fd](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/File%20Inclusion/README.md#lfi-to-rce-via-procfd)

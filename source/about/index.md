@@ -4,13 +4,13 @@ layout: about
 date: 2022-12-13 17:48:33
 excerpt: 'Who is this dude?'
 ---
-## comrade@Internet: $ whoami
+# comrade@Internet: $ whoami
 
 > *The Man Who Loves Tea*
 
 I'm an undergraduate, a wannabe red team operator, a programming hobbyist and a gamer from Sri Lanka. Currently working on studies, finding ways to wriggle into bug hunting **cyber bugs* ;) and maybe try making another C2 (Command & Control) framework because why not.
 
-## Contact and Links
+# Contact and Links
 
 - If you need to contact me, send an e-mail to: **aCursed_Comrade [at] proton.me**
 - You can find me on:
@@ -24,7 +24,7 @@ I'm an undergraduate, a wannabe red team operator, a programming hobbyist and a 
     - [HackTheBox](https://app.hackthebox.com/profile/719962)
     - [PwnTillDawn](https://online.pwntilldawn.com/Achievements/3351)
 
-## Support me
+# Support me
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L4L1LO1CI)
 

@@ -470,7 +470,7 @@ index:
   # 头图黑色蒙版的不透明度，available: 0 - 1.0， 1 是完全不透明
   # Opacity of the banner mask, 1.0 is completely opaque
   # Available: 0 - 1.0
-  banner_mask_alpha: 0.3
+  banner_mask_alpha: 0.4
 
   # 首页副标题的独立设置
   # Independent config of home page subtitle
@@ -534,7 +534,7 @@ index:
 post:
   banner_img: /img/homeworld2-station.jpg
   banner_img_height: 70
-  banner_mask_alpha: 0.3
+  banner_mask_alpha: 0.5
 
   # 文章在首页的默认封面图，当没有指定 index_img 时会使用该图片，若两者都为空则不显示任何图片
   # Path of the default post cover when `index_img` is not set. If both are empty, no image will be displayed
@@ -546,7 +546,7 @@ post:
     # 作者，优先根据 front-matter 里 author 字段，其次是 hexo 配置中 author 值
     # Author, based on `author` field in front-matter, if not set, based on `author` value in hexo config
     author:
-      enable: false
+      enable: true
 
     # 文章日期，优先根据 front-matter 里 date 字段，其次是 md 文件日期
     # Post date, based on `date` field in front-matter, if not set, based on create date of .md file
@@ -636,7 +636,7 @@ post:
 
     # 目录会选择这些节点作为标题
     # TOC will select these nodes as headings
-    headingSelector: "h1,h2,h3,h4"
+    headingSelector: "h1,h2,h3"
 
     # 层级的折叠深度，0 是全部折叠，大于 0 后如果存在下级标题则默认展开
     # Collapse depth. If 0, all headings collapsed. If greater than 0, it will be expanded by default if there are sub headings
@@ -888,7 +888,7 @@ giscus:
 archive:
   banner_img: /img/homeworld2-station.jpg
   banner_img_height: 60
-  banner_mask_alpha: 0.3
+  banner_mask_alpha: 0.4
 
 
 #---------------------------
@@ -899,7 +899,7 @@ category:
   enable: false
   banner_img: /img/homeworld2-station.jpg
   banner_img_height: 60
-  banner_mask_alpha: 0.3
+  banner_mask_alpha: 0.4
 
   # 分类的排序字段，前面带减号是倒序，不带减号是正序
   # Sort field for categories, with a minus sign is reverse order
@@ -928,7 +928,7 @@ tag:
   enable: true
   banner_img: /img/homeworld2-station.jpg
   banner_img_height: 80
-  banner_mask_alpha: 0.3
+  banner_mask_alpha: 0.4
   tagcloud:
     min_font: 15
     max_font: 30
@@ -945,7 +945,7 @@ about:
   enable: true
   banner_img: /img/homeworld2-station.jpg
   banner_img_height: 60
-  banner_mask_alpha: 0.3
+  banner_mask_alpha: 0.4
   avatar: https://www.gravatar.com/avatar/1e69fb742faa999b9a020d87b6f3991c?s=512
   name: "Loshana Aloka"
   intro: "InfoSec Student | Programming Hobbyist | Video Games"
@@ -967,7 +967,7 @@ about:
 page:
   banner_img: /img/homeworld2-station.jpg
   banner_img_height: 60
-  banner_mask_alpha: 0.3
+  banner_mask_alpha: 0.4
 
 
 #---------------------------
@@ -978,7 +978,7 @@ page404:
   enable: true
   banner_img: /img/homeworld2-station.jpg
   banner_img_height: 85
-  banner_mask_alpha: 0.3
+  banner_mask_alpha: 0.4
   # 重定向到首页的延迟(毫秒)
   # Delay in redirecting to home page (milliseconds)
   redirect_delay: 5000
@@ -992,7 +992,7 @@ links:
   enable: false
   banner_img: /img/homeworld2-station.jpg
   banner_img_height: 60
-  banner_mask_alpha: 0.3
+  banner_mask_alpha: 0.4
   # 友链的成员项
   # Member item of page
   items:
