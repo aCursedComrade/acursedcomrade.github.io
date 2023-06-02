@@ -1,9 +1,9 @@
 ---
 title: '"/proc" file system | Enumerating for a foothold'
 tags:
-    - linux
-    - ctf
-    - attack
+  - linux
+  - ctf
+  - attack
 date: 2023-03-30 12:00:00
 excerpt: "A look into the \"/proc\" file system and how can an adversary leverage it for enumeration."
 banner_img: /img/proc_contents.png
@@ -25,28 +25,28 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Hello there!\n'
+  return 'Hello there!\n'
 
 @app.route('/read')
 def read():
-    file = request.args.get('fn')
-    with open(f'/tmp/{file}', 'rb') as f: # Classic LFI
-        data = f.read()
-        return data
+  file = request.args.get('fn')
+  with open(f'/tmp/{file}', 'rb') as f: # Classic LFI
+    data = f.read()
+    return data
 
 if __name__ == '__main__':
-    app.run()
+  app.run()
 ```
 
 If you haven't already installed the **Flask** library, you can do so by executing the command:
 
-```shell
+```bash
 pip install Flask
 ```
 
 For demonstration, I'm using the `export` command to create a few environment variables before we run the application. To do this and run the script, we can execute the following:
 
-```shell
+```bash
 export SOME_VAR="aVariableHere" \
 SECRET="YouShouldntBeReadingThis" \
 VERSION="6.9.0" \
@@ -61,7 +61,7 @@ Make sure to execute the command in the same directory as the script. If execute
 
 First things first, let's confirm the LFI by querying the classic `/etc/passwd`. If we look at the source code again, the app is trying to read from `/tmp` with the filename passed **directly** in to the expression without any sanitation. We only need a single `..` operator to access the file system root. So our malicious query will be:
 
-```shell
+```bash
 curl 'localhost:5000/read?fn=../etc/passwd'
 ```
 
@@ -191,5 +191,7 @@ Thank you for reading **o7**
 # References
 
 [^1]: [The Linux Documentation Project](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html)
+
 [^2]: `man 5 proc` (in your terminal) or [man7 on the web](https://man7.org/linux/man-pages/man5/proc.5.html)
+
 [^3]: [LFI to RCE via /proc/*/fd](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/File%20Inclusion/README.md#lfi-to-rce-via-procfd)
