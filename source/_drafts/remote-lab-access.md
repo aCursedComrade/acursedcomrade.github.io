@@ -3,6 +3,7 @@ title: Pocket home lab | Setting up remote access to your home lab
 tags:
   - home-lab
   - networking
+excerpt: My experience on setting up remote access to my home lab with ZeroTier as a beginner and other possible alternatives.
 photos:
   - /img/proxmox_dashboard.png
 ---
@@ -163,6 +164,8 @@ And that's the proxy manager configuration for my environment. You may need to d
 Now I can easily access my web panels by using a nice *little* URL on my browser and join my internal VPN to play around with my cyber playground as long as I am connected to my ZeroTier network.
 
 ![Using domains to access the web panels](../img/proxy_host_view.png)
+
+![OpenVPN port status](../img/proxy_openvpn.png)
 
 Nginx proxy manager has been pretty helpful to me as a beginner. The GUI has more options available inline with what Nginx has to offer, but one might need to manually configure their Nginx instance to fine tune all the options it has to offer.
 

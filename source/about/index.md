@@ -2,7 +2,7 @@
 title: About
 type: about
 date: 2022-12-13 17:48:33
-excerpt: 'Who is this dude?'
+excerpt_description: 'Who is this dude?'
 comments: false
 toc:
   enable: false

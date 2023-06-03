@@ -5,14 +5,13 @@ tags:
   - ctf
   - attack
 date: 2023-03-30 12:00:00
+excerpt: A quick dive into the `/proc` file system and how can an adversary leverage it for enumeration during an attack chain.
 photos:
   - /img/proc_contents.png
 ---
 # What is "/proc"?
 
 The `proc` file system, which usually lies in `/proc` directory of a Linux system, contains information about the runtime of the system and all processes on the system. This information is stored in the form of files or file-like objects which can be read from using simple text readers such `cat` or `grep` and can be modified by high-privileged users and processes for different purposes.
-
-<!-- more -->
 
 If let's say a vulnerability like **LFI (Local File Inclusion)**, **command injection** or similar exists on a web app, which provides an attacker with read access on the target system. This exposes the `/proc` file system and most likely sensitive information alongside of it. This is something I can personally relate to when solving CTF machines.
 

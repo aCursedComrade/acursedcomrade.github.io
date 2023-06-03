@@ -337,8 +337,8 @@ preconnect: true
 # Set the text alignment in posts / pages.
 text_align:
   # Available values: start | end | left | right | center | justify | justify-all | match-parent
-  desktop: justify-all
-  mobile: justify-all
+  desktop: justify
+  mobile: justify
 
 # Reduce padding / margin indents on devices with narrow width.
 mobile_layout_economy: true
