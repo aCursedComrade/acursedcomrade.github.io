@@ -1,8 +1,11 @@
 ---
 title: About
-layout: about
+type: about
 date: 2022-12-13 17:48:33
 excerpt: 'Who is this dude?'
+comments: false
+toc:
+  enable: false
 ---
 # comrade@Internet: $ whoami
 

@@ -3,25 +3,26 @@ title: Pocket home lab | Setting up remote access to your home lab
 tags:
   - home-lab
   - networking
-excerpt: A guide on how I manage to set up a virtual network with remote access and a proxy to forward internal services on my home lab.
-banner_img: /img/proxmox_dashboard.png
-index_img: /img/proxmox_dashboard.png
+photos:
+  - /img/proxmox_dashboard.png
 ---
 # Home lab on the go
 
-It is a common habit to have your own home lab among many professionals and enthusiasts in the IT field. Whether it is about hosting your content to serve the internet or tinkering with networks and applications, a home lab can be your workplace or your playground. There are different approaches to implement a home lab depending on the resources an individual own. A cloud platform can be used to effortlessly create your assets but with rising cost depending on the scale or by using decent or accessible hardware to set up from scratch in a physical location you can access, like your home.
+It is a common habit to have your own home lab among many professionals and enthusiasts in the IT field. Whether it is about hosting your content to serve the internet or tinkering with networks and applications, a home lab can be your workplace or your playground. There are different approaches to implementing a home lab depending on the resources available. Cloud platforms can be effortlessly used to create assets but costs increase relative to scale. Alternatively one can use accessible hardware to set up in an available physical location.
+
+<!-- more -->
 
 When implemented, you need to be able to access the lab environment in order to manage assets or to interact with internal services. Cloud platforms provide easy methods to expose and define access controls to your assets that sits on the "edge". When working with your own hardware however, you need to manually integrate your infrastructure and assets with services like site-to-site VPNs or SD-WANs to achieve this goal. In addition, some external factors may affect your implementation. Such as [Carrier-grade NAT (CGNAT)](https://www.a10networks.com/glossary/what-is-carrier-grade-nat-cgn-cgnat/) used by ISPs which doesn't allow peer-to-peer connections. It is possible to allocate a public IP for your infrastructure, but there are alternative technologies that can help you to circumvent limitations of CGNAT.
 
 This blog post covers how I configured secure remote access with my home lab with the help of [**ZeroTier**](https://www.zerotier.com/) and using a forward proxy to assign a domain and define port forwards for internal services. This is a beginner set up which I used to learn much about networking.
 
 {% note info %}
-This blog is about interconnecting the infrastructure, I won't be covering how to start your own home lab from scratch. However, there are **lots of resources**[^1] to get started out there already. Also, huge kudos to [**@0xBEN**](https://twitter.com/_0xBEN_?s=20) for his resources that helped me get started with mine.
+This blog is about interconnecting the infrastructure, I won't be covering how to start your own home lab from scratch. However, there are lots of resources to get started out there already. Also, huge kudos to [**@0xBEN**](https://twitter.com/_0xBEN_?s=20) for his resources that helped me get started with mine.
 {% endnote %}
 
 # Connecting the nodes
 
-My home lab layout is based on **[@0xBEN's](https://twitter.com/_0xBEN_?s=20) Proxmox VE guide**[^1] which was used as the foundation for building my home lab, and therefore I will be quoting some content from his blog with his permission to demonstrate the network layout. Before continuing further, below diagram shows our home lab layout:
+My home lab layout is based on **[@0xBEN's](https://twitter.com/_0xBEN_?s=20) Proxmox VE guide** (see references) which was used as the foundation for building my home lab, and therefore I will be quoting some content from his blog with his permission to demonstrate the network layout. Before continuing further, below diagram shows our home lab layout:
 
 ![Proxmox VE home lab layout by 0xBEN](https://benheater.com/content/images/size/w1000/2022/04/db2f4287d59d4536b8ffccd81a8b7e85-1.png)
 
@@ -29,13 +30,13 @@ As of writing this blog post, my home lab layout is similar to what's shown in t
 
 ![Facts](https://i.imgflip.com/f4d4h.jpg)
 
-My goal is simple, I need to be able to talk with the following 3 nodes in order to properly work with my homelab:
+My goal is simple, I need to be able to talk with the following 3 nodes in order to properly work with my home lab:
 
 - **Proxmox hypervisor**: To manage the virtual infrastructure.
 - **Virtual pfSense firewall**: In addition to firewall services, this is also used as a OpenVPN server to access VMs on `vmbr1` (Security) vSwitch. Has access to home LAN.
 - **A utility VM**: Running bare-bones Arch Linux, my plan is to use this VM to host certain services that I may find useful (discussed later in this post). Has access to home LAN.
 
-0xBEN's guide[^1] showcases the **dynamic DNS** method to set up remote access. But this was not the case for me due to CGNAT limitations on my ISP connection. On my quest for an alternative, I received many suggestions for what I could use to bring my infrastructure together. Here are 4 services (in no particular order) that were suggested mostly:
+0xBEN's guide showcases the **dynamic DNS** method to set up remote access. But this was not the case for me due to CGNAT limitations on my ISP connection. On my quest for an alternative, I received many suggestions for what I could use to bring my infrastructure together. Here are 4 services (in no particular order) that were suggested mostly:
 
 - [**ZeroTier**](https://www.zerotier.com/)
 - [**Tailscale**](https://tailscale.com/)
@@ -119,9 +120,9 @@ I initially used the Proxmox node as a proxy (*by using the `ssh -R` option to c
 
 At this point, my attention went towards [**Nginx**](https://nginx.org/en/) as this is a perfect scenario to set it up on the utility VM. It can act as a reverse proxy to serve internal services or forward TCP/UDP connections to internal services. But we still need a DNS or domain service to make it easier to access web content.
 
-This is when I found a nice video[^2] that covers [**Nginx proxy manager project**](https://nginxproxymanager.com/) which can streamline the usage of nginx and easily assign a domain with verifiable security (SSL) including to hosts which are not exposed to the internet. I recommend watching the video for detailed steps, and my changes to its configuration is listed below.
+This is when I found a nice video that covers [**Nginx proxy manager project**](https://nginxproxymanager.com/) which can streamline the usage of nginx and easily assign a domain with verifiable security (SSL) including to hosts which are not exposed to the internet. I recommend watching the video for detailed steps, and my changes to its configuration is listed below.
 
-[![Nginx proxy manager](https://img.youtube.com/vi/qlcVx-k-02E/hqdefault.jpg)](https://youtu.be/qlcVx-k-02E)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qlcVx-k-02E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Nginx Proxy Manager
 
@@ -173,6 +174,6 @@ I would like to thank [**@0xBEN**](https://twitter.com/_0xBEN_?s=20) again for h
 
 # References
 
-[^1]: [Proxmox VE 7: Converting a Laptop into a Bare Metal Server by 0xBEN](https://benheater.com/bare-metal-proxmox-laptop/)
-
-[^2]: [Setting up a reverse proxy and SSL for your home lab](https://youtu.be/qlcVx-k-02E)
+{% button https://benheater.com/bare-metal-proxmox-laptop/, Proxmox VE 7: Converting a Laptop into a Bare Metal Server by 0xBEN, globe fa-fw fa-lg %}
+<br>
+{% button https://youtu.be/qlcVx-k-02E, Setting up a reverse proxy and SSL for your home lab, youtube fa-fw fa-lg %}

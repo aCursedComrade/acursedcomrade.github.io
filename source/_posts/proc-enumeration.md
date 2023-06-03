@@ -5,13 +5,14 @@ tags:
   - ctf
   - attack
 date: 2023-03-30 12:00:00
-excerpt: "A look into the \"/proc\" file system and how can an adversary leverage it for enumeration."
-banner_img: /img/proc_contents.png
-index_img: /img/proc_contents.png
+photos:
+  - /img/proc_contents.png
 ---
 # What is "/proc"?
 
 The `proc` file system, which usually lies in `/proc` directory of a Linux system, contains information about the runtime of the system and all processes on the system. This information is stored in the form of files or file-like objects which can be read from using simple text readers such `cat` or `grep` and can be modified by high-privileged users and processes for different purposes.
+
+<!-- more -->
 
 If let's say a vulnerability like **LFI (Local File Inclusion)**, **command injection** or similar exists on a web app, which provides an attacker with read access on the target system. This exposes the `/proc` file system and most likely sensitive information alongside of it. This is something I can personally relate to when solving CTF machines.
 
@@ -79,8 +80,8 @@ Great! (or not so great *wink*) This means that we can now read all files in the
 
 ![Contents of /proc](../img/proc_contents.png)
 
-{% note success %}
-This post will go over some entries briefly. You can read the complete documentation for the `/proc` file system and its entries from the **Linux documentation**[^1] or **man pages**[^2] in your own terminal. More links are available at the end of the post.
+{% note info %}
+This post will go over some entries briefly. You can read the complete documentation for the `/proc` file system and its entries from the **Linux documentation** or **man pages** (see references) in your own terminal. More links are available at the end of the post.
 {% endnote %}
 
 {% note info %}
@@ -115,7 +116,7 @@ As mentioned in [/proc structure](#proc-structure), there are few interesting li
   - This is a *magical* link that automatically points to the relevant `/proc/<PID>/` **directories** of the processes that are currently accessing the entry. This was introduced as a convenient way of accessing own process information. Thus, it can be easily used in attacks such as LFI to quickly expose information about the current process without having to know the PID.
 
 - `/proc/mounts`
-  - Like `/proc/self`, this link points to the `/proc/<PID>/mounts` entry of the own process. This contains information about the file system mounts that are accessible by the process (Refer `/proc/mounts` in man pages[^2]). This can include network shares that are mounted on the system.
+  - Like `/proc/self`, this link points to the `/proc/<PID>/mounts` entry of the own process. This contains information about the file system mounts that are accessible by the process (Refer `/proc/mounts` in man pages). This can include network shares that are mounted on the system.
   - For example, below you can see a mount that is created by [KDE Connect](https://kdeconnect.kde.org/) that is exposing some folders in my android device. In the next screenshot, I'm accessing the `Documents/message.txt` within that share which is an example of information disclosure.
 
 ![Response of /proc/mounts](../img/proc_mounts.png)
@@ -123,7 +124,7 @@ As mentioned in [/proc structure](#proc-structure), there are few interesting li
 ![Secrets exposed!!!](../img/secret_message.png)
 
 - `/proc/net/`
-  - Like `/proc/mounts`, this link points to the `/proc/<PID>/net/` **directory** of the own process. The entries within this directory hold different kinds of information about the networking stack that is accessible by the process (Refer `/proc/net` in man pages[^2]).
+  - Like `/proc/mounts`, this link points to the `/proc/<PID>/net/` **directory** of the own process. The entries within this directory hold different kinds of information about the networking stack that is accessible by the process (Refer `/proc/net` in man pages).
   - For example, the `arp` entry holds the ARP cache of the system which can be used to discover internal hosts of the network and interface names that are useful to know in some cases. `tcp` and `udp` entries have relevant connections that are established or listening on the system (in hex format).
 
 ![Response of /proc/net/arp](../img/proc_net_arp.png)
@@ -169,7 +170,7 @@ In this scenario, we can use the `/proc/self/` link to expose information about 
 ![Content of /proc/self/exe](../img/proc_exe.png)
 
 - `/proc/<PID>/fd/`
-  - This **directory** contains symbolic links to each file that is open in the process, named using numbers (Numbers correlate to the entries in the `fdinfo/` directory). Except the first three; 0, 1, 2 which are stdin, stdout and stderr respectively, files can be queried to view thier contents which may contain important information. Sometimes it can be used to execute code in the context of the web app[^3].
+  - This **directory** contains symbolic links to each file that is open in the process, named using numbers (Numbers correlate to the entries in the `fdinfo/` directory). Except the first three; 0, 1, 2 which are stdin, stdout and stderr respectively, files can be queried to view thier contents which may contain important information. Sometimes it can be used to execute code in the context of the web app (see references).
 
 ![Content of /proc/self/fd/](../img/proc_fd.png)
 
@@ -190,8 +191,8 @@ Thank you for reading **o7**
 
 # References
 
-[^1]: [The Linux Documentation Project](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html)
-
-[^2]: `man 5 proc` (in your terminal) or [man7 on the web](https://man7.org/linux/man-pages/man5/proc.5.html)
-
-[^3]: [LFI to RCE via /proc/*/fd](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/File%20Inclusion/README.md#lfi-to-rce-via-procfd)
+{% button https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html, The Linux Documentation Project, globe fa-fw fa-lg %}
+<br>
+{% button https://man7.org/linux/man-pages/man5/proc.5.html, man7 on the web, globe fa-fw fa-lg %}
+<br>
+{% button https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/File%20Inclusion/README.md#lfi-to-rce-via-procfd, LFI to RCE via /proc/*/fd, globe fa-fw fa-lg %}
