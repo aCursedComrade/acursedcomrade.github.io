@@ -15,8 +15,6 @@ And that’s about it for this post. You can take a look at the about page for m
     <title>&quot;/proc&quot; file system | Enumerating for a foothold</title>
     <url>/2023/03/proc-enumeration/</url>
     <content><![CDATA[What is “&#x2F;proc”?The proc file system, which usually lies in /proc directory of a Linux system, contains information about the runtime of the system and all processes on the system. This information is stored in the form of files or file-like objects which can be read from using simple text readers such cat or grep and can be modified by high-privileged users and processes for different purposes.
-
-
 If let’s say a vulnerability like LFI (Local File Inclusion), command injection or similar exists on a web app, which provides an attacker with read access on the target system. This exposes the /proc file system and most likely sensitive information alongside of it. This is something I can personally relate to when solving CTF machines.
 A little scenarioThroughout this post, I will be using a small python Flask app that is deliberately vulnerable to an LFI to demonstrate the attack vector. The code for the web app is given below, make sure to run it in a contained environment:
 from flask import Flask, requestapp = Flask(__name__)@app.route(&#x27;/&#x27;)def index():  return &#x27;Hello there!\n&#x27;@app.route(&#x27;/read&#x27;)def read():  file = request.args.get(&#x27;fn&#x27;)  with open(f&#x27;/tmp/&#123;file&#125;&#x27;, &#x27;rb&#x27;) as f: # Classic LFI    data = f.read()    return dataif __name__ == &#x27;__main__&#x27;:  app.run()
