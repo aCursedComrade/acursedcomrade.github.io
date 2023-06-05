@@ -447,13 +447,14 @@ font:
   # Font settings for posts (.post-body).
   posts:
     external: true
-    family: Montserrat
-    size: 0.9
+    family: Roboto
+    size: 0.7
 
   # Font settings for <code> and code blocks.
   codes:
     external: true
     family: Fira Code
+    size: 0.7
 
 
 # ---------------------------------------------------------------
