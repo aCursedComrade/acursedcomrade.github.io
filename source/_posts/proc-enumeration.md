@@ -190,8 +190,6 @@ Thank you for reading **o7**
 
 # References
 
-{% button https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html, The Linux Documentation Project, globe fa-fw fa-lg %}
-<br>
-{% button https://man7.org/linux/man-pages/man5/proc.5.html, man7 on the web, globe fa-fw fa-lg %}
-<br>
-{% button https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/File%20Inclusion/README.md#lfi-to-rce-via-procfd, LFI to RCE via /proc/*/fd, globe fa-fw fa-lg %}
+1. [The Linux Documentation Project](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html)
+2. [man7 on the web](https://man7.org/linux/man-pages/man5/proc.5.html)
+3. [LFI to RCE via /proc/*/fd](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/File%20Inclusion/README.md#lfi-to-rce-via-procfd)

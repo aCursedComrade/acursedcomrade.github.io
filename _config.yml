@@ -117,6 +117,15 @@ feed:
   order_by: -date
   autodiscovery: true
 
+symbols_count_time:
+  symbols: false
+  time: true
+  total_symbols: false
+  total_time: true
+  exclude_codeblock: false
+  wpm: 275
+  suffix: "mins."
+
 filter_optimize:
   enable: true
   # static resource versioning
