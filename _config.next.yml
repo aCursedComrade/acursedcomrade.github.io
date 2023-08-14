@@ -96,14 +96,11 @@ open_graph:
 # Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
 # External url should start with http:// or https://
 menu:
-  home: / || fa fa-home
-  about: /about/ || fa fa-user
-  tags: /tags/ || fa fa-tags
-  #categories: /categories/ || fa fa-th
-  archives: /archives/ || fa fa-archive
-  #schedule: /schedule/ || fa fa-calendar
-  #sitemap: /sitemap.xml || fa fa-sitemap
-  #commonweal: /404/ || fa fa-heartbeat
+  Home: / || fa fa-home
+  About: /about/ || fa fa-user
+  Resume: https://flowcv.com/resume/mmvk34il0j || fa fa-book
+  Archives: /archives/ || fa fa-archive
+  Tags: /tags/ || fa fa-tags
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -160,7 +157,7 @@ social:
   Mastodon: https://wetdry.world/@aCursedComrade || fab fa-mastodon
   LinkedIn: https://www.linkedin.com/in/loshana-aloka/ || fab fa-linkedin
   E-Mail: mailto:aCursed_Comrade@proton.me || fa fa-envelope
-  RSS: /rss.xml || fab fa-rss
+  RSS: /rss.xml || fa fa-rss
 
 social_icons:
   enable: true
@@ -416,7 +413,7 @@ github_banner:
 # ---------------------------------------------------------------
 
 font:
-  enable: enable
+  enable: true
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
   host:
@@ -464,10 +461,10 @@ font:
 
 # If true, site-subtitle will be added to the title of index page.
 # Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
-index_with_subtitle: false
+index_with_subtitle: true
 
 # Automatically add external URL with Base64 encrypt & decrypt.
-exturl: false
+exturl: true
 # If true, an icon will be attached to each external URL
 exturl_icon: true
 
@@ -569,11 +566,11 @@ math:
 
 # Easily enable fast Ajax navigation on your website.
 # For more information: https://github.com/next-theme/pjax
-pjax: false
+pjax: true
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox/
-fancybox: false
+fancybox: true
 
 # Medium Zoom is a JavaScript library for zooming images like Medium.
 # Warning: Do not enable both `fancybox` and `mediumzoom`.
@@ -582,7 +579,7 @@ mediumzoom: false
 
 # Vanilla JavaScript plugin for lazyloading images.
 # For more information: https://apoorv.pro/lozad.js/demo/
-lazyload: false
+lazyload: true
 
 # Automatically insert whitespace between CJK and half-width characters.
 # For more information: https://github.com/vinta/pangu.js
@@ -593,7 +590,7 @@ pangu: false
 # For more information: https://getquick.link
 # Front-matter variable (nonsupport home archive).
 quicklink:
-  enable: false
+  enable: true
 
   # Home page and archive page can be controlled through home and archive options below.
   # This configuration item is independent of `enable`.
@@ -603,7 +600,7 @@ quicklink:
   # Default (true) will initialize quicklink after the load event fires.
   delay: true
   # Custom a time in milliseconds by which the browser must execute prefetching.
-  timeout: 3000
+  timeout: 1000
   # Default (true) will attempt to use the fetch() API if supported (rather than link[rel=prefetch]).
   priority: true
 
@@ -616,7 +613,7 @@ quicklink:
 # For more information: https://animate.style
 motion:
   enable: true
-  async: false
+  async: true
   transition:
     # All available transition variants: https://theme-next.js.org/animate/
     menu_item: fadeInDown

@@ -121,7 +121,7 @@ symbols_count_time:
   symbols: false
   time: true
   total_symbols: false
-  total_time: true
+  total_time: false
   exclude_codeblock: false
   wpm: 275
   suffix: "mins."

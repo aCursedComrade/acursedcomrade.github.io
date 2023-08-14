@@ -15,12 +15,12 @@ Hey there! I'm an infosec student trying to specialize in red team security and 
 
 # Contact and Links
 
-- If you need to contact me, send an e-mail to: **aCursed_Comrade [at] proton.me**
+- If you need to contact me, send an e-mail to: **acursed_comrade [at] proton.me**
 - You can find me on:
   - [GitHub](https://github.com/aCursedComrade)
   - [Twitter](https://twitter.com/aCursed_Comrade)
   - [LinkedIn](https://www.linkedin.com/in/loshana-aloka/)
-  - [Mastodon](https://wetdry.world/@aCursedComrade)
+  - [Mastodon](https://lethallava.land/@acursedcomrade)
   - Discord
   - CTF:
     - [TryHackMe](https://tryhackme.com/p/aCursedComrade)
