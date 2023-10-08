@@ -4,7 +4,7 @@
 
 # Site
 title: Comrade's Blog
-subtitle: Just another random blog 
+subtitle: Ramblings of an infosec student
 description: Infosec Student | Programming Hobbyist | Video Games
 keywords: infosec, programming, ctf
 author: Loshana Aloka
@@ -13,7 +13,7 @@ timezone: 'Asia/Colombo'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://acursedcomrade.github.io/
+url: https://comradelab.win/
 permalink: :year/:month/:name/
 permalink_defaults:
 pretty_urls:
@@ -122,9 +122,9 @@ symbols_count_time:
   time: true
   total_symbols: false
   total_time: false
-  exclude_codeblock: false
+  exclude_codeblock: true
   wpm: 275
-  suffix: "mins."
+  suffix: "minutes"
 
 filter_optimize:
   enable: true
@@ -147,7 +147,7 @@ filter_optimize:
     minify: true
     excludes:
     # remove the comments in each of the js files
-    remove_comments: false
+    remove_comments: true
   html:
     # minify all html files
     minify: true

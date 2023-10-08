@@ -8,7 +8,7 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "7.0.0-rc2"
+    "version": "7.0.0-rc1"
   },
   "dependencies": {
     "css": "^3.0.0",

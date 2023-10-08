@@ -1,9 +1,3 @@
-# ===============================================================
-# It's recommended to use Alternate Theme Config to configure NexT
-# Modifying this file may result in merge conflict
-# See: https://theme-next.js.org/docs/getting-started/configuration
-# ===============================================================
-
 # ---------------------------------------------------------------
 # Theme Core Configuration Settings
 # See: https://theme-next.js.org/docs/theme-settings/
@@ -19,7 +13,7 @@ minify: true
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
-  #head: source/_data/head.njk
+  head: source/_data/head.njk
   #header: source/_data/header.njk
   #sidebar: source/_data/sidebar.njk
   #postMeta: source/_data/post-meta.njk
@@ -154,9 +148,9 @@ site_state: true
 social:
   GitHub: https://github.com/aCursedComrade || fab fa-github
   Twitter: https://twitter.com/aCursed_Comrade || fab fa-twitter
-  Mastodon: https://wetdry.world/@aCursedComrade || fab fa-mastodon
+  Mastodon: https://infosec.exchange/@acursedcomrade || fab fa-mastodon
   LinkedIn: https://www.linkedin.com/in/loshana-aloka/ || fab fa-linkedin
-  E-Mail: mailto:aCursed_Comrade@proton.me || fa fa-envelope
+  E-Mail: mailto:acursed_comrade@proton.me || fa fa-envelope
   RSS: /rss.xml || fa fa-rss
 
 social_icons:
@@ -579,18 +573,18 @@ mediumzoom: false
 
 # Vanilla JavaScript plugin for lazyloading images.
 # For more information: https://apoorv.pro/lozad.js/demo/
-lazyload: true
+lazyload: false
 
 # Automatically insert whitespace between CJK and half-width characters.
 # For more information: https://github.com/vinta/pangu.js
 # Server-side plugin: https://github.com/next-theme/hexo-pangu
-pangu: false
+pangu: true
 
 # Prefetch links based on what is in the user's viewport.
 # For more information: https://getquick.link
 # Front-matter variable (nonsupport home archive).
 quicklink:
-  enable: true
+  enable: false
 
   # Home page and archive page can be controlled through home and archive options below.
   # This configuration item is independent of `enable`.
@@ -613,7 +607,7 @@ quicklink:
 # For more information: https://animate.style
 motion:
   enable: true
-  async: true
+  async: false
   transition:
     # All available transition variants: https://theme-next.js.org/animate/
     menu_item: fadeInDown
