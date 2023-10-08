@@ -6,7 +6,7 @@
   <link href="https://comradelab.win/rss.xml" rel="self"/>
   
   <link href="https://comradelab.win/"/>
-  <updated>2023-10-08T19:24:35.012Z</updated>
+  <updated>2023-10-08T19:46:59.472Z</updated>
   <id>https://comradelab.win/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://comradelab.win/2023/06/remote-lab-access/"/>
     <id>https://comradelab.win/2023/06/remote-lab-access/</id>
     <published>2023-06-05T11:17:46.000Z</published>
-    <updated>2023-10-08T19:24:35.012Z</updated>
+    <updated>2023-10-08T19:46:59.472Z</updated>
     
     
     <summary type="html">My experience on setting up remote access to my home lab with ZeroTier as a beginner and other possible alternatives.</summary>
@@ -40,7 +40,7 @@
     <link href="https://comradelab.win/2023/03/proc-enumeration/"/>
     <id>https://comradelab.win/2023/03/proc-enumeration/</id>
     <published>2023-03-30T06:30:00.000Z</published>
-    <updated>2023-10-08T19:24:35.012Z</updated>
+    <updated>2023-10-08T19:46:59.472Z</updated>
     
     
     <summary type="html">A quick dive into the `/proc` file system and how can an adversary leverage it for enumeration during an attack chain.</summary>
@@ -61,7 +61,7 @@
     <link href="https://comradelab.win/2022/12/hello/"/>
     <id>https://comradelab.win/2022/12/hello/</id>
     <published>2022-12-13T14:58:00.000Z</published>
-    <updated>2023-10-08T19:24:35.012Z</updated>
+    <updated>2023-10-08T19:46:59.472Z</updated>
     
     
     <summary type="html">The birth of Comrade&#39;s Blog.</summary>
