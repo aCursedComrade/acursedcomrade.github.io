@@ -5,7 +5,7 @@
 # Site
 title: Comrade's Blog
 subtitle: Ramblings of an infosec student
-description: Infosec Student | Programming Hobbyist | Video Games
+description: Infosec Student | Programming Hobbyist
 keywords: infosec, programming, ctf
 author: Loshana Aloka
 language: en
@@ -13,7 +13,7 @@ timezone: 'Asia/Colombo'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://comradelab.win/
+url: https://comradelab.win/blog/
 permalink: :year/:month/:name/
 permalink_defaults:
 pretty_urls:

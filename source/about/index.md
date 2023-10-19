@@ -7,7 +7,7 @@ comments: false
 toc:
   enable: false
 ---
-# comrade@Internet: $ whoami
+# comrade@internet: $ whoami
 
 > *The Man Who Loves Tea*
 
@@ -15,7 +15,8 @@ Hey there! I'm an infosec student trying to specialize in red team security and 
 
 # Contact and Links
 
-- If you need to contact me, send an e-mail to: **acursed_comrade [at] proton.me**
+- If you need to contact me, send an e-mail to: <a href="mailto:acursed_comrade@proton.me">acursed_comrade@proton.me</a>
+- View my CV on [Flowcv](https://flowcv.com/resume/mmvk34il0j)
 - You can find me on:
   - [GitHub](https://github.com/aCursedComrade)
   - [Twitter](https://twitter.com/aCursed_Comrade)

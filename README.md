@@ -1,2 +1,4 @@
 # acursedcomrade.github.io
-Powered by [Hexo](https://hexo.io/)
+
+- My personal site
+- Powered by [Hexo](https://hexo.io/)
