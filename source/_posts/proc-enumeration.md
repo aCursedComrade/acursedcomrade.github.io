@@ -55,7 +55,7 @@ DB_URL='mysql://dbuser:P@$$w0rd@localhost/webapp'; flask --app app run
 
 Make sure to execute the command in the same directory as the script. If executed successfully, our vulnerable web app should be listening for new connections.
 
-![Flask app configured and listening](../img/flask_start.png)
+![Flask app configured and listening](/img/flask_start.png)
 
 # The attack begins
 
@@ -65,7 +65,7 @@ First things first, let's confirm the LFI by querying the classic `/etc/passwd`.
 curl 'localhost:5000/read?fn=../etc/passwd'
 ```
 
-![The content of /etc/passwd as the response](../img/flask_etc_passwd.png)
+![The content of /etc/passwd as the response](/img/flask_etc_passwd.png)
 
 Great! (or not so great *wink*) This means that we can now read all files in the system which can be read by the system account running the web app. An attacker can now try to read various configuration files that are presumably on default locations (on the file system) or other files of interest and gather as much as information to gain a foothold.
 
@@ -77,7 +77,7 @@ Great! (or not so great *wink*) This means that we can now read all files in the
 - Another interesting fact is that `/proc` **occupies no disk space at all (or at least a very minimal amount)**, the kernel (or the system) generates the necessary information dynamically when programs access specific entries within `/proc`.
 - Except for a few entries, the contents of `/proc` are globally readable. But as an attacker, we only have to look at a few interesting entries.
 
-![Contents of /proc](../img/proc_contents.png)
+![Contents of /proc](/img/proc_contents.png)
 
 {% note info %}
 This post will go over some entries briefly. You can read the complete documentation for the `/proc` file system and its entries from the **Linux documentation** or **man pages** (see references) in your own terminal. More links are available at the end of the post.
@@ -92,22 +92,22 @@ In this scenario, we are using an LFI vulnerability to read files off the system
 - `/proc/cpuinfo`
   - Returns information regarding individual CPU cores available to the system. (Response can be quite long depending on the number of cores)
 
-![Response of /proc/cpuinfo (truncated)](../img/proc_cpuinfo.png)
+![Response of /proc/cpuinfo (truncated)](/img/proc_cpuinfo.png)
 
 - `/proc/meminfo`
   - Returns information about the system memory. This includes total memory, used memory, free memory, etc.
 
-![Response of /proc/meminfo (truncated)](../img/proc_meminfo.png)
+![Response of /proc/meminfo (truncated)](/img/proc_meminfo.png)
 
 - `/proc/version`
   - Returns the kernel version information.
 
-![Response of /proc/version](../img/proc_version.png)
+![Response of /proc/version](/img/proc_version.png)
 
 - `/proc/partitions`
   - Returns the partition table known to the system.
 
-![Response of /proc/partitions](../img/proc_partitions.png)
+![Response of /proc/partitions](/img/proc_partitions.png)
 
 As mentioned in [/proc structure](#proc-structure), there are few interesting links that are available within `/proc`. Simply, they are ***magical*** links that automatically points to the process directory of the current process. They are listed below:
 
@@ -118,20 +118,20 @@ As mentioned in [/proc structure](#proc-structure), there are few interesting li
   - Like `/proc/self`, this link points to the `/proc/<PID>/mounts` entry of the own process. This contains information about the file system mounts that are accessible by the process (Refer `/proc/mounts` in man pages). This can include network shares that are mounted on the system.
   - For example, below you can see a mount that is created by [KDE Connect](https://kdeconnect.kde.org/) that is exposing some folders in my android device. In the next screenshot, I'm accessing the `Documents/message.txt` within that share which is an example of information disclosure.
 
-![Response of /proc/mounts](../img/proc_mounts.png)
+![Response of /proc/mounts](/img/proc_mounts.png)
 
-![Secrets exposed!!!](../img/secret_message.png)
+![Secrets exposed!!!](/img/secret_message.png)
 
 - `/proc/net/`
   - Like `/proc/mounts`, this link points to the `/proc/<PID>/net/` **directory** of the own process. The entries within this directory hold different kinds of information about the networking stack that is accessible by the process (Refer `/proc/net` in man pages).
   - For example, the `arp` entry holds the ARP cache of the system which can be used to discover internal hosts of the network and interface names that are useful to know in some cases. `tcp` and `udp` entries have relevant connections that are established or listening on the system (in hex format).
 
-![Response of /proc/net/arp](../img/proc_net_arp.png)
+![Response of /proc/net/arp](/img/proc_net_arp.png)
 
 - `/proc/threads-self`
   - Like the above magic links, this points to the relevant `/proc/<PID>/task/<TID>/` **(process thread) directory** of the own process, if it is being accessed by a thread. The TID here is similar to a PID and threads are accessible via `/proc/<TID>` as well. However, threads are different from processes in computing.
 
-![Threads in my "Terminator" session](../img/proc_task.png)
+![Threads in my "Terminator" session](/img/proc_task.png)
 
 ## Process information
 
@@ -142,36 +142,36 @@ In this scenario, we can use the `/proc/self/` link to expose information about 
 - `/proc/<PID>/comm` & `/proc/<PID>/cmdline`
   - `comm` and `cmdline` hold the base name of the command and the complete command (with arguments) used to execute the command respectively. `cmdline` will spit out the command with the spaces in between arguments replaced by a null byte '\0'. We can pass this through a replace function to restore the spaces. What's important here is that the command line arguments can contain passwords (This is bad practice).
 
-![Response of /proc/self/cmd & /proc/self/cmdline](../img/proc_cmd.png)
+![Response of /proc/self/cmd & /proc/self/cmdline](/img/proc_cmd.png)
 
 - `/proc/<PID>/status`
   - This entry contains an array of different kinds of information. `Name`, `Pid`, `PPid` (Parent PID), `Uid` (Effective user ID), `Gid` (Effective group ID) and `Groups` (Groups the process belongs to) are some important fields out of it for enumeration.
 
-![Response of /proc/self/status](../img/proc_status.png)
+![Response of /proc/self/status](/img/proc_status.png)
 
 - `/proc/<PID>/environ`
   - This is the **most important one** in my opinion. This holds the *initial* environment variables that was used to execute the process with. By initial, it means that if any changes happen to these variables during the process lifetime, it won't be reflected here.
   - Often in production and in development, environment variables are used to hold configuration information and usually contain sensitive information like secret keys, authentication tokens, database credentials, etc.
   - For example, here we've dumped our dummy variables that we set up earlier (the newlines '\n' are replaces by null bytes '\0' here as well) (I have also truncated the output to remove any unnecessary variables from my ZSH config).
 
-![Response of /proc/self/environ](../img/proc_environ.png)
+![Response of /proc/self/environ](/img/proc_environ.png)
 
 - `/proc/<PID>/cwd/`
   - This is a symbolic link that points to the **current working directory** of the process. Can sometimes be used as a shortcut in the context of the web app path on the file system. The PWD variable can be extracted from `/proc/<PID>/environ` to figure out what is the current working directory.
 
-![Content of /proc/self/cwd/](../img/proc_cwd.png)
+![Content of /proc/self/cwd/](/img/proc_cwd.png)
 
-![PWD variable as seen in /proc/self/environ](../img/proc_cwd_var.png)
+![PWD variable as seen in /proc/self/environ](/img/proc_cwd_var.png)
 
 - `/proc/<PID>/exe`
   - This entry points directly to the executable command that is used run the command. Reading this will output raw binary data. Useful when you are dealing with custom standalone binaries during challenges, and you want to extract them for analysis and reversing.
 
-![Content of /proc/self/exe](../img/proc_exe.png)
+![Content of /proc/self/exe](/img/proc_exe.png)
 
 - `/proc/<PID>/fd/`
   - This **directory** contains symbolic links to each file that is open in the process, named using numbers (Numbers correlate to the entries in the `fdinfo/` directory). Except the first three; 0, 1, 2 which are stdin, stdout and stderr respectively, files can be queried to view thier contents which may contain important information. Sometimes it can be used to execute code in the context of the web app (see references).
 
-![Content of /proc/self/fd/](../img/proc_fd.png)
+![Content of /proc/self/fd/](/img/proc_fd.png)
 
 # Concluding thoughts
 

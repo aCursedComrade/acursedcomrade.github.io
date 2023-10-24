@@ -62,12 +62,12 @@ If you want to read more and get started with deployment, make sure to read thei
 
 - After signing up for an account, you will land on your account dashboard. This page gives you an overview of your active networks and total number of nodes/hosts connected. Clicking **"Create a Network"** will create a new network entry on the dashboard with a random name. To continue, click on the new record to open the network configuration page.
 
-![ZeroTier dashboard](../img/zt_dashboard.png)
+![ZeroTier dashboard](/img/zt_dashboard.png)
 
 - There are subsections for help regarding each option you see in this configuration page. Make sure to refer that if you have any doubts about a component.
 - The basic settings section can be used to customize the name, description and the level of access control of your network. **Private** mode creates an additional authorization step which has to be approved by a network administrator before a node is allowed to communicate with the network.
 
-![ZeroTier basic settings](../img/zt_basic_settings.png)
+![ZeroTier basic settings](/img/zt_basic_settings.png)
 
 - The advanced settings section contains network related options that you can configure according to your needs.
   - **Managed Routes** dialogue can be used to manually add routes through the connected nodes. Additional configuration on the target node is required to make this work.
@@ -77,9 +77,9 @@ If you want to read more and get started with deployment, make sure to read thei
   - **DNS** dialogue lets you define an internal domain for the network and assign a DNS server node.
   - **Manually Add Member** dialogue lets you authenticate a node before it joins a network (or to unban a previously banned node).
 
-![ZeroTier advanced settings 01](../img/zt_adv_settings01.png)
+![ZeroTier advanced settings 01](/img/zt_adv_settings01.png)
 
-![ZeroTier advanced settings 02](../img/zt_adv_settings02.png)
+![ZeroTier advanced settings 02](/img/zt_adv_settings02.png)
 
 - Heading over to **Members** section after configuring your settings, you will see a message about adding new members. You should now [download and install the client daemon](https://www.zerotier.com/download/) on to the devices you need to connect to the network (You will need administrative privileges when working with ZeroTier client). Assuming you are on a Linux distribution, you can try the below command on your terminal to test the CLI tool:
 
@@ -105,7 +105,7 @@ sudo zerotier-cli listnetworks
 ```
 - Assuming you have chosen to keep the network **private** in the configuration stage, the status of the previous command will be "ACCESS DENIED" because you need to approve the node before it can start communicating over the network. Head over to the **Members** section we previously left before, you should now see a new record with the **client ID** of the node you are working with. Check the box on the "Auth" column to approve the node.
 
-![ZeroTier node authentication](../img/zt_auth.png)
+![ZeroTier node authentication](/img/zt_auth.png)
 
 - If everything went accordingly, your node will be assigned an IP address from the range you previously configured. Use the `listnetwork` command in the CLI tool to verify. The service also configures a virtual network interface for the node which you can see with `ip a` command.
 
@@ -113,11 +113,11 @@ You should now repeat above steps for the remaining hosts that you need on the n
 
 ## Virtual network overview
 
-![My ZeroTier network](../img/zt_network_list.png)
+![My ZeroTier network](/img/zt_network_list.png)
 
 Going back to my home lab setup, I connected my Proxmox node, utility VM, my personal laptop and my mobile to the network. The remaining node is the pfSense firewall but the reason I cannot connect it is that it may cause issues with the firewall config and my lack of knowledge on the BSD ecosystem. Even though I have listed about how to forward these internal services, another approach would be to have the firewall connected directly connected with our SD-WAN solution, so we can directly bridge internal subnets via the firewall without any intermediate forwarding or other solutions (I included a few examples in a previous section).
 
-![Accessing Proxmox web UI](../img/net_access.png)
+![Accessing Proxmox web UI](/img/net_access.png)
 
 I initially used the Proxmox node as a proxy (*by using the `ssh -R` option to create a reverse socks proxy*) to access pfSense web panel and its OpenVPN server. It is a working alternative, but the next section covers how forward proxies can be used AND how we can assign a verifiable domain with the help of certain project.
 
@@ -151,15 +151,15 @@ services:
 ```
 - After spinning up the container and going through the initial login setup, I created an SSL certificate as described in the video.
 
-![SSL certificate](../img/npm_ssl_cert.png)
+![SSL certificate](/img/npm_ssl_cert.png)
 
 - Moving on to proxy host configuration, the process is same as seen in the video. After defining two subdomains for Proxmox and pfSense, the destination is pointed towards their **LAN addresses**. One additional detail is that we need to enable **Websocket support** on both proxy records for the web panels to work correctly (This is the case for Proxmox and pfSense web panels, other web services may differ).
 
-![Proxy hosts](../img/npm_proxy_hosts.png)
+![Proxy hosts](/img/npm_proxy_hosts.png)
 
 - And finally, I defined a stream record to forward all incoming traffic on port `1194` to the same port on pfSense firewall via the LAN. With that, I just need to define the target server on the OpenVPN client config as the utility VM and the proxy will forward the traffic to pfSense server. TCP forwarding is selected as the OpenVPN server is configured to use TCP instead of UDP.
 
-![Stream record](../img/npm_stream_host.png)
+![Stream record](/img/npm_stream_host.png)
 
 And that's the proxy manager configuration for my environment. You may need to define additional port mappings depending on what you are trying to set up forwarding. You are free to stop and scrap the container when you want to modify port mappings as all the data is stored in **mounts** as defined in the `docker-compose` file.
 
@@ -171,9 +171,9 @@ Make sure to properly organize mount folders on your docker host, so your config
 
 Now I can easily access my web panels by using a nice *little* URL on my browser and join my internal VPN to play around with my cyber playground as long as I am connected to my ZeroTier network.
 
-![Using domains to access the web panels](../img/proxy_host_view.png)
+![Using domains to access the web panels](/img/proxy_host_view.png)
 
-![OpenVPN port status](../img/proxy_openvpn.png)
+![OpenVPN port status](/img/proxy_openvpn.png)
 
 Nginx proxy manager has been pretty helpful to me as a beginner. The GUI has more options available inline with what Nginx has to offer, but one might need to manually configure their Nginx instance to fine tune all the options it has to offer.
 

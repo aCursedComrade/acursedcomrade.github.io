@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aCursedComrade</title>
-    <link rel="me" href="https://infosec.exchange/@acursedcomrade" />
+    <title>Loshana Aloka</title>
+
+    <link rel="me" href="https://github.com/aCursedComrade">
+    <link rel="me" href="https://twitter.com/aCursed_Comrade">
+    <link rel="me" href="https://infosec.exchange/@acursedcomrade">
+    <link rel="me" href="https://www.linkedin.com/in/loshana-aloka">
+
     <link rel="shortcut icon" href="https://www.gravatar.com/avatar/1e69fb742faa999b9a020d87b6f3991c?s=96"
         type="image/x-icon" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -16,25 +21,25 @@
         body {
             background-color: #3a3a3a;
             color: #fff;
-            font-family: 'Courier New', Courier, monospace;
+            /* font-family: 'Courier New', Courier, monospace; */
             display: flex;
             justify-content: center;
             align-items: center;
-            /* height: 90vh; */
-            margin: 0;
-            padding: 10vh;
+            /* height: 100vh; */
+            /* margin: 0; */
+            padding: 2dvh;
         }
 
-        .container {
-            width: 65vh;
+        .content {
+            width: 70vh;
             background-color: #000;
-            padding: 20px;
+            padding: 1.5rem;
             border-radius: 10px;
         }
 
         .header-img {
             width: 100%;
-            height: 120px;
+            height: 12dvh;
             /* background: url('assets/welcome.gif') no-repeat center center;
             background-size: cover; */
             background-color: cadetblue;
@@ -52,36 +57,126 @@
         }
 
         .title-section {
-            padding-top: 100px;
-            text-align: center;
-        }
-
-        .subtitle {
-            color: gray;
+            margin-top: 100px;
+            /* text-align: center; */
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid content">
         <section class="header-img">
             <img class="profile-pic" src="https://www.gravatar.com/avatar/1e69fb742faa999b9a020d87b6f3991c?s=256"
                 alt="Profile Picture" />
         </section>
         <section class="title-section">
-            <h2>Loshana Aloka</h2>
-            <p style="margin: 0;">Infosec Student | Programming Hobbyist</p>
-            <small class="subtitle"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Sri Lanka | <i
-                    class="bi bi-envelope-fill" aria-hidden="true"></i> <a href="mailto:acursed_comrade@proton.me"
-                    target="_blank" rel="noopener noreferrer">acursed_comrade@proton.me</a></small>
+            <div>
+                <h2>Loshana Aloka</h2>
+                <p class="mb-1 lead"><small>Infosec Student | Programming Hobbyist</small></p>
+                <p class="mb-2"><small><a href="https://flowcv.com/resume/mmvk34il0j" target="_blank"
+                            rel="noopener noreferrer">is open for an internship...</a></small></p>
+            </div>
+            <div>
+                <ul class="list-group list-group-horizontal-sm">
+                    <li class="list-group-item">
+                        <i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Sri Lanka
+                    </li>
+                    <li class="list-group-item">
+                        <i class="bi bi-envelope-fill" aria-hidden="true"></i> <a
+                            href="mailto:acursed_comrade@proton.me" target="_blank"
+                            rel="noopener noreferrer">acursed_comrade@proton.me</a>
+                    </li>
+                    <li class="list-group-item">He/Him</li>
+                </ul>
+            </div>
         </section>
 
         <hr>
 
-        <section>
-            <h3>Hey!</h3>
-            <p>The landing page is still under construction :) Feel free to visit <a
-                    href="https://comradelab.win/blog/">my blog</a> for now.</p>
+        <nav class="my-2">
+            <div class="nav nav-pills nav-fill flex-sm-row" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about"
+                    type="button" role="tab" aria-controls="nav-about" aria-selected="true">About Me</button>
+                <button class="nav-link" id="nav-links-tab" data-bs-toggle="tab" data-bs-target="#nav-links"
+                    type="button" role="tab" aria-controls="nav-links" aria-selected="false">Social and Links</button>
+                <button class="nav-link" id="nav-verify-tab" data-bs-toggle="tab" data-bs-target="#nav-verify"
+                    type="button" role="tab" aria-controls="nav-verify" aria-selected="false">Verify Me</button>
+                <button class="nav-link" id="nav-support-tab" data-bs-toggle="tab" data-bs-target="#nav-support"
+                    type="button" role="tab" aria-controls="nav-support" aria-selected="false">Support Me</button>
+            </div>
+        </nav>
+
+        <hr>
+
+        <section class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab"
+                tabindex="0">
+                <h3>Hey!</h3>
+                <p>
+                    I'm Loshana Aloka (aka aCursedComrade). I'm generally interested in all things cyber but my aim is
+                    to specialize in system administration and red team security operations. I learn
+                    by tinkering around with tech I don't know about and love to share my experience I gain from that as
+                    well.
+                </p>
+                <p>
+                    Currently, I'm studying as an undergraduate in the computer security stream and getting my hands
+                    dirty with practical application of security and networking concepts as a novice. I'm also
+                    <a href="https://flowcv.com/resume/mmvk34il0j" target="_blank" rel="noopener noreferrer">
+                        open for any internship opportunities</a> at the moment. I'm mainly looking for a position in
+                    security/network
+                    operations or system administration. I appreciate having a guiding employer that can support my
+                    eagerness to keep learning.
+                </p>
+            </div>
+            <div class="tab-pane fade" id="nav-links" role="tabpanel" aria-labelledby="nav-links-tab" tabindex="0">
+                <h3>Links</h3>
+                <ul class="list-group">
+                    <li class="list-group-item"><i class="bi bi-file-person-fill" aria-hidden="true"></i> View my CV <a
+                            href="https://flowcv.com/resume/mmvk34il0j" target="_blank" rel="noopener noreferrer">on
+                            FlowCV</a></li>
+                    <li class="list-group-item"><i class="bi bi-archive-fill" aria-hidden="true"></i> <a href="/blog">My
+                            blog</a></li>
+                    <li class="list-group-item"><i class="bi bi-github" aria-hidden="true"></i> <a
+                            href="https://github.com/aCursedComrade" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-twitter" aria-hidden="true"></i> <a
+                            href="https://twitter.com/aCursed_Comrade" target="_blank"
+                            rel="noopener noreferrer">Twitter</a></li>
+                    <li class="list-group-item"><i class="bi bi-mastodon" aria-hidden="true"></i> <a
+                            href="https://infosec.exchange/@acursedcomrade" target="_blank"
+                            rel="noopener noreferrer">Mastodon</a></li>
+                    <li class="list-group-item"><i class="bi bi-linkedin" aria-hidden="true"></i> <a
+                            href="https://www.linkedin.com/in/loshana-aloka" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="nav-verify" role="tabpanel" aria-labelledby="nav-verify-tab" tabindex="0">
+                <h3>Verify</h3>
+                <p>WIP</p>
+            </div>
+            <div class="tab-pane fade" id="nav-support" role="tabpanel" aria-labelledby="nav-support-tab" tabindex="0">
+                <h3>Support</h3>
+                <p>
+                    Have I helped you in some way or do you happen to like my content? Then, you can send a little tip
+                    towards me using
+                    the below links if you want to. I appreciate all the support you give, whether its a tip or a word
+                    of advice.
+                    <i class="bi bi-heart-fill"></i>
+                </p>
+                <div class="d-flex flex-column align-items-center">
+                    <a href='https://ko-fi.com/L4L1LO1CI' target='_blank' class="m-2">
+                        <img style='border:0px;height:48px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3'
+                            alt='Buy Me a Coffee at ko-fi.com'>
+                    </a>
+                    <a href="https://trocador.app/anonpay/?ticker_to=xmr&network_to=Mainnet&address=84y7YtrP4xTMGBMKfy4EcgF3woKLzxK9GFamBsWsAN9gPoH6eVsDbcfSnA5CeXUaHBGBJYtu6JpLcQWsd89bJdExPbgg3qq&donation=True&simple_mode=True&name=Loshana+Aloka&description=Thanks+for+the+tip%21&email=acursed_comrade@proton.me&ref=OcWCE4CwFy&ticker_from=xmr&network_from=Mainnet&bgcolor=True"
+                        target="_blank" class="m-2">
+                        <img style='border:0px;height: 36px;'
+                            src="https://img.shields.io/badge/Crypto-Donate-blue?style=for-the-badge&logo=monero"
+                            alt="I accpet crypto currencies too!">
+                    </a>
+                </div>
+            </div>
         </section>
     </div>
 
