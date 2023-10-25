@@ -3,23 +3,19 @@ title: Pocket home lab | Setting up remote access to your home lab
 tags:
   - home-lab
   - networking
-excerpt: >-
-  My experience on setting up remote access to my home lab with ZeroTier as a
-  beginner and other possible alternatives.
 photos:
   - /img/proxmox_dashboard.png
 date: 2023-06-05 16:47:46
 ---
+Remote access is a crucial aspect to consider when you setup your own infrastructure. You could have it sitting on the "edge" and be able to directly talk to it or use a secure VPN to have controlled access. Here, I have written about my experience with for setting remote access to my home lab with ZeroTier and possible alternatives ways one can approach the same scenario.
+
+<!-- more -->
 
 # Home lab on the go
 
 It is a common habit to have your own home lab among many professionals and enthusiasts in the IT field. Whether it is about hosting your content to serve the internet or tinkering with networks and applications, a home lab can be your workplace or your playground. There are different approaches to implementing a home lab depending on the resources available. Cloud platforms can be effortlessly used to create infrastructure virtually but costs increase relative to scale. Alternatively one can use accessible hardware to set up in an available physical location.
 
-<!-- more -->
-
-When implemented, you need to be able to access the lab environment in order to manage the infrastructure or to interact with internal services. Cloud platforms provide easy methods to expose and define access controls to your assets that sits on the "edge". When working with your own hardware however, you need to manually integrate your infrastructure with services like site-to-site VPNs or SD-WANs to achieve this goal. In addition, some external factors may affect your implementation. Such as [Carrier-grade NAT (CGNAT)](https://www.a10networks.com/glossary/what-is-carrier-grade-nat-cgn-cgnat/) used by ISPs which doesn't allow peer-to-peer connections. It is possible to allocate a public IP for your infrastructure, but there are alternative technologies that can help you to circumvent limitations of CGNAT.
-
-This blog post is about my experience on setting up secure remote access for my home lab with the help of [**ZeroTier**](https://www.zerotier.com/) as a beginner, including some alternative ways one can approach the same scenario.
+Cloud platforms provide easy methods to expose and define access controls to your assets that sits on the "edge". When working with your own hardware however, you need to manually integrate your infrastructure with services like site-to-site VPNs or SD-WANs to achieve this goal. In addition, some external factors may affect your implementation. Such as [Carrier-grade NAT (CGNAT)](https://www.a10networks.com/glossary/what-is-carrier-grade-nat-cgn-cgnat/) used by ISPs which doesn't allow peer-to-peer connections. It is possible to allocate a public IP for your infrastructure, but there are alternative technologies that can help you to circumvent limitations of CGNAT.
 
 {% note info %}
 This blog is about interconnecting the infrastructure, I won't be covering how to start your own home lab from scratch. However, there are lots of resources to get started out there already. Also, huge kudos to [**@0xBEN**](https://twitter.com/_0xBEN_?s=20) for his resources that helped me get started with mine.
@@ -29,11 +25,11 @@ This blog is about interconnecting the infrastructure, I won't be covering how t
 
 My home lab layout is based on **[@0xBEN's](https://twitter.com/_0xBEN_?s=20) Proxmox VE guide** (see references) which was used as the foundation for building my home lab, and therefore I will be quoting some content from his blog with his permission to demonstrate the network layout. Before continuing further, below diagram shows our home lab layout:
 
-![Proxmox VE home lab layout by 0xBEN](https://benheater.com/content/images/size/w1000/2022/04/db2f4287d59d4536b8ffccd81a8b7e85-1.png)
+{% img https://benheater.com/content/images/size/w1000/2022/04/db2f4287d59d4536b8ffccd81a8b7e85-1.png '"Proxmox VE home lab layout by 0xBEN" "Proxmox VE home lab layout by 0xBEN"' %}
 
 As of writing this blog post, my home lab layout is similar to what's shown in the diagram except for the absence Wazuh SIEM and dedicated OpenVPN/WireGuard VMs. I added my own changes which I think is more suitable or interesting. There's so many rabbit holes to go down and experiment on :D
 
-![Facts](https://i.imgflip.com/f4d4h.jpg)
+{% img https://i.imgflip.com/f4d4h.jpg '"Facts" "Facts"' %}
 
 My goal is simple, I need to be able to talk with the following 3 hosts in order to properly work with my home lab:
 
@@ -62,12 +58,12 @@ If you want to read more and get started with deployment, make sure to read thei
 
 - After signing up for an account, you will land on your account dashboard. This page gives you an overview of your active networks and total number of nodes/hosts connected. Clicking **"Create a Network"** will create a new network entry on the dashboard with a random name. To continue, click on the new record to open the network configuration page.
 
-![ZeroTier dashboard](/img/zt_dashboard.png)
+{% img /img/zt_dashboard.png '"ZeroTier dashboard" "ZeroTier dashboard"' %}
 
 - There are subsections for help regarding each option you see in this configuration page. Make sure to refer that if you have any doubts about a component.
 - The basic settings section can be used to customize the name, description and the level of access control of your network. **Private** mode creates an additional authorization step which has to be approved by a network administrator before a node is allowed to communicate with the network.
 
-![ZeroTier basic settings](/img/zt_basic_settings.png)
+{% img /img/zt_basic_settings.png '"ZeroTier basic settings" "ZeroTier basic settings"' %}
 
 - The advanced settings section contains network related options that you can configure according to your needs.
   - **Managed Routes** dialogue can be used to manually add routes through the connected nodes. Additional configuration on the target node is required to make this work.
@@ -77,9 +73,9 @@ If you want to read more and get started with deployment, make sure to read thei
   - **DNS** dialogue lets you define an internal domain for the network and assign a DNS server node.
   - **Manually Add Member** dialogue lets you authenticate a node before it joins a network (or to unban a previously banned node).
 
-![ZeroTier advanced settings 01](/img/zt_adv_settings01.png)
+{% img /img/zt_adv_settings01.png '"ZeroTier advanced settings 01" "ZeroTier advanced settings 01"' %}
 
-![ZeroTier advanced settings 02](/img/zt_adv_settings02.png)
+{% img /img/zt_adv_settings02.png '"ZeroTier advanced settings 02" "ZeroTier advanced settings 02"' %}
 
 - Heading over to **Members** section after configuring your settings, you will see a message about adding new members. You should now [download and install the client daemon](https://www.zerotier.com/download/) on to the devices you need to connect to the network (You will need administrative privileges when working with ZeroTier client). Assuming you are on a Linux distribution, you can try the below command on your terminal to test the CLI tool:
 
@@ -105,7 +101,7 @@ sudo zerotier-cli listnetworks
 ```
 - Assuming you have chosen to keep the network **private** in the configuration stage, the status of the previous command will be "ACCESS DENIED" because you need to approve the node before it can start communicating over the network. Head over to the **Members** section we previously left before, you should now see a new record with the **client ID** of the node you are working with. Check the box on the "Auth" column to approve the node.
 
-![ZeroTier node authentication](/img/zt_auth.png)
+{% img /img/zt_auth.png '"ZeroTier node authentication" "ZeroTier node authentication"' %}
 
 - If everything went accordingly, your node will be assigned an IP address from the range you previously configured. Use the `listnetwork` command in the CLI tool to verify. The service also configures a virtual network interface for the node which you can see with `ip a` command.
 
@@ -113,11 +109,11 @@ You should now repeat above steps for the remaining hosts that you need on the n
 
 ## Virtual network overview
 
-![My ZeroTier network](/img/zt_network_list.png)
+{% img /img/zt_network_list.png '"My ZeroTier network" "My ZeroTier network"' %}
 
 Going back to my home lab setup, I connected my Proxmox node, utility VM, my personal laptop and my mobile to the network. The remaining node is the pfSense firewall but the reason I cannot connect it is that it may cause issues with the firewall config and my lack of knowledge on the BSD ecosystem. Even though I have listed about how to forward these internal services, another approach would be to have the firewall connected directly connected with our SD-WAN solution, so we can directly bridge internal subnets via the firewall without any intermediate forwarding or other solutions (I included a few examples in a previous section).
 
-![Accessing Proxmox web UI](/img/net_access.png)
+{% img /img/net_access.png '"Accessing Proxmox web UI" "Accessing Proxmox web UI"' %}
 
 I initially used the Proxmox node as a proxy (*by using the `ssh -R` option to create a reverse socks proxy*) to access pfSense web panel and its OpenVPN server. It is a working alternative, but the next section covers how forward proxies can be used AND how we can assign a verifiable domain with the help of certain project.
 
@@ -151,15 +147,15 @@ services:
 ```
 - After spinning up the container and going through the initial login setup, I created an SSL certificate as described in the video.
 
-![SSL certificate](/img/npm_ssl_cert.png)
+{% img /img/npm_ssl_cert.png '"SSL certificate" "SSL certificate"' %}
 
 - Moving on to proxy host configuration, the process is same as seen in the video. After defining two subdomains for Proxmox and pfSense, the destination is pointed towards their **LAN addresses**. One additional detail is that we need to enable **Websocket support** on both proxy records for the web panels to work correctly (This is the case for Proxmox and pfSense web panels, other web services may differ).
 
-![Proxy hosts](/img/npm_proxy_hosts.png)
+{% img /img/npm_proxy_hosts.png '"Proxy hosts" "Proxy hosts"' %}
 
 - And finally, I defined a stream record to forward all incoming traffic on port `1194` to the same port on pfSense firewall via the LAN. With that, I just need to define the target server on the OpenVPN client config as the utility VM and the proxy will forward the traffic to pfSense server. TCP forwarding is selected as the OpenVPN server is configured to use TCP instead of UDP.
 
-![Stream record](/img/npm_stream_host.png)
+{% img /img/npm_stream_host.png '"Stream record" "Stream record"' %}
 
 And that's the proxy manager configuration for my environment. You may need to define additional port mappings depending on what you are trying to set up forwarding. You are free to stop and scrap the container when you want to modify port mappings as all the data is stored in **mounts** as defined in the `docker-compose` file.
 
@@ -171,9 +167,9 @@ Make sure to properly organize mount folders on your docker host, so your config
 
 Now I can easily access my web panels by using a nice *little* URL on my browser and join my internal VPN to play around with my cyber playground as long as I am connected to my ZeroTier network.
 
-![Using domains to access the web panels](/img/proxy_host_view.png)
+{% img /img/proxy_host_view.png '"Using domains to access the web panels" "Using domains to access the web panels"' %}
 
-![OpenVPN port status](/img/proxy_openvpn.png)
+{% img /img/proxy_openvpn.png '"OpenVPN port status" "OpenVPN port status"' %}
 
 Nginx proxy manager has been pretty helpful to me as a beginner. The GUI has more options available inline with what Nginx has to offer, but one might need to manually configure their Nginx instance to fine tune all the options it has to offer.
 

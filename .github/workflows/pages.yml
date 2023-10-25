@@ -16,7 +16,7 @@ jobs:
       - name: Use Node.js version
         uses: actions/setup-node@v2
         with:
-          node-version: '18'
+          node-version: '20'
       - name: Cache NPM dependencies
         uses: actions/cache@v2
         with:
@@ -32,4 +32,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./www
+          publish_dir: ./public

@@ -4,9 +4,7 @@
     "private": true,
     "scripts": {
         "build": "hexo generate",
-        "postbuild": "mkdir -p ./www/blog && cp -r ./index/* ./www && cp -r ./public/* ./www/blog",
         "clean": "hexo clean",
-        "postclean": "rm -fr ./www",
         "server": "hexo server"
     },
     "hexo": {
