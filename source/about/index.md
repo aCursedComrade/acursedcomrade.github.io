@@ -14,8 +14,6 @@ Currently, I'm studying as an undergraduate in the computer security stream and 
 
 > I'm also [open for any internship opportunities](https://flowcv.com/resume/mmvk34il0j) at the moment. I'm mainly looking for a position in security/network operations or system administration. I appreciate having a guiding employer that can help a student like me to keep learning and gain a foothold in the field.
 
-# Contact and links
-
 - Mail me at [acursed_comrade@proton.me](mailto:acursed_comrade@proton.me)
 - View my CV on [Flowcv](https://flowcv.com/resume/mmvk34il0j)
 - View my projects on [GitHub](https://github.com/aCursedComrade)
@@ -27,9 +25,10 @@ Currently, I'm studying as an undergraduate in the computer security stream and 
   - [HackTheBox](https://app.hackthebox.com/profile/719962)
   - [PwnTillDawn](https://online.pwntilldawn.com/Achievements/3351)
 
-# Verify me
+Here are my public keys:
 
-WIP
+- [Public PGP key](/pgp.pub)
+- [Public SSH key](/ssh.pub)
 
 # Support me
 
