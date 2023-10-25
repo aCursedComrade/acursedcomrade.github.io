@@ -27,7 +27,7 @@ Currently, I'm studying as an undergraduate in the computer security stream and 
 
 Here are my public keys:
 
-- [Public PGP key](/pgp.pub)
+- [Public PGP key](/public_key.asc) ([Signature](/public_key.asc.sig))
 - [Public SSH key](/ssh.pub)
 
 # Support me
