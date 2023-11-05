@@ -559,7 +559,7 @@ math:
 
 # Easily enable fast Ajax navigation on your website.
 # For more information: https://github.com/next-theme/pjax
-pjax: true
+pjax: false
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox/
@@ -583,7 +583,7 @@ pangu: true
 # For more information: https://getquick.link
 # Front-matter variable (nonsupport home archive).
 quicklink:
-  enable: false
+  enable: true
 
   # Home page and archive page can be controlled through home and archive options below.
   # This configuration item is independent of `enable`.
@@ -681,7 +681,7 @@ giscus:
   # Place the comment box above the comments
   input_position: top
   # Load the comments lazily
-  loading: ""
+  loading: lazy
 
 # ---------------------------------------------------------------
 # Post Widgets & Content Sharing Services

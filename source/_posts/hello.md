@@ -14,4 +14,4 @@ This is my shot at making a blog and writing about stuff. You can expect me to w
 
 And that's about it for this post. You can take a look at the [about page](/about) for more information about me. Thanks for reading!
 
-{% img https://media.tenor.com/dI7PKF421EgAAAAd/thank-you-bow.gif '"Thank you!" "Thank you!"' %}
+{% img https://media.tenor.com/dI7PKF421EgAAAAd/thank-you-bow.gif "Thank you!" %}

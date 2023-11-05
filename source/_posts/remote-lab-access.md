@@ -4,7 +4,7 @@ tags:
   - home-lab
   - networking
 photos:
-  - /img/proxmox_dashboard.png
+  - https://stash.comradelab.win/img/proxmox_dashboard.png
 date: 2023-06-05 16:47:46
 ---
 Remote access is a crucial aspect to consider when you setup your own infrastructure. You could have it sitting on the "edge" and be able to directly talk to it or use a secure VPN to have controlled access. Here, I have written about my experience with for setting remote access to my home lab with ZeroTier and possible alternatives ways one can approach the same scenario.
@@ -25,11 +25,11 @@ This blog is about interconnecting the infrastructure, I won't be covering how t
 
 My home lab layout is based on **[@0xBEN's](https://twitter.com/_0xBEN_?s=20) Proxmox VE guide** (see references) which was used as the foundation for building my home lab, and therefore I will be quoting some content from his blog with his permission to demonstrate the network layout. Before continuing further, below diagram shows our home lab layout:
 
-{% img https://benheater.com/content/images/size/w1000/2022/04/db2f4287d59d4536b8ffccd81a8b7e85-1.png '"Proxmox VE home lab layout by 0xBEN" "Proxmox VE home lab layout by 0xBEN"' %}
+{% img https://benheater.com/content/images/size/w1000/2022/04/db2f4287d59d4536b8ffccd81a8b7e85-1.png "Proxmox VE home lab layout by 0xBEN" %}
 
 As of writing this blog post, my home lab layout is similar to what's shown in the diagram except for the absence Wazuh SIEM and dedicated OpenVPN/WireGuard VMs. I added my own changes which I think is more suitable or interesting. There's so many rabbit holes to go down and experiment on :D
 
-{% img https://i.imgflip.com/f4d4h.jpg '"Facts" "Facts"' %}
+{% img https://i.imgflip.com/f4d4h.jpg "Facts" %}
 
 My goal is simple, I need to be able to talk with the following 3 hosts in order to properly work with my home lab:
 
@@ -58,12 +58,12 @@ If you want to read more and get started with deployment, make sure to read thei
 
 - After signing up for an account, you will land on your account dashboard. This page gives you an overview of your active networks and total number of nodes/hosts connected. Clicking **"Create a Network"** will create a new network entry on the dashboard with a random name. To continue, click on the new record to open the network configuration page.
 
-{% img /img/zt_dashboard.png '"ZeroTier dashboard" "ZeroTier dashboard"' %}
+{% img https://stash.comradelab.win/img/zt_dashboard.png "ZeroTier dashboard" %}
 
 - There are subsections for help regarding each option you see in this configuration page. Make sure to refer that if you have any doubts about a component.
 - The basic settings section can be used to customize the name, description and the level of access control of your network. **Private** mode creates an additional authorization step which has to be approved by a network administrator before a node is allowed to communicate with the network.
 
-{% img /img/zt_basic_settings.png '"ZeroTier basic settings" "ZeroTier basic settings"' %}
+{% img https://stash.comradelab.win/img/zt_basic_settings.png "ZeroTier basic settings" %}
 
 - The advanced settings section contains network related options that you can configure according to your needs.
   - **Managed Routes** dialogue can be used to manually add routes through the connected nodes. Additional configuration on the target node is required to make this work.
@@ -73,9 +73,9 @@ If you want to read more and get started with deployment, make sure to read thei
   - **DNS** dialogue lets you define an internal domain for the network and assign a DNS server node.
   - **Manually Add Member** dialogue lets you authenticate a node before it joins a network (or to unban a previously banned node).
 
-{% img /img/zt_adv_settings01.png '"ZeroTier advanced settings 01" "ZeroTier advanced settings 01"' %}
+{% img https://stash.comradelab.win/img/zt_adv_settings01.png "ZeroTier advanced settings 01" %}
 
-{% img /img/zt_adv_settings02.png '"ZeroTier advanced settings 02" "ZeroTier advanced settings 02"' %}
+{% img https://stash.comradelab.win/img/zt_adv_settings02.png "ZeroTier advanced settings 02" %}
 
 - Heading over to **Members** section after configuring your settings, you will see a message about adding new members. You should now [download and install the client daemon](https://www.zerotier.com/download/) on to the devices you need to connect to the network (You will need administrative privileges when working with ZeroTier client). Assuming you are on a Linux distribution, you can try the below command on your terminal to test the CLI tool:
 
@@ -101,7 +101,7 @@ sudo zerotier-cli listnetworks
 ```
 - Assuming you have chosen to keep the network **private** in the configuration stage, the status of the previous command will be "ACCESS DENIED" because you need to approve the node before it can start communicating over the network. Head over to the **Members** section we previously left before, you should now see a new record with the **client ID** of the node you are working with. Check the box on the "Auth" column to approve the node.
 
-{% img /img/zt_auth.png '"ZeroTier node authentication" "ZeroTier node authentication"' %}
+{% img https://stash.comradelab.win/img/zt_auth.png "ZeroTier node authentication" %}
 
 - If everything went accordingly, your node will be assigned an IP address from the range you previously configured. Use the `listnetwork` command in the CLI tool to verify. The service also configures a virtual network interface for the node which you can see with `ip a` command.
 
@@ -109,11 +109,11 @@ You should now repeat above steps for the remaining hosts that you need on the n
 
 ## Virtual network overview
 
-{% img /img/zt_network_list.png '"My ZeroTier network" "My ZeroTier network"' %}
+{% img https://stash.comradelab.win/img/zt_network_list.png "My ZeroTier network" %}
 
 Going back to my home lab setup, I connected my Proxmox node, utility VM, my personal laptop and my mobile to the network. The remaining node is the pfSense firewall but the reason I cannot connect it is that it may cause issues with the firewall config and my lack of knowledge on the BSD ecosystem. Even though I have listed about how to forward these internal services, another approach would be to have the firewall connected directly connected with our SD-WAN solution, so we can directly bridge internal subnets via the firewall without any intermediate forwarding or other solutions (I included a few examples in a previous section).
 
-{% img /img/net_access.png '"Accessing Proxmox web UI" "Accessing Proxmox web UI"' %}
+{% img https://stash.comradelab.win/img/net_access.png "Accessing Proxmox web UI" %}
 
 I initially used the Proxmox node as a proxy (*by using the `ssh -R` option to create a reverse socks proxy*) to access pfSense web panel and its OpenVPN server. It is a working alternative, but the next section covers how forward proxies can be used AND how we can assign a verifiable domain with the help of certain project.
 
@@ -123,7 +123,7 @@ At this point, my attention went towards [**Nginx**](https://nginx.org/en/) as t
 
 This is when I found a nice video that covers [**Nginx proxy manager project**](https://nginxproxymanager.com/) which can streamline the usage of Nginx and easily assign a domain name with verifiable security (SSL) to sites even if they are not exposed to the internet. I recommend watching the video for detailed steps, and my changes to its configuration is listed below.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qlcVx-k-02E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="640" height="420" src="https://www.youtube-nocookie.com/embed/qlcVx-k-02E" title="Nginx proxy manager" frameborder="0" allowfullscreen></iframe>
 
 ## Nginx Proxy Manager
 
@@ -147,15 +147,15 @@ services:
 ```
 - After spinning up the container and going through the initial login setup, I created an SSL certificate as described in the video.
 
-{% img /img/npm_ssl_cert.png '"SSL certificate" "SSL certificate"' %}
+{% img https://stash.comradelab.win/img/npm_ssl_cert.png "SSL certificate" %}
 
 - Moving on to proxy host configuration, the process is same as seen in the video. After defining two subdomains for Proxmox and pfSense, the destination is pointed towards their **LAN addresses**. One additional detail is that we need to enable **Websocket support** on both proxy records for the web panels to work correctly (This is the case for Proxmox and pfSense web panels, other web services may differ).
 
-{% img /img/npm_proxy_hosts.png '"Proxy hosts" "Proxy hosts"' %}
+{% img https://stash.comradelab.win/img/npm_proxy_hosts.png "Proxy hosts" %}
 
 - And finally, I defined a stream record to forward all incoming traffic on port `1194` to the same port on pfSense firewall via the LAN. With that, I just need to define the target server on the OpenVPN client config as the utility VM and the proxy will forward the traffic to pfSense server. TCP forwarding is selected as the OpenVPN server is configured to use TCP instead of UDP.
 
-{% img /img/npm_stream_host.png '"Stream record" "Stream record"' %}
+{% img https://stash.comradelab.win/img/npm_stream_host.png "Stream record" %}
 
 And that's the proxy manager configuration for my environment. You may need to define additional port mappings depending on what you are trying to set up forwarding. You are free to stop and scrap the container when you want to modify port mappings as all the data is stored in **mounts** as defined in the `docker-compose` file.
 
@@ -167,9 +167,9 @@ Make sure to properly organize mount folders on your docker host, so your config
 
 Now I can easily access my web panels by using a nice *little* URL on my browser and join my internal VPN to play around with my cyber playground as long as I am connected to my ZeroTier network.
 
-{% img /img/proxy_host_view.png '"Using domains to access the web panels" "Using domains to access the web panels"' %}
+{% img https://stash.comradelab.win/img/proxy_host_view.png "Using domains to access the web panels" %}
 
-{% img /img/proxy_openvpn.png '"OpenVPN port status" "OpenVPN port status"' %}
+{% img https://stash.comradelab.win/img/proxy_openvpn.png "OpenVPN port status" %}
 
 Nginx proxy manager has been pretty helpful to me as a beginner. The GUI has more options available inline with what Nginx has to offer, but one might need to manually configure their Nginx instance to fine tune all the options it has to offer.
 
