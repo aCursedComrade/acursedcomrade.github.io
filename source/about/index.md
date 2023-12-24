@@ -8,11 +8,11 @@ toc:
 ---
 # comrade@internet > whoami
 
-Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), an IT student from Sri Lanka. I'm generally interested in all things cyber but my aim is to specialize in system administration and  team security operations. I learn by tinkering around with tech I don't know about and love to share my experience I gain from that as well.
+Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), an IT student from Sri Lanka. I'm generally interested in all things cyber but my goal is to specialize in system administration and red team security operations. I love to tinker around with networking and systems related stuff and love to share my experience I gain from that as well.
 
 Currently, I'm studying as an undergraduate in the computer security stream and getting my hands dirty with practical application of security and networking concepts as a novice.
 
-> I'm also [open for any internship opportunities](https://flowcv.com/resume/mmvk34il0j) at the moment. I'm mainly looking for a position in security/network operations or system administration. I appreciate having a guiding employer that can help a student like me to keep learning and gain a foothold in the field.
+> I'm also [open for any internship opportunities](https://flowcv.com/resume/mmvk34il0j) at the moment. I'm mainly looking for a position in security/network operations or system administration. I appreciate having a supportive employer that can support a student like me to keep learning and gain a foothold in the field.
 
 - Mail me at [acursed_comrade@proton.me](mailto:acursed_comrade@proton.me)
 - View my CV on [Flowcv](https://flowcv.com/resume/mmvk34il0j)
@@ -36,4 +36,4 @@ Have I helped you in some way or do you happen to like my content? Then, you can
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L4L1LO1CI)
 
-[![monero](https://img.shields.io/badge/Crypto-Tip-blue?style=for-the-badge&logo=monero)](https://trocador.app/anonpay/?ticker_to=xmr&network_to=Mainnet&address=84y7YtrP4xTMGBMKfy4EcgF3woKLzxK9GFamBsWsAN9gPoH6eVsDbcfSnA5CeXUaHBGBJYtu6JpLcQWsd89bJdExPbgg3qq&donation=True&simple_mode=True&name=Loshana+Aloka&description=Thanks+for+the+tip%21&email=acursed_comrade@proton.me&ref=OcWCE4CwFy&ticker_from=xmr&network_from=Mainnet&bgcolor=True)
+[![monero](https://img.shields.io/badge/Monero-Trocador-blue?style=flat&logo=monero)](https://trocador.app/anonpay/?ticker_to=xmr&network_to=Mainnet&address=84y7YtrP4xTMGBMKfy4EcgF3woKLzxK9GFamBsWsAN9gPoH6eVsDbcfSnA5CeXUaHBGBJYtu6JpLcQWsd89bJdExPbgg3qq&donation=True&simple_mode=True&name=Loshana+Aloka&description=Thanks+for+the+tip%21&email=acursed_comrade@proton.me&ref=OcWCE4CwFy&ticker_from=xmr&network_from=Mainnet&bgcolor=True)
