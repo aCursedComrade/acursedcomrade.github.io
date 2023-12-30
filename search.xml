@@ -15,6 +15,21 @@ And that’s about it for this post. You can take a look at the about page for m
       </tags>
   </entry>
   <entry>
+    <title>Heading into 2024...</title>
+    <url>/2023/12/into-2024/</url>
+    <content><![CDATA[Oh boy, its almost 2024 and this blog has been dry for a while. So I want to leave my thoughts here before the new year, looking back at what happened and what I hope for the future.
+
+
+2023 has been a good year. Not really an eventful one for my introverted self but it was good nonetheless. Got myself occupied as an undergraduate, learning new things and getting those darn coursework done on time. I am also thankful for the new peers I met who share similar niches with me, they are a joy to work with. And of course, continued to break and learn cyber stuff as usual. Its cool to have your own domain and some infrastructure to spin up stuff that greatly helps your day-to-day work. Makes you feel unstoppable.
+As for what I have planned for the next year, tackling the bachelors is on the priority list. Working on my final research project as well at the time of writing. Then its about moving in to the field, getting that first foothold somewhere nice. And as usual, keep hacking away and learning new things.
+Even though the little me did not have much of an eventful year, the world certainly did. We saw a lot of ups and downs, wins and losses and then peace and chaos. Looking back at all that happened, what I want to say is that please be excellent to each other, help out when you can because it can make a difference. And finally, stick to your goals. Its OK to get distracted once in a while but stay positive and remember what you are working for.
+With that, I wish everyone a happy new year! Stay safe and keep kicking butt o7
+]]></content>
+      <tags>
+        <tag>personal</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>&quot;/proc&quot; file system | Enumerating for a foothold</title>
     <url>/2023/03/proc-enumeration/</url>
     <content><![CDATA[The /proc filesystem is a unique location in a Linux system which holds runtime information of the system. Let’s look at why does it exist and how can a malicious actor can leverage it for enumeration.
@@ -328,7 +343,7 @@ Setting up a reverse proxy and SSL for your home lab
 
 ]]></content>
       <tags>
-        <tag>home-lab</tag>
+        <tag>homelab</tag>
         <tag>networking</tag>
       </tags>
   </entry>
