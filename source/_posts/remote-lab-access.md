@@ -1,7 +1,7 @@
 ---
 title: Pocket home lab | Setting up remote access to your home lab
 tags:
-  - home-lab
+  - homelab
   - networking
 photos:
   - https://stash.comradelab.win/img/proxmox_dashboard.png
