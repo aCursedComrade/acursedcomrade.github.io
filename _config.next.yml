@@ -653,7 +653,7 @@ comments:
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: false
   # Lazyload all comment systems.
-  lazyload: false
+  lazyload: true
   # Modify texts or order for any naves, here are some examples.
   nav:
     #disqus:
@@ -663,7 +663,7 @@ comments:
     #  order: -2
 
 giscus:
-  enable: true
+  enable: false # https://github.com/giscus/giscus/issues/1269
   repo: aCursedComrade/acursedcomrade.github.io
   repo_id: R_kgDOInDD4w
   category: General
