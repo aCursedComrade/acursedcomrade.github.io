@@ -663,7 +663,7 @@ comments:
     #  order: -2
 
 giscus:
-  enable: false # https://github.com/giscus/giscus/issues/1269
+  enable: true
   repo: aCursedComrade/acursedcomrade.github.io
   repo_id: R_kgDOInDD4w
   category: General
