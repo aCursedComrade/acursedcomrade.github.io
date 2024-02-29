@@ -19,15 +19,17 @@ Currently, I'm studying as an undergraduate in the computer security stream and 
 - [GitHub](https://github.com/aCursedComrade)
 - [Twitter](https://twitter.com/aCursed_Comrade)
 - [Mastodon](https://infosec.exchange/@acursedcomrade)
-- [LinkedIn](https://www.linkedin.com/in/loshana-aloka/)
+- [Matrix](https://matrix.to/#/@acursedcomrade:oikei.net)
+- Discord
+<!-- - [LinkedIn](https://www.linkedin.com/in/loshana-aloka/) -->
 - CTF:
   - [TryHackMe](https://tryhackme.com/p/aCursedComrade)
   - [HackTheBox](https://app.hackthebox.com/profile/719962)
 
 Here are my public keys:
 
-- [Public PGP key](/public_key.asc) ([Signature](/public_key.asc.sig))
-- [Public SSH key](/ssh.pub)
+- [PGP key](/public_key.asc) ([Signature](/public_key.asc.sig))
+- [SSH key](/ssh.pub)
 
 # Support me
 

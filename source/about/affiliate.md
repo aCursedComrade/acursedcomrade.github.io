@@ -8,4 +8,4 @@ toc:
 ---
 You can use these affiliate links to support me as well!
 
-- [NextDNS](https://nextdns.io/?from=emjyw8c4)
+- DigitalOcean - [https://m.do.co/c/98be8b278c8e](https://m.do.co/c/98be8b278c8e)
