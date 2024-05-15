@@ -1,7 +1,7 @@
 ---
-title: Affiliations
+title: Affiliate Links
 type: about
-excerpt_description: My affiliate links
+description: My affiliate links
 comments: false
 toc:
   enable: false

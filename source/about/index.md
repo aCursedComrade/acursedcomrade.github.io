@@ -1,7 +1,7 @@
 ---
 title: About Me
 type: about
-excerpt_description: A little info about me
+description: A little info about me
 comments: false
 toc:
   enable: false
