@@ -72,14 +72,16 @@ creative_commons:
 open_graph:
   enable: true
   options:
-    twitter_card: <twitter:card>
-    #twitter_id: <twitter:creator>
-    twitter_site: <twitter:site>
-    twitter_image: <twitter:image>
-    #google_plus: <g+:profile_link>
-    #fb_admins: <fb:admin_id>
-    #fb_app_id: <fb:app_id>
-
+    title: og:title
+    site_name: og:site_name
+    type: og:type
+    url: og:url
+    image: og:image
+    author: og:article:author
+    description: og:description
+    date: og:article:published_time
+    updated: og:article:modified_time
+    language: og:locale
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -91,9 +93,9 @@ open_graph:
 # External url should start with http:// or https://
 menu:
   Home: / || fa fa-home
+  About: /about/ || fa fa-user
   Archives: /archives/ || fa fa-archive
   Tags: /tags/ || fa fa-tags
-  About: /about/ || fa fa-user
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -145,11 +147,10 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  GitHub: https://github.com/aCursedComrade || fab fa-github
-  Twitter: https://twitter.com/aCursed_Comrade || fab fa-twitter
-  Mastodon: https://infosec.exchange/@acursedcomrade || fab fa-mastodon
-  LinkedIn: https://www.linkedin.com/in/loshana-aloka/ || fab fa-linkedin
   E-Mail: mailto:acursed_comrade@proton.me || fa fa-envelope
+  Mastodon: https://infosec.exchange/@acursedcomrade || fab fa-mastodon
+  Twitter: https://twitter.com/aCursed_Comrade || fab fa-twitter
+  GitHub: https://github.com/aCursedComrade || fab fa-github
   RSS: /rss.xml || fa fa-rss
 
 social_icons:
