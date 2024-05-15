@@ -6,7 +6,7 @@
   <link href="https://comradelab.win/rss.xml" rel="self"/>
   
   <link href="https://comradelab.win/"/>
-  <updated>2024-05-15T15:36:52.850Z</updated>
+  <updated>2024-05-15T17:28:06.360Z</updated>
   <id>https://comradelab.win/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://comradelab.win/2023/06/remote-lab-access/"/>
     <id>https://comradelab.win/2023/06/remote-lab-access/</id>
     <published>2023-06-05T11:17:46.000Z</published>
-    <updated>2024-05-15T15:36:52.850Z</updated>
+    <updated>2024-05-15T17:28:06.360Z</updated>
     
     
     <summary type="html">&lt;p&gt;Remote access is a crucial aspect to consider when you setup your own infrastructure. You could have it sitting on the “edge” and be able to directly talk to it or use a secure VPN to have controlled access. Here, I have written about my experience with for setting remote access to my home lab with ZeroTier and possible alternatives ways one can approach the same scenario.&lt;/p&gt;</summary>
@@ -40,7 +40,7 @@
     <link href="https://comradelab.win/2023/03/proc-enumeration/"/>
     <id>https://comradelab.win/2023/03/proc-enumeration/</id>
     <published>2023-03-30T06:30:00.000Z</published>
-    <updated>2024-05-15T15:36:52.850Z</updated>
+    <updated>2024-05-15T17:28:06.360Z</updated>
     
     
     <summary type="html">&lt;p&gt;The &lt;code&gt;/proc&lt;/code&gt; filesystem is a unique location in a Linux system which holds runtime information of the system. Let’s look at why does it exist and how can a malicious actor can leverage it for enumeration.&lt;/p&gt;</summary>
@@ -61,7 +61,7 @@
     <link href="https://comradelab.win/2022/12/hello/"/>
     <id>https://comradelab.win/2022/12/hello/</id>
     <published>2022-12-13T14:58:00.000Z</published>
-    <updated>2024-05-15T15:36:52.850Z</updated>
+    <updated>2024-05-15T17:28:06.360Z</updated>
     
     
     <summary type="html">&lt;p&gt;Hello world! Welcome to my little corner of the inter-webs.&lt;/p&gt;</summary>
