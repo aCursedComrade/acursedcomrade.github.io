@@ -72,16 +72,16 @@ creative_commons:
 open_graph:
   enable: true
   options:
-    title: og:title
-    site_name: og:site_name
-    type: og:type
-    url: og:url
-    image: og:image
-    author: og:article:author
-    description: og:description
-    date: og:article:published_time
-    updated: og:article:modified_time
-    language: og:locale
+    title: <og:title>
+    site_name: <og:site_name>
+    type: <og:type>
+    url: <og:url>
+    image: <og:image>
+    author: <og:article:author>
+    description: <og:description>
+    date: <og:article:published_time>
+    updated: <og:article:modified_time>
+    language: <og:locale>
 
 # ---------------------------------------------------------------
 # Menu Settings
