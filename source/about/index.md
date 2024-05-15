@@ -10,21 +10,14 @@ toc:
 
 Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), an IT student from Sri Lanka. I'm generally interested in all things cyber but my goal is to specialize in system administration and red team security operations. I love to tinker around with networking and systems related stuff and love to share my experience I gain from that as well.
 
-Currently, I'm studying as an undergraduate in the computer security stream and getting my hands dirty with practical application of security and networking concepts as a novice.
-
-> I'm also [open for any internship opportunities](https://flowcv.com/resume/mmvk34il0j) at the moment. I'm mainly looking for a position in security/network operations or system administration. I appreciate having a supportive employer that can help a student like me to keep learning and gain a foothold in the field.
+> I'm [open for any junior or internship opportunities](https://read.cv/acursedcomrade) at the moment. I'm mainly looking for a position in security/network operations or system administration. I appreciate having a supportive employer that can help a student like me to keep learning and gain a foothold in the field.
 
 - Mail me at [acursed_comrade@proton.me](mailto:acursed_comrade@proton.me)
-- View my CV on [Flowcv](https://flowcv.com/resume/mmvk34il0j)
-- [GitHub](https://github.com/aCursedComrade)
-- [Twitter](https://twitter.com/aCursed_Comrade)
+- Resume on [read.cv](https://read.cv/acursedcomrade)
 - [Mastodon](https://infosec.exchange/@acursedcomrade)
-- [Matrix](https://matrix.to/#/@acursedcomrade:oikei.net)
-- Discord
-<!-- - [LinkedIn](https://www.linkedin.com/in/loshana-aloka/) -->
-- CTF:
-  - [TryHackMe](https://tryhackme.com/p/aCursedComrade)
-  - [HackTheBox](https://app.hackthebox.com/profile/719962)
+- [Twitter](https://twitter.com/aCursed_Comrade)
+- [GitHub](https://github.com/aCursedComrade)
+- @acursedcomrade on Discord
 
 Here are my public keys:
 

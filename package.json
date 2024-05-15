@@ -8,7 +8,7 @@
     "start": "hexo server -p 8080 --draft"
   },
   "hexo": {
-    "version": "7.0.0"
+    "version": "7.2.0"
   },
   "dependencies": {
     "css": "^3.0.0",
