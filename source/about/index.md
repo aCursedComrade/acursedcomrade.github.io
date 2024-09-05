@@ -12,17 +12,18 @@ Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), an IT student from Sr
 
 > I'm [open for any junior or internship opportunities](https://read.cv/acursedcomrade) at the moment. I'm mainly looking for a position in security/network operations or system administration. I appreciate having a supportive employer that can help a student like me to keep learning and gain a foothold in the field.
 
-- Resume: [read.cv](https://read.cv/acursedcomrade)
-- Email: [acursed_comrade@proton.me](mailto:acursed_comrade@proton.me)
 - [Jabber (XMPP)](xmpp:acursedcomrade@xmpp.earth)
 - [Mastodon](https://infosec.exchange/@acursedcomrade)
 - [Twitter](https://twitter.com/aCursed_Comrade)
 - [GitHub](https://github.com/aCursedComrade)
 - @acursedcomrade on Discord
+- Resume: [read.cv](https://read.cv/acursedcomrade)
+- Email:
+    - acursed_comrade at yahoo.com
 
 Here are my public keys:
 
-- [PGP key](/public_key.asc) ([Signature](/public_key.asc.sig))
+- PGP keys are available at keys.openpgp.org listed under my emails
 - [SSH key](/ssh.pub)
 
 # Support me
