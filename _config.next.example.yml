@@ -14,12 +14,12 @@ cache:
   enable: true
 
 # Remove unnecessary files after hexo generate.
-minify: true
+minify: false
 
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
-  head: source/_data/head.njk
+  #head: source/_data/head.njk
   #header: source/_data/header.njk
   #sidebar: source/_data/sidebar.njk
   #postMeta: source/_data/post-meta.njk
@@ -29,7 +29,7 @@ custom_file_path:
   #bodyEnd: source/_data/body-end.njk
   #variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
-  style: source/_data/styles.styl
+  #style: source/_data/styles.styl
 
 
 # ---------------------------------------------------------------
@@ -37,13 +37,13 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 # Schemes
-#scheme: Muse
+scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-scheme: Gemini
+#scheme: Gemini
 
 # Dark Mode
-darkmode: true
+darkmode: false
 
 
 # ---------------------------------------------------------------
@@ -51,20 +51,20 @@ darkmode: true
 # ---------------------------------------------------------------
 
 favicon:
-  small: https://www.gravatar.com/avatar/1e69fb742faa999b9a020d87b6f3991c?s=16
-  medium: https://www.gravatar.com/avatar/1e69fb742faa999b9a020d87b6f3991c?s=32
-  apple_touch_icon: https://www.gravatar.com/avatar/1e69fb742faa999b9a020d87b6f3991c?s=32
-  safari_pinned_tab: https://www.gravatar.com/avatar/1e69fb742faa999b9a020d87b6f3991c?s=32
+  small: /images/favicon-16x16-next.png
+  medium: /images/favicon-32x32-next.png
+  apple_touch_icon: /images/apple-touch-icon-next.png
+  safari_pinned_tab: /images/logo.svg
   #android_manifest: /manifest.json
 
 # Custom Logo (Warning: Do not support scheme Mist)
-custom_logo: 
+custom_logo: #/uploads/custom-logo.png
 
 # Creative Commons 4.0 International License.
 # See: https://creativecommons.org/about/cclicenses/
 creative_commons:
   # Available values: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | cc-zero
-  license: by
+  license: by-nc-sa
   # Available values: big | small
   size: small
   sidebar: false
@@ -78,8 +78,14 @@ creative_commons:
 open_graph:
   enable: true
   options:
-    twitter_card: summary_large_image
-    twitter_id: "@aCursed_Comrade"
+    #twitter_card: <twitter:card>
+    #twitter_id: <twitter:creator>
+    #twitter_site: <twitter:site>
+    #twitter_image: <twitter:image>
+    #google_plus: <g+:profile_link>
+    #fb_admins: <fb:admin_id>
+    #fb_app_id: <fb:app_id>
+
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -90,11 +96,14 @@ open_graph:
 # Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
 # External url should start with http:// or https://
 menu:
-  Home: / || fa fa-home
-  About: /about/ || fa fa-user
-  Archives: /archives/ || fa fa-archive
-  Tags: /tags/ || fa fa-tags
-  RSS: /rss.xml || fa fa-rss
+  #home: / || fa fa-home
+  #about: /about/ || fa fa-user
+  #tags: /tags/ || fa fa-tags
+  #categories: /categories/ || fa fa-th
+  #archives: /archives/ || fa fa-archive
+  #schedule: /schedule/ || fa fa-calendar
+  #sitemap: /sitemap.xml || fa fa-sitemap
+  #commonweal: /404/ || fa fa-heartbeat
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -134,7 +143,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: https://www.gravatar.com/avatar/1e69fb742faa999b9a020d87b6f3991c?s=128
+  url: #/images/avatar.gif
   # If true, the avatar will be displayed in circle.
   rounded: false
   # If true, the avatar will be rotated with the cursor.
@@ -148,15 +157,19 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  E-Mail: mailto:acursed_comrade@yahoo.com || fa fa-envelope
-  GitHub: https://github.com/aCursedComrade || fab fa-github
-  LinkedIn: https://www.linkedin.com/in/loshana-aloka || fab fa-linkedin
-  Mastodon: https://infosec.exchange/@acursedcomrade || fab fa-mastodon
-  Twitter: https://twitter.com/aCursed_Comrade || fab fa-twitter
+  #GitHub: https://github.com/yourname || fab fa-github
+  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+  #Weibo: https://weibo.com/yourname || fab fa-weibo
+  #Twitter: https://twitter.com/yourname || fab fa-twitter
+  #FB Page: https://www.facebook.com/yourname || fab fa-facebook
+  #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
+  #YouTube: https://youtube.com/yourname || fab fa-youtube
+  #Instagram: https://instagram.com/yourname || fab fa-instagram
+  #Skype: skype:yourname?call|chat || fab fa-skype
 
 social_icons:
   enable: true
-  icons_only: true
+  icons_only: false
   transition: false
 
 # Blog rolls
@@ -241,7 +254,7 @@ post_meta:
   updated_at:
     enable: true
     another_day: true
-  categories: false
+  categories: true
 
 # Post wordcount display settings
 # Dependencies: https://github.com/next-theme/hexo-word-counter
@@ -330,11 +343,11 @@ preconnect: false
 # Set the text alignment in posts / pages.
 text_align:
   # Available values: start | end | left | right | center | justify | justify-all | match-parent
-  desktop: left
-  mobile: left
+  desktop: justify
+  mobile: justify
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: true
+mobile_layout_economy: false
 
 # Browser header panel color.
 theme_color:
@@ -413,7 +426,7 @@ github_banner:
 # ---------------------------------------------------------------
 
 font:
-  enable: true
+  enable: false
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
   host:
@@ -426,32 +439,30 @@ font:
   # Global font settings used for all elements inside <body>.
   global:
     external: true
-    family: Monda
-    size: 0.9
+    family: Lato
+    size:
 
   # Font settings for site title (.site-title).
   title:
     external: true
-    family: Oswald
-    size: 1.5
+    family:
+    size:
 
   # Font settings for headlines (<h1> to <h6>).
   headings:
     external: true
-    family: Oswald
-    size: 1.5
+    family:
+    size:
 
   # Font settings for posts (.post-body).
   posts:
     external: true
-    family: Monda
-    size: 0.9
+    family:
 
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family: Fira Code
-    size: 0.9
+    family:
 
 
 # ---------------------------------------------------------------
@@ -461,12 +472,12 @@ font:
 
 # If true, site-subtitle will be added to the title of index page.
 # Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
-index_with_subtitle: true
+index_with_subtitle: false
 
 # Automatically add external URL with Base64 encrypt & decrypt.
 exturl: false
 # If true, an icon will be attached to each external URL
-exturl_icon: false
+exturl_icon: true
 
 # Google Webmaster tools verification.
 # See: https://developers.google.com/search
@@ -497,7 +508,7 @@ note:
   #  - modern    bootstrap callout new (v2-v3) alert style.
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
-  style: flat
+  style: simple
   icons: false
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
   # Offset also applied to label tag variables. This option can work with disabled note tag.
@@ -573,7 +584,7 @@ pjax: false
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox/
-fancybox: true
+fancybox: false
 
 # Medium Zoom is a JavaScript library for zooming images like Medium.
 # Warning: Do not enable both `fancybox` and `mediumzoom`.
@@ -633,7 +644,7 @@ pace:
   enable: false
   # All available colors:
   # black | blue | green | orange | pink | purple | red | silver | white | yellow
-  color: silver
+  color: blue
   # All available themes:
   # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
   # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
@@ -659,9 +670,9 @@ comments:
   style: tabs
   # Choose a comment system to be displayed by default.
   # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
-  active: giscus
+  active:
   # Setting `true` means remembering the comment system selected by the visitor.
-  storage: false
+  storage: true
   # Lazyload all comment systems.
   lazyload: false
   # Modify texts or order for any naves, here are some examples.
@@ -735,26 +746,6 @@ utterances:
 # For more information: https://isso-comments.de
 isso: # <data_isso>
 
-giscus:
-  enable: true
-  repo: aCursedComrade/acursedcomrade.github.io
-  repo_id: R_kgDOInDD4w
-  category: General
-  category_id: DIC_kwDOInDD484CVgW-
-  # Available values: pathname | url | title | og:title
-  mapping: og:title
-  # Available values: 0 | 1
-  reactions_enabled: 1
-   # Available values: 0 | 1
-  emit_metadata: 0
-  # Available values: light | dark | dark_high_contrast | transparent_dark | preferred-color-scheme
-  theme: dark
-  # Available values: en | zh-CN
-  lang: en
-  # Place the comment box above the comments
-  input_position: top
-  # Load the comments lazily
-  loading: lazy
 
 # ---------------------------------------------------------------
 # Post Widgets & Content Sharing Services
@@ -871,7 +862,7 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/next-theme/hexo-generator-searchdb
 local_search:
-  enable: true
+  enable: false
   # Show top n results per article, show all results by setting to -1
   top_n_per_article: 1
   # Unescape html strings to the readable one.
@@ -933,4 +924,4 @@ vendors:
 # The js option is only valid when vendors.internal is local.
 css: css
 js: js
-images: img
+images: images
