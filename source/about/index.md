@@ -17,12 +17,13 @@ Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), an IT student from Sr
   - E-Mail: [acursed_comrade@yahoo.com](mailto:acursed_comrade@yahoo.com)
   - [Jabber (XMPP)](xmpp:acursedcomrade@xmpp.earth)
   - @acursedcomrade on Discord
-- You can interact with me through these socials:
+- You can find me on these platforms:
+  - [Bluesky](https://bsky.app/profile/comradelab.win)
   - [GitHub](https://github.com/aCursedComrade)
   - [LinkedIn](https://www.linkedin.com/in/loshana-aloka/)
   - [Mastodon (infosec.exchange)](https://infosec.exchange/@acursedcomrade)
   - [Steam Community](https://steamcommunity.com/id/acursedcomrade/)
-  - [Twitter](https://twitter.com/aCursed_Comrade)
+  - [X (Twitter)](https://x.com/aCursed_Comrade)
 
 Here are my public keys:
 
