@@ -51,10 +51,10 @@ darkmode: true
 # ---------------------------------------------------------------
 
 favicon:
-  small: https://www.gravatar.com/avatar/1e69fb742faa999b9a020d87b6f3991c?s=16
-  medium: https://www.gravatar.com/avatar/1e69fb742faa999b9a020d87b6f3991c?s=32
-  apple_touch_icon: https://www.gravatar.com/avatar/1e69fb742faa999b9a020d87b6f3991c?s=32
-  safari_pinned_tab: https://www.gravatar.com/avatar/1e69fb742faa999b9a020d87b6f3991c?s=32
+  small: https://www.gravatar.com/avatar/6ce033b1c1944dfc764ad2b55e80c583?s=16
+  medium: https://www.gravatar.com/avatar/6ce033b1c1944dfc764ad2b55e80c583?s=32
+  apple_touch_icon: https://www.gravatar.com/avatar/6ce033b1c1944dfc764ad2b55e80c583?s=32
+  safari_pinned_tab: https://www.gravatar.com/avatar/6ce033b1c1944dfc764ad2b55e80c583?s=32
   #android_manifest: /manifest.json
 
 # Custom Logo (Warning: Do not support scheme Mist)
@@ -134,7 +134,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: https://www.gravatar.com/avatar/1e69fb742faa999b9a020d87b6f3991c?s=128
+  url: https://www.gravatar.com/avatar/6ce033b1c1944dfc764ad2b55e80c583?s=128
   # If true, the avatar will be displayed in circle.
   rounded: false
   # If true, the avatar will be rotated with the cursor.
