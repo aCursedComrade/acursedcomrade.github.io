@@ -6,7 +6,7 @@
   <link href="https://comradelab.win/rss.xml" rel="self"/>
   
   <link href="https://comradelab.win/"/>
-  <updated>2024-12-31T11:47:25.369Z</updated>
+  <updated>2024-12-31T13:19:53.933Z</updated>
   <id>https://comradelab.win/</id>
   
   <author>
@@ -17,11 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Off to 2025</title>
+    <link href="https://comradelab.win/2024/12/into-2025/"/>
+    <id>https://comradelab.win/2024/12/into-2025/</id>
+    <published>2024-12-31T12:29:51.000Z</published>
+    <updated>2024-12-31T13:19:53.933Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Well… this blog has been dry for a real long time huh… &amp;gt;_&amp;gt; Anyways, it’s time to leave 2024 behind and jump head first into 2025 which also means it’s time for me to “step out from the shadows” and reflect on what happened this year and what I expect in the future. I got few things to share since my &lt;a href=&quot;/2023/12/into-2024/&quot; title=&quot;Heading into 2024...&quot;&gt;last yearly update&lt;/a&gt;.&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="personal" scheme="https://comradelab.win/tags/personal/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Heading into 2024...</title>
     <link href="https://comradelab.win/2023/12/into-2024/"/>
     <id>https://comradelab.win/2023/12/into-2024/</id>
     <published>2023-12-30T19:15:10.000Z</published>
-    <updated>2024-12-31T11:47:25.369Z</updated>
+    <updated>2024-12-31T13:19:53.932Z</updated>
     
     
     <summary type="html">&lt;p&gt;Oh boy, its almost 2024 and this blog has been dry for a while. So I want to leave my thoughts here before the new year, looking back at what happened and what I hope for the future.&lt;/p&gt;</summary>
@@ -38,7 +55,7 @@
     <link href="https://comradelab.win/2023/06/remote-lab-access/"/>
     <id>https://comradelab.win/2023/06/remote-lab-access/</id>
     <published>2023-06-05T11:17:46.000Z</published>
-    <updated>2024-12-31T11:47:25.369Z</updated>
+    <updated>2024-12-31T13:19:53.933Z</updated>
     
     
     <summary type="html">&lt;p&gt;Remote access is a crucial aspect to consider when you setup your own infrastructure. You could have it sitting on the “edge” and be able to directly talk to it or use a secure VPN to have controlled access. Here, I have written about my experience with for setting remote access to my home lab with ZeroTier and possible alternatives ways one can approach the same scenario.&lt;/p&gt;</summary>
@@ -57,7 +74,7 @@
     <link href="https://comradelab.win/2023/03/proc-enumeration/"/>
     <id>https://comradelab.win/2023/03/proc-enumeration/</id>
     <published>2023-03-30T06:30:00.000Z</published>
-    <updated>2024-12-31T11:47:25.369Z</updated>
+    <updated>2024-12-31T13:19:53.933Z</updated>
     
     
     <summary type="html">&lt;p&gt;The &lt;code&gt;/proc&lt;/code&gt; filesystem is a unique location in a Linux system which holds runtime information of the system. Let’s look at why does it exist and how can a malicious actor can leverage it for enumeration.&lt;/p&gt;</summary>
@@ -78,7 +95,7 @@
     <link href="https://comradelab.win/2022/12/hello/"/>
     <id>https://comradelab.win/2022/12/hello/</id>
     <published>2022-12-13T14:58:00.000Z</published>
-    <updated>2024-12-31T11:47:25.368Z</updated>
+    <updated>2024-12-31T13:19:53.932Z</updated>
     
     
     <summary type="html">&lt;p&gt;Hello world! Welcome to my little corner of the inter-webs.&lt;/p&gt;</summary>
