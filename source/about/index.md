@@ -10,15 +10,18 @@ toc:
 
 Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), an IT student from Sri Lanka. I'm generally interested in all things cyber but my goal is to specialize in system administration and red team security operations. I love to tinker around with networking and systems related stuff and love to share my experience I gain from that as well.
 
-> I'm [open for any junior or internship opportunities](https://read.cv/acursedcomrade) at the moment. I'm mainly looking for a position in security/network operations or system administration. I appreciate having a supportive employer that can help a student like me to keep learning and gain a foothold in the field.
+> I'm <u>**open for any junior or internship opportunities**</u> at the moment. I'm looking for <u>**a position on security/network operations, a systems engineer role or a dev-ops role**</u> if possible. You can view [**my complete resume**](https://flowcv.com/resume/mmvk34il0j) to know more about me. I appreciate having a supportive employer that can help a student like me to keep learning and gain a foothold in the field.
 
-- Resume: [read.cv](https://read.cv/acursedcomrade)
+- Brief resume: [read.cv](https://read.cv/acursedcomrade)
 - You can contact me quickly through:
-  - E-Mail: [acursed_comrade@yahoo.com](mailto:acursed_comrade@yahoo.com)
+  - E-Mail:
+    - acursed_comrade [AT] yahoo.com (PGP: `E69C3ADB274C686D5A81EB0F9205800A39174DD8` @ keys.openpgp.org)
+    - acursed_comrade [AT] proton.me (PGP: `D4316BA4D0AA4E25C635563FECE2269CA9D35F9D` @ openpgpkey.protonmail.com)
   - [Jabber (XMPP)](xmpp:acursedcomrade@xmpp.earth)
   - @acursedcomrade on Discord
 - You can find me on these platforms:
   - [Bluesky](https://bsky.app/profile/comradelab.win)
+  - [Facebook](https://web.facebook.com/acursedcomrade)
   - [GitHub](https://github.com/aCursedComrade)
   - [LinkedIn](https://www.linkedin.com/in/loshana-aloka/)
   - [Mastodon (infosec.exchange)](https://infosec.exchange/@acursedcomrade)
@@ -27,7 +30,7 @@ Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), an IT student from Sr
 
 Here are my public keys:
 
-- PGP keys are available at keys.openpgp.org under my E-Mails above
+- For PGP keys, see e-mails above
 - [SSH key](/ssh.pub)
 
 # Support me

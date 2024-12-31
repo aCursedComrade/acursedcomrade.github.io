@@ -1,10 +1,10 @@
 ---
 title: Pocket home lab | Setting up remote access to your home lab
 tags:
-  - homelab
-  - networking
+- homelab
+- networking
 photos:
-  - https://stash.comradelab.win/img/proxmox_dashboard.png
+- https://stash.comradelab.win/img/proxmox_dashboard.png
 date: 2023-06-05 16:47:46
 ---
 Remote access is a crucial aspect to consider when you setup your own infrastructure. You could have it sitting on the "edge" and be able to directly talk to it or use a secure VPN to have controlled access. Here, I have written about my experience with for setting remote access to my home lab with ZeroTier and possible alternatives ways one can approach the same scenario.

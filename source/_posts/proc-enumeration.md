@@ -1,12 +1,12 @@
 ---
 title: '"/proc" file system | Enumerating for a foothold'
 tags:
-  - linux
-  - ctf
-  - attack
+- linux
+- ctf
+- attack
 date: 2023-03-30 12:00:00
 photos:
-  - https://stash.comradelab.win/img/proc_contents.png
+- https://stash.comradelab.win/img/proc_contents.png
 ---
 The `/proc` filesystem is a unique location in a Linux system which holds runtime information of the system. Let's look at why does it exist and how can a malicious actor can leverage it for enumeration.
 
