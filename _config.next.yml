@@ -428,25 +428,25 @@ font:
   # Global font settings used for all elements inside <body>.
   global:
     external: true
-    family: Monda
+    family: Inter
     size: 0.9
 
   # Font settings for site title (.site-title).
   title:
     external: true
     family: Oswald
-    size: 1.5
+    size: 1.6
 
   # Font settings for headlines (<h1> to <h6>).
   headings:
     external: true
     family: Oswald
-    size: 1.5
+    size: 1.4
 
   # Font settings for posts (.post-body).
   posts:
     external: true
-    family: Monda
+    family: Inter
     size: 0.9
 
   # Font settings for <code> and code blocks.

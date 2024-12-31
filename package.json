@@ -5,7 +5,7 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "start": "hexo server -p 8080 --draft"
+    "start": "hexo server -p 8080"
   },
   "hexo": {
     "version": "7.3.0"
