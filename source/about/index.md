@@ -6,11 +6,12 @@ comments: false
 toc:
   enable: false
 ---
+
 # comrade@internet > whoami
 
 Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), an IT student from Sri Lanka. I'm generally interested in all things cyber but my goal is to specialize in system administration and red team security operations. I love to tinker around with networking and systems related stuff and love to share my experience I gain from that as well.
 
-> I'm <u>**open for any junior or internship opportunities**</u> at the moment. I'm looking for <u>**a position on security/network operations, a systems engineer role or a dev-ops role**</u> if possible. You can view [**my complete resume**](https://flowcv.com/resume/mmvk34il0j) to know more about me. I appreciate having a supportive employer that can help a student like me to keep learning and gain a foothold in the field.
+> I'm **open for any junior or internship opportunities** at the moment. I'm looking for **a position on security/network operations, a systems engineer role or a dev-ops role** if possible. You can view [**my complete resume**](https://flowcv.com/resume/mmvk34il0j) to know more about me. I appreciate having a supportive employer that can help a student like me to keep learning and gain a foothold in the field.
 
 - Brief resume: [read.cv](https://read.cv/acursedcomrade)
 - You can contact me quickly through:
