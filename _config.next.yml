@@ -149,12 +149,10 @@ site_state: true
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
   E-Mail: mailto:acursed_comrade@yahoo.com || fa-solid fa-envelope
-  Bluesky: https://bsky.app/profile/comradelab.win || fa-brands fa-bluesky
   GitHub: https://github.com/aCursedComrade || fa-brands fa-github
   LinkedIn: https://www.linkedin.com/in/loshana-aloka || fa-brands fa-linkedin
   Mastodon: https://infosec.exchange/@acursedcomrade || fa-brands fa-mastodon
   Steam Community: https://steamcommunity.com/id/acursedcomrade/ || fa-brands fa-steam
-  X (Twitter): https://twitter.com/aCursed_Comrade || fa-brands fa-x-twitter
 
 social_icons:
   enable: true
@@ -241,7 +239,7 @@ post_meta:
   item_text: true
   created_at: true
   updated_at:
-    enable: true
+    enable: false
     another_day: true
   categories: false
 

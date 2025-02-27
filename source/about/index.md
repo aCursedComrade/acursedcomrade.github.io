@@ -6,6 +6,7 @@ comments: false
 toc:
   enable: false
 ---
+
 # comrade@internet > whoami
 
 Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), an IT student from Sri Lanka. I'm generally interested in all things cyber but my goal is to specialize in system administration and system/infrastructure security. I love to tinker around with networking and systems related stuff and love to share my experience I gain from that as well.
@@ -19,14 +20,12 @@ Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), an IT student from Sr
     - acursed_comrade [AT] proton.me (PGP: `D4316BA4D0AA4E25C635563FECE2269CA9D35F9D` @ openpgpkey.protonmail.com)
   - [Jabber (XMPP)](xmpp:acursedcomrade@xmpp.earth)
   - @acursedcomrade on Discord
-- You can find me on these platforms:
-  - [Bluesky](https://bsky.app/profile/comradelab.win)
-  - [Facebook](https://web.facebook.com/acursedcomrade)
+- You can find me on these platforms (I can be inactive on certain platforms*):
+  - [Facebook*](https://web.facebook.com/acursedcomrade)
   - [GitHub](https://github.com/aCursedComrade)
   - [LinkedIn](https://www.linkedin.com/in/loshana-aloka/)
-  - [Mastodon (infosec.exchange)](https://infosec.exchange/@acursedcomrade)
+  - [Mastodon (infosec.exchange)](https://infosec.exchange/@acursedcomrade) (alternatively: [Bluesky*](https://bsky.app/profile/comradelab.win), [X (Twitter)*](https://x.com/aCursed_Comrade))
   - [Steam Community](https://steamcommunity.com/id/acursedcomrade/)
-  - [X (Twitter)](https://x.com/aCursed_Comrade)
 
 Here are my public keys:
 
