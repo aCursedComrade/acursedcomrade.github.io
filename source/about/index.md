@@ -11,7 +11,7 @@ toc:
 
 Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), an IT student from Sri Lanka. I'm generally interested in all things cyber but my goal is to specialize in system administration and system/infrastructure security. I love to tinker around with networking and systems related stuff and love to share my experience I gain from that as well.
 
-> I'm **open for any junior or internship opportunities** at the moment. I'm looking for **a position on security/network operations, a systems engineer role or a dev-ops role** if possible. You can view [**my resume**](/cv-partial.pdf) (and [**the cover letter**](/cover-letter.pdf)) to know more about me. I appreciate having a supportive employer that can help a student like me to keep learning and gain a foothold in the field.
+> I'm **open for any junior or internship opportunities** at the moment. I'm looking for **a position on technical support, developer operations (DevOps), systems management or defensive cyber role** if possible. You can view [**my curriculum vitae (CV)**](/cv-partial.pdf) (and the usual [**cover letter**](/cover-letter.pdf)) to know more about me. I appreciate having a supportive employer that can help a student like me to keep learning and gain a foothold in the field.
 
 - Brief resume: [read.cv](https://read.cv/acursedcomrade)
 - You can contact me quickly through:
