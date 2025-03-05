@@ -11,7 +11,9 @@ toc:
 
 Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), an IT student from Sri Lanka. I'm generally interested in all things cyber but my goal is to specialize in system administration and system/infrastructure security. I love to tinker around with networking and systems related stuff and love to share my experience I gain from that as well.
 
-> I'm **open for any junior or internship opportunities** at the moment. I'm looking for **a position on technical support, developer operations (DevOps), systems management or defensive cyber role** if possible. You can view [**my curriculum vitae (CV)**](/cv-partial.pdf) (and the usual [**cover letter**](/cover-letter.pdf)) to know more about me. I appreciate having a supportive employer that can help a student like me to keep learning and gain a foothold in the field.
+{% note info %}
+I'm **open for any junior or internship job opportunities** at the moment. I'm looking for **a position on technical support, developer operations (DevOps), systems management or defensive cyber role** if possible. You can view [**my curriculum vitae (CV)**](/cv-partial.pdf) (and the usual [**cover letter**](/cover-letter.pdf)) to know more about me. I appreciate having a supportive employer that can help a student like me to keep learning and gain a foothold in the field.
+{% endnote %}
 
 - Brief resume: [read.cv](https://read.cv/acursedcomrade)
 - You can contact me quickly through:
@@ -23,8 +25,9 @@ Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), an IT student from Sr
 - You can find me on these platforms (I can be inactive on certain platforms*):
   - [Facebook*](https://web.facebook.com/acursedcomrade)
   - [GitHub](https://github.com/aCursedComrade)
+  - [Last.fm](https://www.last.fm/user/aCursedComrade)
   - [LinkedIn](https://www.linkedin.com/in/loshana-aloka/)
-  - [Mastodon (infosec.exchange)](https://infosec.exchange/@acursedcomrade) (alternatively: [Bluesky*](https://bsky.app/profile/comradelab.win), [X (Twitter)*](https://x.com/aCursed_Comrade))
+  - [Fediverse (infosec.exchange)](https://infosec.exchange/@acursedcomrade) (alternatively: [Bluesky*](https://bsky.app/profile/comradelab.win), [X (Twitter)*](https://x.com/aCursed_Comrade))
   - [Steam Community](https://steamcommunity.com/id/acursedcomrade/)
 
 Here are my public keys:
