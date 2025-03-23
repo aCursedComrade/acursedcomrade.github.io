@@ -18,8 +18,8 @@ I'm **open for any junior or internship job opportunities** at the moment. I'm l
 - Brief resume: [read.cv](https://read.cv/acursedcomrade)
 - You can contact me quickly through:
   - E-Mail:
-    - acursed_comrade [AT] yahoo.com (PGP: `E69C3ADB274C686D5A81EB0F9205800A39174DD8` @ keys.openpgp.org)
-    - acursed_comrade [AT] proton.me (PGP: `D4316BA4D0AA4E25C635563FECE2269CA9D35F9D` @ openpgpkey.protonmail.com)
+    - acursed_comrade [AT] yahoo.com (PGP: `E69C3ADB274C686D5A81EB0F9205800A39174DD8` @ `keys.openpgp.org`, `pgp.id`)
+    - acursed_comrade [AT] proton.me (PGP: `D4316BA4D0AA4E25C635563FECE2269CA9D35F9D` @ `openpgpkey.protonmail.com`)
   - [Jabber (XMPP)](xmpp:acursedcomrade@xmpp.earth)
   - @acursedcomrade on Discord
 - You can find me on these platforms (I can be inactive on certain platforms\*):
@@ -27,7 +27,7 @@ I'm **open for any junior or internship job opportunities** at the moment. I'm l
   - [GitHub](https://github.com/aCursedComrade)
   - [Last.fm](https://www.last.fm/user/aCursedComrade)
   - [LinkedIn](https://www.linkedin.com/in/loshana-aloka/)
-  - [Fediverse (infosec.exchange)](https://infosec.exchange/@acursedcomrade) (alternatively: [Bluesky\*](https://bsky.app/profile/comradelab.win), [X (Twitter)\*](https://x.com/aCursed_Comrade))
+  - [Fediverse (infosec.exchange)](https://infosec.exchange/@acursedcomrade) (alternatively: [X (Twitter)\*](https://x.com/aCursed_Comrade))
   - [Steam Community](https://steamcommunity.com/id/acursedcomrade/)
 
 Here are my public keys:
