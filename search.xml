@@ -30,23 +30,6 @@ With that, I wish everyone a happy new year! Stay safe and keep kicking butt o7
       </tags>
   </entry>
   <entry>
-    <title>Off to 2025</title>
-    <url>/2024/12/into-2025/</url>
-    <content><![CDATA[Well… this blog has been dry for a real long time huh… &gt;_&gt; Anyways, it’s time to leave 2024 behind and jump head first into 2025 which also means it’s time for me to “step out from the shadows” and reflect on what happened this year and what I expect in the future. I got few things to share since my last yearly update.
-
-
-First of all, I graduated from my computer security bachelors with first-class honors! Yippeeee! The past 3 years (+1 with foundation program) has been a rollercoaster. From actually understanding programming and deciding to follow computer security (and networks) oriented discipline, I can see that I have traveled far since 2019. Looking back at my younger, bratty self who tried to run Metasploit or use a pirated version of Cobalt Strike against my family’s devices, I feel both embarassed and proud seeing that I have deeper, useful knowledge and experience in information security that I can use to help my peers and people around me with and contribute to the digital space in various ways. I am thankful for my parents, professionals in and out of academics, and peers (new and old alike) who supported me during this period. I wish all my graduate peers good luck with their next step. I do hope we can keep in touch at times in the future.
-Speaking of bachelors, I completed my final year research project sucessfully, too. It is a framework for “sandboxing” (isolating&#x2F;limiting) running applications on Microsoft Windows with the objective of improving personal privacy and operational security. This does not really include novel techniques that are not known yet but its more of a demonstration of how one can impose controls and security measures on running applications. This has been largely inspired by and works similar to Sandboxie (for Windows) and firejail (for Linux) solutions which I use on a day-to-day basis as well. You can view the source code for this research&#x2F;framework on my GitHub repo (aCursedComrade&#x2F;sandbox-research). NOTE: This is not a complete product fit for daily use, it will remain as a toy for myself to learn about application security and operating system internal in its time, possibly.
-Other than that, I had the pleasure of organizing events with ISACA student chapter of my university, taught juniors and peers on different technical matters, did a few audits and vulnerability discolsures as an independant security researcher, started working on professional certifications, got back in touch with old friends and started hitting the gym for those gains. Overrall, it has been a nice year for me. As of writing this post, I am working on getting hired into the field, stabilizing myself and learning to be independant. It does suck to leave my little cave and face the horrors of adulthood but oh well, I got places to be in.
-With all that said, I wish a happy new year for all of you who come across this post. Stay safe, be kind, and follow your goals into 2025 o7
-P.S. If you are seeing this note, that means I am still looking for a job! If you might be willing to hire and&#x2F;or mentor me, you can visit the “About” section to know about me and my specialty. Thanks in advance!
-
-]]></content>
-      <tags>
-        <tag>personal</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>&quot;/proc&quot; file system | Enumerating for a foothold</title>
     <url>/2023/03/proc-enumeration/</url>
     <content><![CDATA[The /proc filesystem is a unique location in a Linux system which holds runtime information of the system. Let’s look at why does it exist and how can a malicious actor can leverage it for enumeration.
@@ -362,6 +345,23 @@ Setting up a reverse proxy and SSL for your home lab
       <tags>
         <tag>homelab</tag>
         <tag>networking</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Off to 2025</title>
+    <url>/2024/12/into-2025/</url>
+    <content><![CDATA[Well… this blog has been dry for a real long time huh… &gt;_&gt; Anyways, it’s time to leave 2024 behind and jump head first into 2025 which also means it’s time for me to “step out from the shadows” and reflect on what happened this year and what I expect in the future. I got few things to share since my last yearly update.
+
+
+First of all, I graduated from my computer security bachelors with first-class honors! Yippeeee! The past 3 years (+1 with foundation program) has been a rollercoaster. From actually understanding programming and deciding to follow computer security (and networks) oriented discipline, I can see that I have traveled far since 2019. Looking back at my younger, bratty self who tried to run Metasploit or use a pirated version of Cobalt Strike against my family’s devices, I feel both embarassed and proud seeing that I have deeper, useful knowledge and experience in information security that I can use to help my peers and people around me with and contribute to the digital space in various ways. I am thankful for my parents, professionals in and out of academics, and peers (new and old alike) who supported me during this period. I wish all my graduate peers good luck with their next step. I do hope we can keep in touch at times in the future.
+Speaking of bachelors, I completed my final year research project sucessfully, too. It is a framework for “sandboxing” (isolating&#x2F;limiting) running applications on Microsoft Windows with the objective of improving personal privacy and operational security. This does not really include novel techniques that are not known yet but its more of a demonstration of how one can impose controls and security measures on running applications. This has been largely inspired by and works similar to Sandboxie (for Windows) and firejail (for Linux) solutions which I use on a day-to-day basis as well. You can view the source code for this research&#x2F;framework on my GitHub repo (aCursedComrade&#x2F;sandbox-research). NOTE: This is not a complete product fit for daily use, it will remain as a toy for myself to learn about application security and operating system internal in its time, possibly.
+Other than that, I had the pleasure of organizing events with ISACA student chapter of my university, taught juniors and peers on different technical matters, did a few audits and vulnerability discolsures as an independant security researcher, started working on professional certifications, got back in touch with old friends and started hitting the gym for those gains. Overrall, it has been a nice year for me. As of writing this post, I am working on getting hired into the field, stabilizing myself and learning to be independant. It does suck to leave my little cave and face the horrors of adulthood but oh well, I got places to be in.
+With all that said, I wish a happy new year for all of you who come across this post. Stay safe, be kind, and follow your goals into 2025 o7
+P.S. If you are seeing this note, that means I am still looking for a job! If you might be willing to hire and&#x2F;or mentor me, you can visit the “About” section to know about me and my specialty. Thanks in advance!
+
+]]></content>
+      <tags>
+        <tag>personal</tag>
       </tags>
   </entry>
 </search>
