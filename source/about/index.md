@@ -9,11 +9,7 @@ toc:
 
 # comrade@internet > whoami
 
-Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), an IT student from Sri Lanka. I'm generally interested in all things cyber but my goal is to specialize in system administration and system/infrastructure security. I love to tinker around with networking and systems related stuff and love to share my experience I gain from that as well.
-
-{% note info %}
-I'm **open for any junior or internship job opportunities** at the moment. I'm looking for **a position on technical support, developer operations (DevOps), systems management or defensive cyber role** if possible. You can view [**my curriculum vitae (CV)**](/static/cv-partial.pdf) (partially redacted) (and the usual [**cover letter**](/static/cover-letter.pdf)) to know more about me. I appreciate having a supportive employer that can help a student like me to keep learning and gain a foothold in the field.
-{% endnote %}
+Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), a techie from Sri Lanka. I'm generally interested in all things cyber but my goal is to specialize in system administration and system/infrastructure security. I love to tinker around with networking and systems related stuff and love to share my experience I gain from that as well.
 
 - Brief resume: [read.cv](https://read.cv/acursedcomrade)
 - You can contact me quickly through:
