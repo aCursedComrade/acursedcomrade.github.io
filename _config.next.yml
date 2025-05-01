@@ -26,11 +26,10 @@ custom_file_path:
   #postBodyStart: source/_data/post-body-start.njk
   #postBodyEnd: source/_data/post-body-end.njk
   #footer: source/_data/footer.njk
-  #bodyEnd: source/_data/body-end.njk
+  bodyEnd: source/_data/body-end.njk
   #variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
   style: source/_data/styles.styl
-
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -45,7 +44,6 @@ scheme: Gemini
 # Dark Mode
 darkmode: true
 
-
 # ---------------------------------------------------------------
 # Site Information Settings
 # ---------------------------------------------------------------
@@ -58,7 +56,7 @@ favicon:
   #android_manifest: /manifest.json
 
 # Custom Logo (Warning: Do not support scheme Mist)
-custom_logo: 
+custom_logo:
 
 # Creative Commons 4.0 International License.
 # See: https://creativecommons.org/about/cclicenses/
@@ -100,7 +98,6 @@ menu:
 menu_settings:
   icons: true
   badges: false
-
 
 # ---------------------------------------------------------------
 # Sidebar Settings
@@ -181,7 +178,6 @@ toc:
   # Maximum heading depth of generated toc.
   max_depth: 6
 
-
 # ---------------------------------------------------------------
 # Footer Settings
 # See: https://theme-next.js.org/docs/theme-settings/footer
@@ -220,7 +216,6 @@ footer:
     gongan_num:
     # The icon for gongan beian. Login and See: https://beian.mps.gov.cn/web/business/businessHome/website
     gongan_icon_url:
-
 
 # ---------------------------------------------------------------
 # Post Settings
@@ -290,7 +285,6 @@ post_edit:
 # Available values: left | right | false
 post_navigation: left
 
-
 # ---------------------------------------------------------------
 # Custom Page Settings
 # See: https://theme-next.js.org/docs/theme-settings/custom-pages
@@ -316,7 +310,6 @@ calendar:
   showDeleted: false
   singleEvents: true
   maxResults: 250
-
 
 # ---------------------------------------------------------------
 # Misc Theme Settings
@@ -399,7 +392,6 @@ github_banner:
   enable: false
   permalink: https://github.com/yourname
 
-
 # ---------------------------------------------------------------
 # Font Settings
 # ---------------------------------------------------------------
@@ -453,7 +445,6 @@ font:
     family: Fira Code
     size: 0.9
 
-
 # ---------------------------------------------------------------
 # SEO Settings
 # See: https://theme-next.js.org/docs/theme-settings/seo
@@ -483,7 +474,6 @@ yandex_site_verification:
 # Baidu Webmaster tools verification.
 # See: https://ziyuan.baidu.com/site
 baidu_site_verification:
-
 
 # ---------------------------------------------------------------
 # Tags Settings
@@ -561,7 +551,6 @@ math:
     # See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex
     copy_tex: false
 
-
 # ---------------------------------------------------------------
 # External Libraries
 # See: https://theme-next.js.org/docs/third-party-services/external-libraries
@@ -607,7 +596,6 @@ quicklink:
   # Default (true) will attempt to use the fetch() API if supported (rather than link[rel=prefetch]).
   priority: true
 
-
 # ---------------------------------------------------------------
 # Animation Settings
 # ---------------------------------------------------------------
@@ -646,7 +634,6 @@ canvas_ribbon:
   size: 300 # The width of the ribbon
   alpha: 0.6 # The transparency of the ribbon
   zIndex: -1 # The display level of the ribbon
-
 
 # ---------------------------------------------------------------
 # Comments Settings
@@ -744,8 +731,9 @@ giscus:
   # Available values: pathname | url | title | og:title
   mapping: og:title
   # Available values: 0 | 1
-  reactions_enabled: 1
-   # Available values: 0 | 1
+  reactions_enabled:
+    1
+    # Available values: 0 | 1
   emit_metadata: 0
   # Available values: light | dark | dark_high_contrast | transparent_dark | preferred-color-scheme
   theme: dark
@@ -767,7 +755,6 @@ addtoany:
   buttons:
     - facebook
     - twitter
-
 
 # ---------------------------------------------------------------
 # Statistics and Analytics
@@ -810,9 +797,9 @@ matomo:
 # Umami Analytics
 # See: https://umami.is/
 umami:
-  enable: false
-  script_url: # https://umami.example.com/script.js
-  website_id: # <your website id>
+  enable: true
+  script_url: https://ticker.bastards.party/script.js
+  website_id: 61600b1d-9647-4e28-8c67-0b6eb70706fc
   host_url: # <your umami site url>
 
 # Plausible Analytics
@@ -855,7 +842,6 @@ busuanzi_count:
   post_views: true
   post_views_icon: far fa-eye
 
-
 # ---------------------------------------------------------------
 # Search Services
 # See: https://theme-next.js.org/docs/third-party-services/search-services
@@ -878,7 +864,6 @@ local_search:
   unescape: false
   # Preload the search data when the page loads.
   preload: false
-
 
 # ---------------------------------------------------------------
 # Chat Services
@@ -906,7 +891,6 @@ chatra:
 tidio:
   enable: false
   key: # Public Key, get it from dashboard. See: https://www.tidio.com/panel/settings/developer
-
 
 # ---------------------------------------------------------------
 # CDN Settings
