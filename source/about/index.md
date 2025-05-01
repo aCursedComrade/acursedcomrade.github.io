@@ -9,9 +9,8 @@ toc:
 
 # comrade@internet > whoami
 
-Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), a techie from Sri Lanka. I'm generally interested in all things cyber but my goal is to specialize in system administration and system/infrastructure security. I love to tinker around with networking and systems related stuff and love to share my experience I gain from that as well.
+Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), a techie/IT professional from Sri Lanka. I'm generally interested in all things cyber but my goal is to specialize in system administration and system/infrastructure security. I love to tinker around with networking and systems related stuff and love to share my experience I gain from that as well.
 
-- Brief resume: [read.cv](https://read.cv/acursedcomrade)
 - You can contact me quickly through:
   - E-Mail:
     - acursed_comrade [AT] yahoo.com (PGP: `E69C3ADB274C686D5A81EB0F9205800A39174DD8` @ `keys.openpgp.org`, `pgp.id`)
