@@ -27,7 +27,6 @@ Hey there! I'm Loshana Aloka (he/him, aka aCursedComrade), a techie/IT professio
 
 Here are my public keys:
 
-- PGP key ID: E69C3ADB274C686D5A81EB0F9205800A39174DD8
 - [SSH key](/static/ssh.pub)
 
 # Support me
