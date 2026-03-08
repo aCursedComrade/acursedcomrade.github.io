@@ -9,4 +9,4 @@ toc:
 
 You can use these affiliate links to support me as well!
 
-- None currently
+- Ground News: 4183872 - Get a month off from Ground News Premium when you subscribe
