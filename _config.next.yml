@@ -131,7 +131,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: https://www.gravatar.com/avatar/6ce033b1c1944dfc764ad2b55e80c583?s=128
+  url: https://www.gravatar.com/avatar/379e4dc765f8b35ee0d6d16ea28790a9e588759e11066503461c96f8a285592b?s=128
   # If true, the avatar will be displayed in circle.
   rounded: false
   # If true, the avatar will be rotated with the cursor.
