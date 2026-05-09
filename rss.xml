@@ -10,7 +10,7 @@
   <rights>All rights reserved 2026, Loshana Aloka</rights>
   <subtitle>Ramblings of a person</subtitle>
   <title>Loshana Aloka</title>
-  <updated>2026-05-09T12:32:55.642Z</updated>
+  <updated>2026-05-09T12:41:46.169Z</updated>
   <entry>
     <author>
       <name>Loshana Aloka</name>
@@ -23,7 +23,7 @@
       <![CDATA[<p>It has been a rollercoaster ride since my last yearly update. Not much happened, yet I felt a lot of things had changed. How one simple decision, a simple act of reaching out, can change the life of someone is amazing. At least that’s how I felt last year.</p>]]>
     </summary>
     <title>Following the wind into 2026</title>
-    <updated>2026-05-09T12:32:55.642Z</updated>
+    <updated>2026-05-09T12:41:46.169Z</updated>
   </entry>
   <entry>
     <author>
@@ -37,7 +37,7 @@
       <![CDATA[<p>Well… this blog has been dry for a real long time huh… &gt;_&gt; Anyways, it’s time to leave 2024 behind and jump head first into 2025 which also means it’s time for me to “step out from the shadows” and reflect on what happened this year and what I expect in the future. I got few things to share since my <a href="/2023/12/into-2024/" title="Heading into 2024...">last yearly update</a>.</p>]]>
     </summary>
     <title>Off to 2025</title>
-    <updated>2026-05-09T12:32:55.642Z</updated>
+    <updated>2026-05-09T12:41:46.169Z</updated>
   </entry>
   <entry>
     <author>
@@ -51,7 +51,7 @@
       <![CDATA[<p>Oh boy, its almost 2024 and this blog has been dry for a while. So I want to leave my thoughts here before the new year, looking back at what happened and what I hope for the future.</p>]]>
     </summary>
     <title>Heading into 2024...</title>
-    <updated>2026-05-09T12:32:55.642Z</updated>
+    <updated>2026-05-09T12:41:46.169Z</updated>
   </entry>
   <entry>
     <author>
@@ -66,7 +66,7 @@
       <![CDATA[<p>Remote access is a crucial aspect to consider when you setup your own infrastructure. You could have it sitting on the “edge” and be able to directly talk to it or use a secure VPN to have controlled access. Here, I have written about my experience with for setting remote access to my home lab with ZeroTier and possible alternatives ways one can approach the same scenario.</p>]]>
     </summary>
     <title>Pocket home lab | Setting up remote access to your home lab</title>
-    <updated>2026-05-09T12:32:55.643Z</updated>
+    <updated>2026-05-09T12:41:46.169Z</updated>
   </entry>
   <entry>
     <author>
@@ -82,7 +82,7 @@
       <![CDATA[<p>The <code>/proc</code> filesystem is a unique location in a Linux system which holds runtime information of the system. Let’s look at why does it exist and how can a malicious actor can leverage it for enumeration.</p>]]>
     </summary>
     <title>&quot;/proc&quot; file system | Enumerating for a foothold</title>
-    <updated>2026-05-09T12:32:55.642Z</updated>
+    <updated>2026-05-09T12:41:46.169Z</updated>
   </entry>
   <entry>
     <author>
@@ -96,6 +96,6 @@
       <![CDATA[<p>Hello world! Welcome to my little corner of the inter-webs.</p>]]>
     </summary>
     <title>Hello World!</title>
-    <updated>2026-05-09T12:32:55.642Z</updated>
+    <updated>2026-05-09T12:41:46.169Z</updated>
   </entry>
 </feed>
