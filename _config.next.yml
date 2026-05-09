@@ -76,8 +76,8 @@ creative_commons:
 open_graph:
   enable: true
   options:
-    twitter_card: summary_large_image
-    twitter_id: "@aCursed_Comrade"
+    # twitter_card: summary_large_image
+    # twitter_id: "@aCursed_Comrade"
 
 # ---------------------------------------------------------------
 # Menu Settings
