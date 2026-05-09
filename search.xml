@@ -15,21 +15,6 @@ And that’s about it for this post. You can take a look at the about page for m
       </tags>
   </entry>
   <entry>
-    <title>Heading into 2024...</title>
-    <url>/2023/12/into-2024/</url>
-    <content><![CDATA[Oh boy, its almost 2024 and this blog has been dry for a while. So I want to leave my thoughts here before the new year, looking back at what happened and what I hope for the future.
-
-
-2023 has been a good year. Not really an eventful one for my introverted self but it was good nonetheless. Got myself occupied as an undergraduate, learning new things and getting those darn coursework done on time. I am also thankful for the new peers I met who share similar niches with me, they are a joy to work with. And of course, continued to break and learn cyber stuff as usual. Its cool to have your own domain and some infrastructure to spin up stuff that greatly helps your day-to-day work. Makes you feel unstoppable.
-As for what I have planned for the next year, tackling the bachelors is on the priority list. Working on my final research project as well at the time of writing. Then its about moving in to the field, getting that first foothold somewhere nice. And as usual, keep hacking away and learning new things.
-Even though the little me did not have much of an eventful year, the world certainly did. We saw a lot of ups and downs, wins and losses and then peace and chaos. Looking back at all that happened, what I want to say is that please be excellent to each other, help out when you can because it can make a difference. And finally, stick to your goals. Its OK to get distracted once in a while but stay positive and remember what you are working for.
-With that, I wish everyone a happy new year! Stay safe and keep kicking butt o7
-]]></content>
-      <tags>
-        <tag>personal</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Off to 2025</title>
     <url>/2024/12/into-2025/</url>
     <content><![CDATA[Well… this blog has been dry for a real long time huh… &gt;_&gt; Anyways, it’s time to leave 2024 behind and jump head first into 2025 which also means it’s time for me to “step out from the shadows” and reflect on what happened this year and what I expect in the future. I got few things to share since my last yearly update.
@@ -45,14 +30,29 @@ With all that said, I wish a happy new year for all of you who come across this 
       </tags>
   </entry>
   <entry>
+    <title>Heading into 2024...</title>
+    <url>/2023/12/into-2024/</url>
+    <content><![CDATA[Oh boy, its almost 2024 and this blog has been dry for a while. So I want to leave my thoughts here before the new year, looking back at what happened and what I hope for the future.
+
+
+2023 has been a good year. Not really an eventful one for my introverted self but it was good nonetheless. Got myself occupied as an undergraduate, learning new things and getting those darn coursework done on time. I am also thankful for the new peers I met who share similar niches with me, they are a joy to work with. And of course, continued to break and learn cyber stuff as usual. Its cool to have your own domain and some infrastructure to spin up stuff that greatly helps your day-to-day work. Makes you feel unstoppable.
+As for what I have planned for the next year, tackling the bachelors is on the priority list. Working on my final research project as well at the time of writing. Then its about moving in to the field, getting that first foothold somewhere nice. And as usual, keep hacking away and learning new things.
+Even though the little me did not have much of an eventful year, the world certainly did. We saw a lot of ups and downs, wins and losses and then peace and chaos. Looking back at all that happened, what I want to say is that please be excellent to each other, help out when you can because it can make a difference. And finally, stick to your goals. Its OK to get distracted once in a while but stay positive and remember what you are working for.
+With that, I wish everyone a happy new year! Stay safe and keep kicking butt o7
+]]></content>
+      <tags>
+        <tag>personal</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Following the wind into 2026</title>
     <url>/2026/03/into-2026/</url>
     <content><![CDATA[It has been a rollercoaster ride since my last yearly update. Not much happened, yet I felt a lot of things had changed. How one simple decision, a simple act of reaching out, can change the life of someone is amazing. At least that’s how I felt last year.
 
 
-Hello again, I am not dead yet. I just turned 23 as I write this piece. Do whatever you want with that information. Even though this place had been dry as usual, real life was not the same. There were not any grand adventures, except maybe one with the boys, but it was mostly about mental gymnastics.
-The start of 2025 was a bit stressful. It had been about 6 months since I graduated in 2024, and, naturally, I was expected to find a job as a normal person would. The job market for junior-level roles and the burnout I have felt since I graduated were not helping in the first place. But I managed to land my first role as a contracted technical support engineer. It was a small team of people serving a specific set of businesses in the UK. I only met or talked to 7 people out of supposedly around 50 people working in the org. As you might already imagine, it was not the best of workplaces. But it was a start, and I don’t blame them for the circumstances they were in. On the other hand, I got to work on Windows Server environments and databases. Literal production databases that handle transactions of decent retail stores. And I almost nuked 3-year transaction records once just because I forgot to use a WHERE condition. Thankfully, the backup I had before that saved my ass without anyone noticing. Whew.
-Unfortunately, due to low number of members in the team and an erratic work schedule, it caught up with my burnout. Weekends shifted, and my sense of time got blurred. Motivation was at an all-time low, and I did not feel like doing anything by myself during R&amp;R. Even tensions between me and a close family member escalated. I came to an understanding that they and I were different despite how close we are. So I cut them off, and it’s painful up to this day. But my mom and connecting with the few friends I know from school and met online over the years helped me to continue just by being there. Then, by August, a batchmate sent a message to our batch group chat. It was about an internship in a rather interesting place. It was a way out, but I was hesitant. But she was trustworthy, and I really needed a way out despite having to step into a lower role. Little did I know, that opportunity would be one of the best turning points I had in my life.
+Hello again, I am not dead yet. I just turned 23 as I write this piece. Even though this place had been dry as usual, real life was not the same. There were not any grand adventures, except maybe one with the boys, but it was mostly about mental gymnastics.
+The start of 2025 was a bit stressful. It had been about 6 months since I graduated in 2024, and, naturally, I was expected to find a job as a normal person would. The job market for junior-level roles and the burnout I have felt since I graduated were not helping in the first place. But I managed to land my first role as a contracted technical support engineer. It was a small team of people serving a specific set of businesses. I only met or talked to 7 people out of supposedly around 50 people working in the org. As you might already imagine, it was not the best of workplaces. But it was a start, and I don’t blame them for the circumstances they were in. On the other hand, I got to work on Windows Server environments and databases. Literal production databases that handle transactions of decent retail stores. And I almost nuked 3-year transaction records once just because I forgot to use a WHERE condition. Thankfully, the backup I had before that saved my ass without anyone noticing. Whew.
+Unfortunately, due to low number of members in the team and an erratic work schedule, it caught up with my burnout. Weekends shifted, and my sense of time got blurred. Motivation was at an all-time low, and I did not feel like doing anything by myself during R&amp;R. Even tensions between me and a close family member escalated. I came to an understanding that they and I were different despite how close we are. So I cut them off, and it’s painful up to this day. But my mom and connecting with the few friends I know from school and met online over the years helped me to continue just by being there. Then, by August, a batchmate sent a message to our batch group chat. It was about an internship in a rather interesting place. It was a way out, but I was hesitant. But she felt trustworthy, and I really needed a way out despite having to step into a lower role. Little did I know, that opportunity would be one of the best turning points I had in my life.
 Fast forward to today, I got promoted to associate level after completing that internship. The Colombo lifestyle, meeting new people, and being in a position to oversee IT operations of a large conglomerate have been both scary and life-changing experiences. I must admit that the 9-5 can get exhausting sometime. I want to get past my burnout and do something cool in the IT space as well. But I will keep trying and get that bread every day. Because, at the very least, I can continue to make my mom proud and give back to her for all the trust she gave me. And maybe, I can try to go out, explore, and enjoy stuff I have not tried before. Hopefully, I am not too late to try that.
 To the batchmate, she who referred me: You and I have different backstories. But I like that we share similar tastes in stuff like music and aspects of life. If you are reading this, just know that you did a great deed by helping me even though you did not mean it. It is nice to get to know you from being strangers back in the university. I’d like to know more and help when you need it. Of course, it would be easier if my chronically academic self (otherwise, nerd) knew one skill that would help me communicate this better to you: socializing.
 That’s it for now. As usual, be kind and excellent to each other. We all need it now more than we realize.
