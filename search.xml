@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World!</title>
-    <url>/2022/12/hello/</url>
-    <content><![CDATA[Hello world! Welcome to my little corner of the inter-webs.
-
-
-Hey there!This is my shot at making a blog and writing about stuff. You can expect me to write about tech stuff, cybersecurity (when I am a professional ‘wink’), games ??? Or anything else that I may find interesting.
-And that’s about it for this post. You can take a look at the about page for more information about me. Thanks for reading!
-
-]]></content>
-      <tags>
-        <tag>personal</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Heading into 2024...</title>
     <url>/2023/12/into-2024/</url>
     <content><![CDATA[Oh boy, its almost 2024 and this blog has been dry for a while. So I want to leave my thoughts here before the new year, looking back at what happened and what I hope for the future.
@@ -30,154 +16,32 @@ With that, I wish everyone a happy new year! Stay safe and keep kicking butt o7
       </tags>
   </entry>
   <entry>
-    <title>Following the wind into 2026</title>
-    <url>/2026/03/into-2026/</url>
-    <content><![CDATA[It has been a rollercoaster ride since my last yearly update. Not much happened, yet I felt a lot of things had changed. How one simple decision, a simple act of reaching out, can change the life of someone is amazing. At least that’s how I felt last year.
+    <title>Off to 2025</title>
+    <url>/2024/12/into-2025/</url>
+    <content><![CDATA[Well… this blog has been dry for a real long time huh… &gt;_&gt; Anyways, it’s time to leave 2024 behind and jump head first into 2025 which also means it’s time for me to “step out from the shadows” and reflect on what happened this year and what I expect in the future. I got few things to share since my last yearly update.
 
 
-Hello again, I am not dead yet. I just turned 23 as I write this piece. Even though this place had been dry as usual, real life was not the same. There were not any grand adventures, except maybe one with the boys, but it was mostly about mental gymnastics.
-The start of 2025 was a bit stressful. It had been about 6 months since I graduated in 2024, and, naturally, I was expected to find a job as a normal person would. The job market for junior-level roles and the burnout I have felt since I graduated were not helping in the first place. But I managed to land my first role as a contracted technical support engineer. It was a small team of people serving a specific set of businesses. I only met or talked to 7 people out of supposedly around 50 people working in the org. As you might already imagine, it was not the best of workplaces. But it was a start, and I don’t blame them for the circumstances they were in. On the other hand, I got to work on Windows Server environments and databases. Literal production databases that handle transactions of decent retail stores. And I almost nuked 3-year transaction records once just because I forgot to use a WHERE condition. Thankfully, the backup I had before that saved my ass without anyone noticing. Whew.
-Unfortunately, due to low number of members in the team and an erratic work schedule, it caught up with my burnout. Weekends shifted, and my sense of time got blurred. Motivation was at an all-time low, and I did not feel like doing anything by myself during R&amp;R. Even tensions between me and a close family member escalated. I came to an understanding that they and I were different despite how close we are. So I cut them off, and it’s painful up to this day. But my mom and connecting with the few friends I know from school and met online over the years helped me to continue just by being there. Then, by August, a batchmate sent a message to our batch group chat. It was about an internship in a rather interesting place. It was a way out, but I was hesitant. But she felt trustworthy, and I really needed a way out despite having to step into a lower role. Little did I know, that opportunity would be one of the best turning points I had in my life.
-Fast forward to today, I got promoted to associate level after completing that internship. The Colombo lifestyle, meeting new people, and being in a position to oversee IT operations of a large conglomerate have been both scary and life-changing experiences. I must admit that the 9-5 can get exhausting sometime. I want to get past my burnout and do something cool in the IT space as well. But I will keep trying and get that bread every day. Because, at the very least, I can continue to make my mom proud and give back to her for all the trust she gave me. And maybe, I can try to go out, explore, and enjoy stuff I have not tried before. Hopefully, I am not too late to try that.
-To the batchmate, she who referred me: You and I have different backstories. But I like that we share similar tastes in stuff like music and aspects of life. If you are reading this, just know that you did a great deed by helping me even though you did not mean it. It is nice to get to know you from being strangers back in the university. I’d like to know more and help when you need it. Of course, it would be easier if my chronically academic self (otherwise, nerd) knew one skill that would help me communicate this better to you: socializing.
-That’s it for now. As usual, be kind and excellent to each other. We all need it now more than we realize.
+First of all, I graduated from my computer security bachelors with first-class honors! Yippeeee! The past 3 years (+1 with foundation program) has been a rollercoaster. From actually understanding programming and deciding to follow computer security (and networks) oriented discipline, I can see that I have traveled far since 2019. Looking back at my younger, bratty self who tried to run Metasploit or use a pirated version of Cobalt Strike against my family’s devices, I feel both embarassed and proud seeing that I have deeper, useful knowledge and experience in information security that I can use to help my peers and people around me with and contribute to the digital space in various ways. I am thankful for my parents, professionals in and out of academics, and peers (new and old alike) who supported me during this period. I wish all my graduate peers good luck with their next step. I do hope we can keep in touch at times in the future.
+Speaking of bachelors, I completed my final year research project sucessfully, too. It is a framework for “sandboxing” (isolating&#x2F;limiting) running applications on Microsoft Windows with the objective of improving personal privacy and operational security. This does not really include novel techniques that are not known yet but its more of a demonstration of how one can impose controls and security measures on running applications. This has been largely inspired by and works similar to Sandboxie (for Windows) and firejail (for Linux) solutions which I use on a day-to-day basis as well. You can view the source code for this research&#x2F;framework on my GitHub repo (aCursedComrade&#x2F;sandbox-research). NOTE: This is not a complete product fit for daily use, it will remain as a toy for myself to learn about application security and operating system internal in its time, possibly.
+Other than that, I had the pleasure of organizing events with ISACA student chapter of my university, taught juniors and peers on different technical matters, did a few audits and vulnerability discolsures as an independant security researcher, started working on professional certifications, got back in touch with old friends and started hitting the gym for those gains. Overrall, it has been a nice year for me. As of writing this post, I am working on getting hired into the field, stabilizing myself and learning to be independant. It does suck to leave my little cave and face the horrors of adulthood but oh well, I got places to be in.
+With all that said, I wish a happy new year for all of you who come across this post. Stay safe, be kind, and follow your goals into 2025 o7
 ]]></content>
       <tags>
         <tag>personal</tag>
       </tags>
   </entry>
   <entry>
-    <title>Pocket home lab | Setting up remote access to your home lab</title>
-    <url>/2023/06/remote-lab-access/</url>
-    <content><![CDATA[Remote access is a crucial aspect to consider when you setup your own infrastructure. You could have it sitting on the “edge” and be able to directly talk to it or use a secure VPN to have controlled access. Here, I have written about my experience with for setting remote access to my home lab with ZeroTier and possible alternatives ways one can approach the same scenario.
+    <title>Hello World!</title>
+    <url>/2022/12/hello/</url>
+    <content><![CDATA[Hello world! Welcome to my little corner of the inter-webs.
 
 
-Home lab on the goIt is a common habit to have your own home lab among many professionals and enthusiasts in the IT field. Whether it is about hosting your content to serve the internet or tinkering with networks and applications, a home lab can be your workplace or your playground. There are different approaches to implementing a home lab depending on the resources available. Cloud platforms can be effortlessly used to create infrastructure virtually but costs increase relative to scale. Alternatively one can use accessible hardware to set up in an available physical location.
-Cloud platforms provide easy methods to expose and define access controls to your assets that sits on the “edge”. When working with your own hardware however, you need to manually integrate your infrastructure with services like site-to-site VPNs or SD-WANs to achieve this goal. In addition, some external factors may affect your implementation. Such as Carrier-grade NAT (CGNAT) used by ISPs which doesn’t allow peer-to-peer connections. It is possible to allocate a public IP for your infrastructure, but there are alternative technologies that can help you to circumvent limitations of CGNAT.
-This blog is about interconnecting the infrastructure, I won’t be covering how to start your own home lab from scratch. However, there are lots of resources to get started out there already. Also, huge kudos to @0xBEN for his resources that helped me get started with mine.
-
-
-Connecting the nodesMy home lab layout is based on @0xBEN’s Proxmox VE guide (see references) which was used as the foundation for building my home lab, and therefore I will be quoting some content from his blog with his permission to demonstrate the network layout. Before continuing further, below diagram shows our home lab layout:
-
-
-As of writing this blog post, my home lab layout is similar to what’s shown in the diagram except for the absence Wazuh SIEM and dedicated OpenVPN&#x2F;WireGuard VMs. I added my own changes which I think is more suitable or interesting. There’s so many rabbit holes to go down and experiment on :D
-
-
-My goal is simple, I need to be able to talk with the following 3 hosts in order to properly work with my home lab:
-
-Proxmox hypervisor: To manage the virtual infrastructure.
-Virtual pfSense firewall: In addition to firewall services, this is also used as a OpenVPN server to access VMs on vmbr1 (Security) vSwitch. Has access to home LAN.
-A utility VM: Running bare-bones Arch Linux, my plan is to use this VM to host certain services that I may find useful (discussed later in this post). Has access to home LAN.
-
-0xBEN’s guide demonstrate how dynamic DNS can be used to communicate with the lab remotely. But this was not the case for me due to CGNAT limitations on my ISP connection. Upon looking for alternatives, these are some solutions that I found popular (in no particular order) that I can use:
-
-ZeroTier
-Tailscale
-Defined Networking which uses Nebula and manages backbone infrastructure for individuals&#x2F;organizations.
-Netmaker
-
-These services have the same use case, being able to connect internal or non-internet-facing hosts over a virtual network for remote access, with each having a few different features with different underlying spec. These services provide a decent pricing plan with a generous free tier for individual and some services or their underlying frameworks are publicly available and can be self-hosted by capable individuals.
-One more important point to highlight is that these services provide different synergies with other services&#x2F;devices as well. For example, pfSense officially support Tailscale to bridge “sites” (subnets) together and likewise MikroTik’s RouterOS supports ZeroTier integration. This can help bridge private networks quick and easily without having to configure intermediate routing&#x2F;service in between. However, for my first run I decided to use ZeroTier, and it has been pretty simple to get started and work with.
-ZeroTierZeroTier combines the capabilities of VPN and SD-WAN to connect all kinds of end user devices to a single virtualized network. The virtual interface created by ZeroTier makes it feel like a regular LAN network where you can manage routes, assign IPs, define flow rules, etc. while providing end-to-end encryption to all traffic.
-It is also an open source project (some actions falls under their business license) and the relay server implementation is publicly available for anyone to self-host their own instance. They also provide a development SDK (a socket library) in a few different programming languages that can be used create and connect embedded applications and systems over the virtual network.
-If you want to read more and get started with deployment, make sure to read their documentation and knowledge base for guides and troubleshooting. Now, let’s go over the steps you need to set up a ZeroTier network.
-
-After signing up for an account, you will land on your account dashboard. This page gives you an overview of your active networks and total number of nodes&#x2F;hosts connected. Clicking “Create a Network” will create a new network entry on the dashboard with a random name. To continue, click on the new record to open the network configuration page.
-
-
-
-
-There are subsections for help regarding each option you see in this configuration page. Make sure to refer that if you have any doubts about a component.
-The basic settings section can be used to customize the name, description and the level of access control of your network. Private mode creates an additional authorization step which has to be approved by a network administrator before a node is allowed to communicate with the network.
-
-
-
-
-The advanced settings section contains network related options that you can configure according to your needs.
-Managed Routes dialogue can be used to manually add routes through the connected nodes. Additional configuration on the target node is required to make this work.
-IPv4 Auto Assign dialogue lets you define a IPv4 private address range (RFC 1918) that will be used to automatically allocated addresses to connecting nodes. You may want to double-check your allocation with your LAN or other networks that might overlap and cause issues with routing.
-IPv6 Auto Assign dialogue works the same as IPv4.
-Multicast dialogue lets you configure multicast recipient limit and enable broadcast within the network.
-DNS dialogue lets you define an internal domain for the network and assign a DNS server node.
-Manually Add Member dialogue lets you authenticate a node before it joins a network (or to unban a previously banned node).
-
-
-
-
-
-
-
-
-Heading over to Members section after configuring your settings, you will see a message about adding new members. You should now download and install the client daemon on to the devices you need to connect to the network (You will need administrative privileges when working with ZeroTier client). Assuming you are on a Linux distribution, you can try the below command on your terminal to test the CLI tool:
-
-# To print help textsudo zerotier-cli help
-
-# To view your client infosudo zerotier-cli info
-
-The client info command returns your client ID and service status, client ID (or member ID) is used to uniquely identify nodes when adding&#x2F;removing from the network. We should now join our node to the virtual network with the network ID that is shown in the dashboard or in the network management page.
-
-# To join a networksudo zerotier-cli join NETWORK_ID
-
-# To list active network statussudo zerotier-cli listnetworks
-
-Assuming you have chosen to keep the network private in the configuration stage, the status of the previous command will be “ACCESS DENIED” because you need to approve the node before it can start communicating over the network. Head over to the Members section we previously left before, you should now see a new record with the client ID of the node you are working with. Check the box on the “Auth” column to approve the node.
-
-
-
-
-If everything went accordingly, your node will be assigned an IP address from the range you previously configured. Use the listnetwork command in the CLI tool to verify. The service also configures a virtual network interface for the node which you can see with ip a command.
-
-You should now repeat above steps for the remaining hosts that you need on the network. The client daemon makes sure that every time a host reboots, the virtual interface will be brought back up again. All you need is to be able to connect and talk to ZeroTier or your own relay server over the internet, then you can just treat it like a usual LAN connection.
-Virtual network overview
-
-Going back to my home lab setup, I connected my Proxmox node, utility VM, my personal laptop and my mobile to the network. The remaining node is the pfSense firewall but the reason I cannot connect it is that it may cause issues with the firewall config and my lack of knowledge on the BSD ecosystem. Even though I have listed about how to forward these internal services, another approach would be to have the firewall connected directly connected with our SD-WAN solution, so we can directly bridge internal subnets via the firewall without any intermediate forwarding or other solutions (I included a few examples in a previous section).
-
-
-I initially used the Proxmox node as a proxy (by using the ssh -R option to create a reverse socks proxy) to access pfSense web panel and its OpenVPN server. It is a working alternative, but the next section covers how forward proxies can be used AND how we can assign a verifiable domain with the help of certain project.
-A forwarding proxyAt this point, my attention went towards Nginx as this is a perfect scenario to set it up on the utility VM. It can act as a reverse proxy to serve internal services or forward TCP&#x2F;UDP connections to internal services.
-This is when I found a nice video that covers Nginx proxy manager project which can streamline the usage of Nginx and easily assign a domain name with verifiable security (SSL) to sites even if they are not exposed to the internet. I recommend watching the video for detailed steps, and my changes to its configuration is listed below.
-
-
-Nginx Proxy Manager
-For the domain, I have selected comradenet.duckdns.org (that’s a pretty long domain name) and pointed the record at the ZeroTier assigned address 172.27.10.11 of the utility VM.
-After setting up docker and docker-compose on the VM, I took the docker-compose file in the quick setup page and added an extra mapping to port 1194 which is the default port for OpenVPN servers.
-
-version: &#x27;3.8&#x27;services:  nginxproxymanager:    image: &#x27;jc21/nginx-proxy-manager:latest&#x27;    restart: unless-stopped    ports:      - &#x27;80:80&#x27;      - &#x27;81:81&#x27;      - &#x27;443:443&#x27;      - &#x27;1194:1194&#x27;    volumes:      - ./data:/data      - ./letsencrypt:/etc/letsencrypt
-
-After spinning up the container and going through the initial login setup, I created an SSL certificate as described in the video.
-
-
-
-
-Moving on to proxy host configuration, the process is same as seen in the video. After defining two subdomains for Proxmox and pfSense, the destination is pointed towards their LAN addresses. One additional detail is that we need to enable Websocket support on both proxy records for the web panels to work correctly (This is the case for Proxmox and pfSense web panels, other web services may differ).
-
-
-
-
-And finally, I defined a stream record to forward all incoming traffic on port 1194 to the same port on pfSense firewall via the LAN. With that, I just need to define the target server on the OpenVPN client config as the utility VM and the proxy will forward the traffic to pfSense server. TCP forwarding is selected as the OpenVPN server is configured to use TCP instead of UDP.
-
-
-
-And that’s the proxy manager configuration for my environment. You may need to define additional port mappings depending on what you are trying to set up forwarding. You are free to stop and scrap the container when you want to modify port mappings as all the data is stored in mounts as defined in the docker-compose file.
-Make sure to properly organize mount folders on your docker host, so your configuration is not lost.
-
-
-Proxy in actionNow I can easily access my web panels by using a nice little URL on my browser and join my internal VPN to play around with my cyber playground as long as I am connected to my ZeroTier network.
-
-
-
-
-Nginx proxy manager has been pretty helpful to me as a beginner. The GUI has more options available inline with what Nginx has to offer, but one might need to manually configure their Nginx instance to fine tune all the options it has to offer.
-Concluding thoughtsAnd that’s about it for this home lab adventure. This has been a nice learning experience for me when it comes to network implementation and technologies behind them. I am planning try out more services as listed in this post to come up with a better network design that is easy to use and maintain. The industry certainly has much more to offer, and this post only covered a few of them.
-I would like to thank @0xBEN again for his awesome resources that got me interested in tinkering as well. And thank you for reading my post, hope you enjoyed and possibly gained something from my post.
-References
-Proxmox VE 7: Converting a Laptop into a Bare Metal Server by 0xBEN
-Setting up a reverse proxy and SSL for your home lab
+Hey there!This is my shot at making a blog and writing about stuff. You can expect me to write about tech stuff, cybersecurity (when I am a professional ‘wink’), games ??? Or anything else that I may find interesting.
+And that’s about it for this post. You can take a look at the about page for more information about me. Thanks for reading!
 
 ]]></content>
       <tags>
-        <tag>homelab</tag>
-        <tag>networking</tag>
+        <tag>personal</tag>
       </tags>
   </entry>
   <entry>
@@ -365,18 +229,155 @@ LFI to RCE via &#x2F;proc&#x2F;*&#x2F;fd
       </tags>
   </entry>
   <entry>
-    <title>Off to 2025</title>
-    <url>/2024/12/into-2025/</url>
-    <content><![CDATA[Well… this blog has been dry for a real long time huh… &gt;_&gt; Anyways, it’s time to leave 2024 behind and jump head first into 2025 which also means it’s time for me to “step out from the shadows” and reflect on what happened this year and what I expect in the future. I got few things to share since my last yearly update.
+    <title>Following the wind into 2026</title>
+    <url>/2026/03/into-2026/</url>
+    <content><![CDATA[It has been a rollercoaster ride since my last yearly update. Not much happened, yet I felt a lot of things had changed. How one simple decision, a simple act of reaching out, can change the life of someone is amazing. At least that’s how I felt last year.
 
 
-First of all, I graduated from my computer security bachelors with first-class honors! Yippeeee! The past 3 years (+1 with foundation program) has been a rollercoaster. From actually understanding programming and deciding to follow computer security (and networks) oriented discipline, I can see that I have traveled far since 2019. Looking back at my younger, bratty self who tried to run Metasploit or use a pirated version of Cobalt Strike against my family’s devices, I feel both embarassed and proud seeing that I have deeper, useful knowledge and experience in information security that I can use to help my peers and people around me with and contribute to the digital space in various ways. I am thankful for my parents, professionals in and out of academics, and peers (new and old alike) who supported me during this period. I wish all my graduate peers good luck with their next step. I do hope we can keep in touch at times in the future.
-Speaking of bachelors, I completed my final year research project sucessfully, too. It is a framework for “sandboxing” (isolating&#x2F;limiting) running applications on Microsoft Windows with the objective of improving personal privacy and operational security. This does not really include novel techniques that are not known yet but its more of a demonstration of how one can impose controls and security measures on running applications. This has been largely inspired by and works similar to Sandboxie (for Windows) and firejail (for Linux) solutions which I use on a day-to-day basis as well. You can view the source code for this research&#x2F;framework on my GitHub repo (aCursedComrade&#x2F;sandbox-research). NOTE: This is not a complete product fit for daily use, it will remain as a toy for myself to learn about application security and operating system internal in its time, possibly.
-Other than that, I had the pleasure of organizing events with ISACA student chapter of my university, taught juniors and peers on different technical matters, did a few audits and vulnerability discolsures as an independant security researcher, started working on professional certifications, got back in touch with old friends and started hitting the gym for those gains. Overrall, it has been a nice year for me. As of writing this post, I am working on getting hired into the field, stabilizing myself and learning to be independant. It does suck to leave my little cave and face the horrors of adulthood but oh well, I got places to be in.
-With all that said, I wish a happy new year for all of you who come across this post. Stay safe, be kind, and follow your goals into 2025 o7
+Hello again, I am not dead yet. I just turned 23 as I write this piece. Even though this place had been dry as usual, real life was not the same. There were not any grand adventures, except maybe one with the boys, but it was mostly about mental gymnastics.
+The start of 2025 was a bit stressful. It had been about 6 months since I graduated in 2024, and, naturally, I was expected to find a job as a normal person would. The job market for junior-level roles and the burnout I have felt since I graduated were not helping in the first place. But I managed to land my first role as a contracted technical support engineer. It was a small team of people serving a specific set of businesses. I only met or talked to 7 people out of supposedly around 50 people working in the org. As you might already imagine, it was not the best of workplaces. But it was a start, and I don’t blame them for the circumstances they were in. On the other hand, I got to work on Windows Server environments and databases. Literal production databases that handle transactions of decent retail stores. And I almost nuked 3-year transaction records once just because I forgot to use a WHERE condition. Thankfully, the backup I had before that saved my ass without anyone noticing. Whew.
+Unfortunately, due to low number of members in the team and an erratic work schedule, it caught up with my burnout. Weekends shifted, and my sense of time got blurred. Motivation was at an all-time low, and I did not feel like doing anything by myself during R&amp;R. Even tensions between me and a close family member escalated. I came to an understanding that they and I were different despite how close we are. So I cut them off, and it’s painful up to this day. But my mom and connecting with the few friends I know from school and met online over the years helped me to continue just by being there. Then, by August, an interesting batchmate sent a message to our batch group chat. It was about an internship in a rather interesting place. It was a way out, but I was hesitant. But she felt trustworthy, and I really needed a way out despite having to step into a lower role. Little did I know, that opportunity would be one of the best turning points I had in my life.
+Fast forward to today, I got promoted to associate level after completing that internship. The Colombo lifestyle, meeting new people, and being in a position to oversee IT operations of a large conglomerate have been both scary and life-changing experiences. I must admit that the 9-5 can get exhausting sometime. I want to get past my burnout and do something cool in the IT space as well. But I will keep trying and get that bread every day. Because, at the very least, I can continue to make my mom proud and give back to her for all the trust she gave me. And maybe, I can try to go out, explore, and enjoy stuff I have not tried before. Hopefully, I am not too late to try that.
+
+
+That’s it for now. As usual, be kind and excellent to each other. We all need it now more than we realize.
 ]]></content>
       <tags>
         <tag>personal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pocket home lab | Setting up remote access to your home lab</title>
+    <url>/2023/06/remote-lab-access/</url>
+    <content><![CDATA[Remote access is a crucial aspect to consider when you setup your own infrastructure. You could have it sitting on the “edge” and be able to directly talk to it or use a secure VPN to have controlled access. Here, I have written about my experience with for setting remote access to my home lab with ZeroTier and possible alternatives ways one can approach the same scenario.
+
+
+Home lab on the goIt is a common habit to have your own home lab among many professionals and enthusiasts in the IT field. Whether it is about hosting your content to serve the internet or tinkering with networks and applications, a home lab can be your workplace or your playground. There are different approaches to implementing a home lab depending on the resources available. Cloud platforms can be effortlessly used to create infrastructure virtually but costs increase relative to scale. Alternatively one can use accessible hardware to set up in an available physical location.
+Cloud platforms provide easy methods to expose and define access controls to your assets that sits on the “edge”. When working with your own hardware however, you need to manually integrate your infrastructure with services like site-to-site VPNs or SD-WANs to achieve this goal. In addition, some external factors may affect your implementation. Such as Carrier-grade NAT (CGNAT) used by ISPs which doesn’t allow peer-to-peer connections. It is possible to allocate a public IP for your infrastructure, but there are alternative technologies that can help you to circumvent limitations of CGNAT.
+This blog is about interconnecting the infrastructure, I won’t be covering how to start your own home lab from scratch. However, there are lots of resources to get started out there already. Also, huge kudos to @0xBEN for his resources that helped me get started with mine.
+
+
+Connecting the nodesMy home lab layout is based on @0xBEN’s Proxmox VE guide (see references) which was used as the foundation for building my home lab, and therefore I will be quoting some content from his blog with his permission to demonstrate the network layout. Before continuing further, below diagram shows our home lab layout:
+
+
+As of writing this blog post, my home lab layout is similar to what’s shown in the diagram except for the absence Wazuh SIEM and dedicated OpenVPN&#x2F;WireGuard VMs. I added my own changes which I think is more suitable or interesting. There’s so many rabbit holes to go down and experiment on :D
+
+
+My goal is simple, I need to be able to talk with the following 3 hosts in order to properly work with my home lab:
+
+Proxmox hypervisor: To manage the virtual infrastructure.
+Virtual pfSense firewall: In addition to firewall services, this is also used as a OpenVPN server to access VMs on vmbr1 (Security) vSwitch. Has access to home LAN.
+A utility VM: Running bare-bones Arch Linux, my plan is to use this VM to host certain services that I may find useful (discussed later in this post). Has access to home LAN.
+
+0xBEN’s guide demonstrate how dynamic DNS can be used to communicate with the lab remotely. But this was not the case for me due to CGNAT limitations on my ISP connection. Upon looking for alternatives, these are some solutions that I found popular (in no particular order) that I can use:
+
+ZeroTier
+Tailscale
+Defined Networking which uses Nebula and manages backbone infrastructure for individuals&#x2F;organizations.
+Netmaker
+
+These services have the same use case, being able to connect internal or non-internet-facing hosts over a virtual network for remote access, with each having a few different features with different underlying spec. These services provide a decent pricing plan with a generous free tier for individual and some services or their underlying frameworks are publicly available and can be self-hosted by capable individuals.
+One more important point to highlight is that these services provide different synergies with other services&#x2F;devices as well. For example, pfSense officially support Tailscale to bridge “sites” (subnets) together and likewise MikroTik’s RouterOS supports ZeroTier integration. This can help bridge private networks quick and easily without having to configure intermediate routing&#x2F;service in between. However, for my first run I decided to use ZeroTier, and it has been pretty simple to get started and work with.
+ZeroTierZeroTier combines the capabilities of VPN and SD-WAN to connect all kinds of end user devices to a single virtualized network. The virtual interface created by ZeroTier makes it feel like a regular LAN network where you can manage routes, assign IPs, define flow rules, etc. while providing end-to-end encryption to all traffic.
+It is also an open source project (some actions falls under their business license) and the relay server implementation is publicly available for anyone to self-host their own instance. They also provide a development SDK (a socket library) in a few different programming languages that can be used create and connect embedded applications and systems over the virtual network.
+If you want to read more and get started with deployment, make sure to read their documentation and knowledge base for guides and troubleshooting. Now, let’s go over the steps you need to set up a ZeroTier network.
+
+After signing up for an account, you will land on your account dashboard. This page gives you an overview of your active networks and total number of nodes&#x2F;hosts connected. Clicking “Create a Network” will create a new network entry on the dashboard with a random name. To continue, click on the new record to open the network configuration page.
+
+
+
+
+There are subsections for help regarding each option you see in this configuration page. Make sure to refer that if you have any doubts about a component.
+The basic settings section can be used to customize the name, description and the level of access control of your network. Private mode creates an additional authorization step which has to be approved by a network administrator before a node is allowed to communicate with the network.
+
+
+
+
+The advanced settings section contains network related options that you can configure according to your needs.
+Managed Routes dialogue can be used to manually add routes through the connected nodes. Additional configuration on the target node is required to make this work.
+IPv4 Auto Assign dialogue lets you define a IPv4 private address range (RFC 1918) that will be used to automatically allocated addresses to connecting nodes. You may want to double-check your allocation with your LAN or other networks that might overlap and cause issues with routing.
+IPv6 Auto Assign dialogue works the same as IPv4.
+Multicast dialogue lets you configure multicast recipient limit and enable broadcast within the network.
+DNS dialogue lets you define an internal domain for the network and assign a DNS server node.
+Manually Add Member dialogue lets you authenticate a node before it joins a network (or to unban a previously banned node).
+
+
+
+
+
+
+
+
+Heading over to Members section after configuring your settings, you will see a message about adding new members. You should now download and install the client daemon on to the devices you need to connect to the network (You will need administrative privileges when working with ZeroTier client). Assuming you are on a Linux distribution, you can try the below command on your terminal to test the CLI tool:
+
+# To print help textsudo zerotier-cli help
+
+# To view your client infosudo zerotier-cli info
+
+The client info command returns your client ID and service status, client ID (or member ID) is used to uniquely identify nodes when adding&#x2F;removing from the network. We should now join our node to the virtual network with the network ID that is shown in the dashboard or in the network management page.
+
+# To join a networksudo zerotier-cli join NETWORK_ID
+
+# To list active network statussudo zerotier-cli listnetworks
+
+Assuming you have chosen to keep the network private in the configuration stage, the status of the previous command will be “ACCESS DENIED” because you need to approve the node before it can start communicating over the network. Head over to the Members section we previously left before, you should now see a new record with the client ID of the node you are working with. Check the box on the “Auth” column to approve the node.
+
+
+
+
+If everything went accordingly, your node will be assigned an IP address from the range you previously configured. Use the listnetwork command in the CLI tool to verify. The service also configures a virtual network interface for the node which you can see with ip a command.
+
+You should now repeat above steps for the remaining hosts that you need on the network. The client daemon makes sure that every time a host reboots, the virtual interface will be brought back up again. All you need is to be able to connect and talk to ZeroTier or your own relay server over the internet, then you can just treat it like a usual LAN connection.
+Virtual network overview
+
+Going back to my home lab setup, I connected my Proxmox node, utility VM, my personal laptop and my mobile to the network. The remaining node is the pfSense firewall but the reason I cannot connect it is that it may cause issues with the firewall config and my lack of knowledge on the BSD ecosystem. Even though I have listed about how to forward these internal services, another approach would be to have the firewall connected directly connected with our SD-WAN solution, so we can directly bridge internal subnets via the firewall without any intermediate forwarding or other solutions (I included a few examples in a previous section).
+
+
+I initially used the Proxmox node as a proxy (by using the ssh -R option to create a reverse socks proxy) to access pfSense web panel and its OpenVPN server. It is a working alternative, but the next section covers how forward proxies can be used AND how we can assign a verifiable domain with the help of certain project.
+A forwarding proxyAt this point, my attention went towards Nginx as this is a perfect scenario to set it up on the utility VM. It can act as a reverse proxy to serve internal services or forward TCP&#x2F;UDP connections to internal services.
+This is when I found a nice video that covers Nginx proxy manager project which can streamline the usage of Nginx and easily assign a domain name with verifiable security (SSL) to sites even if they are not exposed to the internet. I recommend watching the video for detailed steps, and my changes to its configuration is listed below.
+
+
+Nginx Proxy Manager
+For the domain, I have selected comradenet.duckdns.org (that’s a pretty long domain name) and pointed the record at the ZeroTier assigned address 172.27.10.11 of the utility VM.
+After setting up docker and docker-compose on the VM, I took the docker-compose file in the quick setup page and added an extra mapping to port 1194 which is the default port for OpenVPN servers.
+
+version: &#x27;3.8&#x27;services:  nginxproxymanager:    image: &#x27;jc21/nginx-proxy-manager:latest&#x27;    restart: unless-stopped    ports:      - &#x27;80:80&#x27;      - &#x27;81:81&#x27;      - &#x27;443:443&#x27;      - &#x27;1194:1194&#x27;    volumes:      - ./data:/data      - ./letsencrypt:/etc/letsencrypt
+
+After spinning up the container and going through the initial login setup, I created an SSL certificate as described in the video.
+
+
+
+
+Moving on to proxy host configuration, the process is same as seen in the video. After defining two subdomains for Proxmox and pfSense, the destination is pointed towards their LAN addresses. One additional detail is that we need to enable Websocket support on both proxy records for the web panels to work correctly (This is the case for Proxmox and pfSense web panels, other web services may differ).
+
+
+
+
+And finally, I defined a stream record to forward all incoming traffic on port 1194 to the same port on pfSense firewall via the LAN. With that, I just need to define the target server on the OpenVPN client config as the utility VM and the proxy will forward the traffic to pfSense server. TCP forwarding is selected as the OpenVPN server is configured to use TCP instead of UDP.
+
+
+
+And that’s the proxy manager configuration for my environment. You may need to define additional port mappings depending on what you are trying to set up forwarding. You are free to stop and scrap the container when you want to modify port mappings as all the data is stored in mounts as defined in the docker-compose file.
+Make sure to properly organize mount folders on your docker host, so your configuration is not lost.
+
+
+Proxy in actionNow I can easily access my web panels by using a nice little URL on my browser and join my internal VPN to play around with my cyber playground as long as I am connected to my ZeroTier network.
+
+
+
+
+Nginx proxy manager has been pretty helpful to me as a beginner. The GUI has more options available inline with what Nginx has to offer, but one might need to manually configure their Nginx instance to fine tune all the options it has to offer.
+Concluding thoughtsAnd that’s about it for this home lab adventure. This has been a nice learning experience for me when it comes to network implementation and technologies behind them. I am planning try out more services as listed in this post to come up with a better network design that is easy to use and maintain. The industry certainly has much more to offer, and this post only covered a few of them.
+I would like to thank @0xBEN again for his awesome resources that got me interested in tinkering as well. And thank you for reading my post, hope you enjoyed and possibly gained something from my post.
+References
+Proxmox VE 7: Converting a Laptop into a Bare Metal Server by 0xBEN
+Setting up a reverse proxy and SSL for your home lab
+
+]]></content>
+      <tags>
+        <tag>homelab</tag>
+        <tag>networking</tag>
       </tags>
   </entry>
 </search>
